@@ -73,8 +73,10 @@ small, .ff-mono[style*="font-size:.62rem"], .ff-mono[style*="font-size:.63rem"],
 .logo-diamond { width:34px; height:34px; border: 2px solid var(--red); transform:rotate(45deg); position:relative; flex-shrink:0; }
 .logo-diamond::before { content:''; position:absolute; inset:5px; background:var(--red); }
 .nav-link { font-family:'Share Tech Mono',monospace; font-size:.82rem; letter-spacing:.1em; position:relative; }
-.nav-link::after { content:''; position:absolute; bottom:4px; left:16px; width:0; height:1px; background:var(--red); transition:width .3s; }
-.nav-link:hover::after { width:calc(100% - 32px); }
+.nav-link:not(.dropdown-toggle)::after { content:''; position:absolute; bottom:4px; left:16px; width:0; height:1px; background:var(--red); transition:width .3s; }
+.nav-link:not(.dropdown-toggle):hover::after { width:calc(100% - 32px); }
+.nav-link.dropdown-toggle { display:inline-flex; align-items:center; gap:.35rem; }
+.nav-link.dropdown-toggle::after { position:static; margin-left:0; vertical-align:middle; }
 .navbar-toggler { border-color: rgba(204,0,0,.4); }
 .navbar-toggler-icon { background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(204,0,0,.9)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); }
 
@@ -228,7 +230,7 @@ small, .ff-mono[style*="font-size:.62rem"], .ff-mono[style*="font-size:.63rem"],
   color:#fff;
   background:var(--red);
   border:1px solid rgba(255,255,255,.22);
-  padding:5px 11px;
+  padding: 0px 11px;
   box-shadow:0 8px 18px rgba(0,0,0,.35);
 }
 .service-card h3 { color:#fff; text-shadow:0 2px 10px rgba(0,0,0,.5); }
@@ -319,11 +321,17 @@ footer .ff-mono.text-red { color:#ff7a85 !important; }
     </button>
     <div class="collapse navbar-collapse" id="navMenu">
       <ul class="navbar-nav ms-auto align-items-lg-center gap-1">
-        <li class="nav-item"><a class="nav-link ff-mono text-uppercase text-white fw-bold" href="#">Solutions</a></li>
-        <li class="nav-item"><a class="nav-link ff-mono text-uppercase text-white fw-bold" href="#">Projects</a></li>
-        <li class="nav-item"><a class="nav-link ff-mono text-uppercase text-white fw-bold" href="#">Technology</a></li>
-        <li class="nav-item"><a class="nav-link ff-mono text-uppercase text-white fw-bold" href="./about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link ff-mono text-uppercase text-white fw-bold" href="#">Blog</a></li>
+        <li class="nav-item"><a class="nav-link ff-mono text-uppercase text-white fw-bold" href="./index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle ff-mono text-uppercase text-white fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
+          <ul class="dropdown-menu dropdown-menu-dark bg-dark2 border-dark3">
+            <li><a class="dropdown-item ff-mono text-uppercase" href="./about.html">About</a></li>
+            <li><a class="dropdown-item ff-mono text-uppercase" href="./team.html">Our Team</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link ff-mono text-uppercase text-white fw-bold" href="./services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link ff-mono text-uppercase text-white fw-bold" href="./industries.html">Industries</a></li>
+        <li class="nav-item"><a class="nav-link ff-mono text-uppercase text-white fw-bold" href="./index.html#blog">Resources</a></li>
         <li class="nav-item"><a class="nav-link ff-mono text-uppercase text-white fw-bold" href="./contact.html">Contact</a></li>
         <li class="nav-item ms-2">
           <a href="#" class="btn-sentinel btn bg-danger text-white text-decoration-none d-inline-flex align-items-center gap-2">GET A QUOTE</a>
