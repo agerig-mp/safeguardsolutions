@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Utilities & Energy Security | Market Solutions | Safeguard Solutions</title>
+<meta name="description" content="Perimeter security solutions for utility contractors and utility infrastructure: power, gas, water, and wastewater. Explore utilities-specific challenges and Safeguard Solutions approaches.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="http://127.0.0.1:8000/dev/utilities.html">
+<meta property="og:title" content="Utilities & Energy Security | Safeguard Solutions">
+<meta property="og:description" content="Utility perimeter security strategies for power, gas, water, and wastewater operations with high-security requirements.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="http://127.0.0.1:8000/dev/utilities.html">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Share+Tech+Mono&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --black:#050507;
+  --dark:#0d0d0f;
+  --dark2:#141418;
+  --dark3:#1c1c22;
+  --red:#ED1c24;
+  --red-hi:#ff3243;
+  --gray:#A7A8B5;
+  --bs-body-bg:#050507;
+  --bs-body-color:#E2E2EA;
+  --bs-body-font-family:'Rajdhani',sans-serif;
+}
+html { scroll-behavior:smooth; }
+body { cursor:crosshair; overflow-x:hidden; font-size:18px; line-height:1.8; }
+body::before {
+  content:''; position:fixed; inset:0; pointer-events:none; z-index:9999;
+  background:repeating-linear-gradient(0deg, transparent 0 2px, rgba(0,0,0,0.04) 2px 4px);
+}
+.ff-display { font-family:'Bebas Neue',sans-serif; }
+.ff-mono { font-family:'Share Tech Mono',monospace; }
+h1.ff-display, h2.ff-display { letter-spacing:.01em; line-height:1.05; }
+h2.ff-display { font-size:clamp(1.9rem,3vw,3.5rem)!important; }
+.text-red { color:var(--red)!important; }
+.text-gray { color:#d9dae6!important; }
+.bg-black { background-color:var(--black)!important; }
+.bg-dark1 { background-color:var(--dark)!important; }
+.bg-dark2 { background-color:var(--dark2)!important; }
+.bg-dark3 { background-color:var(--dark3)!important; }
+.border-dark3 { border-color:var(--dark3)!important; }
+
+#cursor-dot {
+  width:8px; height:8px; background:var(--red); border-radius:50%;
+  position:fixed; top:0; left:0; pointer-events:none; z-index:99999;
+  transform:translate(-50%,-50%);
+}
+
+#main-nav {
+  background:linear-gradient(180deg,rgba(5,5,7,.98) 0%, rgba(5,5,7,0) 100%);
+  backdrop-filter:blur(2px);
+  transition:padding .3s, background .3s;
+}
+#main-nav.scrolled { background:rgba(5,5,7,.97)!important; }
+.nav-link { font-family:'Share Tech Mono',monospace; font-size:.82rem; letter-spacing:.1em; position:relative; }
+.nav-link:not(.dropdown-toggle)::after { content:''; position:absolute; bottom:4px; left:16px; width:0; height:1px; background:var(--red); transition:width .3s; }
+.nav-link:not(.dropdown-toggle):hover::after { width:calc(100% - 32px); }
+.nav-link.dropdown-toggle { display:inline-flex; align-items:center; gap:.35rem; }
+.nav-link.dropdown-toggle::after { position:static; margin-left:0; vertical-align:middle; }
+.navbar-toggler { border-color:rgba(204,0,0,.4); }
+.navbar-toggler-icon { background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(204,0,0,.9)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); }
+
+.btn-sentinel {
+  font-family:'Rajdhani',sans-serif; font-weight:700; font-size:.88rem;
+  letter-spacing:.2em; text-transform:uppercase; padding:14px 32px;
+  clip-path:polygon(12px 0%,100% 0%,calc(100% - 12px) 100%,0% 100%);
+  transition:background .2s, transform .2s;
+}
+.btn-sentinel.bg-danger { background-color:var(--red)!important; border-color:var(--red)!important; }
+.btn-sentinel:hover { background:var(--red-hi)!important; transform:translateY(-2px); }
+.btn-sentinel-outline {
+  font-family:'Share Tech Mono',monospace; font-size:.78rem;
+  letter-spacing:.15em; text-transform:uppercase; padding:14px 32px;
+  border:1px solid rgba(204,0,0,.5); background:transparent;
+  color:#fff; text-decoration:none;
+}
+.btn-sentinel-outline:hover { border-color:var(--red); background:rgba(204,0,0,.08); }
+
+.section-label {
+  display:flex; align-items:center; gap:14px;
+  font-family:'Rajdhani',sans-serif; font-size:1rem; font-weight:700;
+  letter-spacing:.22em; text-transform:uppercase; color:var(--red-hi);
+  text-shadow:0 0 12px rgba(204,0,0,.28); margin-bottom:16px;
+}
+.section-label::before { content:''; width:32px; height:1px; background:var(--red); }
+
+#hero { min-height:46.5vh; }
+.hero-bg { position:absolute; inset:0; background:url('./assets/perimeter-fencing.jpg') center/cover no-repeat; filter:grayscale(60%) contrast(1.2) brightness(.45); }
+.hero-overlay { position:absolute; inset:0; z-index:1; background:radial-gradient(ellipse 120% 100% at 70% 50%, rgba(80,0,0,.08) 0%, rgba(5,5,7,.28) 60%); }
+.hero-grid { position:absolute; inset:0; z-index:2; background-image:linear-gradient(rgba(204,0,0,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(204,0,0,.08) 1px,transparent 1px); background-size:60px 60px; animation:gridPan 20s linear infinite; }
+.hero-vignette { position:absolute; inset:0; z-index:3; background:linear-gradient(90deg,rgba(5,5,7,.5) 38%,rgba(5,5,7,.0) 100%); }
+.hero-accent-bar { position:absolute; top:0; right:220px; width:3px; height:100%; background:linear-gradient(180deg,transparent,var(--red) 30%,#660000 70%,transparent); opacity:.6; z-index:4; }
+#hero.utilities-hero .hero-particles { position:absolute; inset:0; z-index:4; pointer-events:none; opacity:1; }
+#hero.utilities-hero h1.ff-display { font-size:clamp(2.2rem,4.2vw,4.4rem)!important; }
+#hero.utilities-hero .container { padding-top:6.25rem!important; padding-bottom:2.25rem!important; }
+@media (max-width:991.98px) {
+  #hero.utilities-hero h1.ff-display { white-space:normal; font-size:clamp(1.8rem,8vw,2.8rem)!important; }
+  #hero.utilities-hero .container { padding-top:5.5rem!important; padding-bottom:2rem!important; }
+}
+
+.service-block {
+  background:var(--dark3); border:1px solid var(--dark3);
+  padding:28px; height:100%; transition:border-color .25s, transform .25s, background .25s;
+}
+.service-block:hover { border-color:rgba(237,28,36,.35); background:#202028; transform:translateY(-2px); }
+/* Home-matching solution cards */
+.service-card { position:relative; aspect-ratio:4/3; overflow:hidden; cursor:pointer; }
+.service-card img { width:100%; height:100%; object-fit:cover; filter:grayscale(80%) contrast(1.1) brightness(.65); transition:filter .5s, transform .5s; }
+.service-card:hover img { filter:grayscale(20%) brightness(.55); transform:scale(1.06); }
+.service-overlay { position:absolute; inset:0; background:linear-gradient(0deg,rgba(5,5,7,.96) 0%,rgba(5,5,7,.2) 60%); display:flex; flex-direction:column; justify-content:flex-end; padding:28px; z-index:1; }
+.svc-corner { position:absolute; top:18px; right:18px; width:18px; height:18px; border-top:1px solid rgba(204,0,0,.5); border-right:1px solid rgba(204,0,0,.5); z-index:2; }
+.svc-eyebrow {
+  display:inline-flex;
+  align-self:flex-start;
+  font-family:'Rajdhani',sans-serif;
+  font-weight:700;
+  font-size:.78rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:#fff;
+  background:var(--red);
+  border:1px solid rgba(255,255,255,.22);
+  padding: 0px 11px;
+  box-shadow:0 8px 18px rgba(0,0,0,.35);
+}
+.service-card h3 { color:#fff; text-shadow:0 2px 10px rgba(0,0,0,.5); }
+.service-card p { color:#dfe0ea!important; font-size:.86rem; line-height:1.65; text-shadow:0 1px 8px rgba(0,0,0,.45); max-height:0; overflow:hidden; opacity:0; transition:max-height .4s, opacity .4s; }
+.service-card:hover p { max-height:90px; opacity:1; }
+.market-card {
+  border-radius:14px;
+  padding:32px 30px;
+  height:100%;
+  background:var(--dark3);
+  border:1px solid var(--dark3);
+  transition:border-color .25s, transform .25s, background .25s;
+}
+.market-card h3 {
+  font-family:'Share Tech Mono',monospace;
+  font-size:.82rem;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  margin-bottom:1rem;
+}
+.market-card ul { list-style:none; padding:0; margin:0; }
+.market-card li {
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  color:#d9dae6;
+  font-size:1.06rem;
+  line-height:1.45;
+}
+.market-card li + li { margin-top:.85rem; }
+.market-card .bi { font-size:1.05rem; margin-top:.2rem; flex-shrink:0; }
+.market-card.challenges { border-color:rgba(237,28,36,.34); }
+.market-card.challenges h3 { color:var(--red-hi); font-weight: 700; }
+.market-card.challenges .bi { color:var(--red); }
+.market-card.solutions { border-color:rgba(33,177,107,.34); }
+.market-card.solutions h3 { color:#4cd38c; }
+.market-card.solutions .bi { color:#38bf79; }
+.market-card:hover { transform:translateY(-2px); background:#202028; }
+.utility-overview-grid {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  grid-template-rows:repeat(3,minmax(0,1fr));
+  column-gap:1.25rem;
+  row-gap:.3rem;
+  height:100%;
+}
+.utility-overview-item { display:flex; align-items:center; }
+.utility-overview-item p { margin:0; }
+@media (max-width:767.98px) {
+  .utility-overview-grid {
+    grid-template-columns:1fr;
+    grid-template-rows:auto;
+    row-gap:.75rem;
+  }
+}
+.utility-solution-card {
+  background:var(--dark3);
+  border:1px solid var(--dark3);
+  padding:0;
+  height:100%;
+  overflow:hidden;
+  transition:border-color .25s, transform .25s, background .25s;
+}
+.utility-solution-card:hover { border-color:rgba(237,28,36,.35); background:#202028; transform:translateY(-2px); }
+.utility-solution-photo { width:100%; aspect-ratio:16/10; object-fit:cover; filter:grayscale(60%) contrast(1.08) brightness(.72); }
+.utility-solution-copy { padding:22px; }
+.utility-solution-card h3 { font-size:1.25rem; margin-bottom:.5rem; }
+.utility-solution-card p { color:#d9dae6; margin-bottom:0; }
+.utility-why-card {
+  background:var(--dark3);
+  border:1px solid var(--dark3);
+  padding:24px;
+  height:100%;
+}
+.utility-why-head { display:flex; align-items:center; gap:10px; margin-bottom:.45rem; }
+.utility-why-head i { color:var(--red); font-size:1rem; line-height:1; }
+.utility-why-card h3 { font-size:1.2rem; margin-bottom:0; }
+.utility-standard-list { display:flex; flex-wrap:wrap; gap:10px; }
+.utility-standard-pill {
+  display:inline-flex;
+  align-items:center;
+  border:1px solid rgba(237,28,36,.35);
+  background:rgba(237,28,36,.08);
+  color:#f2f2f7;
+  padding:8px 12px;
+  font-family:'Share Tech Mono',monospace;
+  font-size:.74rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.faq-utilities .accordion-item {
+  background:var(--dark3);
+  border:1px solid var(--dark3);
+  margin-bottom:10px;
+}
+.faq-utilities .accordion-button {
+  background:var(--dark3);
+  color:#fff;
+  font-family:'Rajdhani',sans-serif;
+  font-weight:700;
+  letter-spacing:.02em;
+}
+.faq-utilities .accordion-button:not(.collapsed) {
+  background:#202028;
+  color:#fff;
+  box-shadow:none;
+}
+.faq-utilities .accordion-button:focus { box-shadow:none; border-color:rgba(237,28,36,.25); }
+.faq-utilities .accordion-button::after { filter:invert(1) grayscale(1); }
+.faq-utilities .accordion-body { color:#d9dae6; }
+
+.red-bar { width:100%; height:3px; background:linear-gradient(90deg,transparent,var(--red),var(--red-hi),var(--red),transparent); }
+.social-link { width:40px; height:40px; border:1px solid var(--dark3); font-size:.72rem; transition:border-color .2s, color .2s, background .2s; }
+.social-link i { font-size:1.1rem; line-height:1; }
+.social-link:hover { border-color:var(--red); color:var(--red)!important; background:rgba(204,0,0,.08); }
+.footer-link { color:#d7d8e4; text-decoration:none; font-size:.97rem; line-height:1.55; transition:color .2s, padding-left .2s; display:inline-block; }
+.footer-link:hover { color:#fff; padding-left:5px; }
+.footer-legal-link { font-family:'Share Tech Mono',monospace; font-size:.72rem; color:rgba(226,226,234,.7); text-decoration:none; letter-spacing:.06em; transition:color .2s; }
+.footer-legal-link:hover { color:#fff; }
+footer .ff-mono.text-red { color:#ff7a85!important; }
+
+@keyframes gridPan { from{background-position:0 0} to{background-position:60px 60px} }
+.reveal { opacity:0; transform:translateY(24px); transition:opacity .6s, transform .6s; }
+.reveal.visible { opacity:1; transform:translateY(0); }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Utilities and Energy Security Challenges and Solutions",
+  "itemListElement": [
+    {"@type":"Thing","position":1,"name":"24/7 unmanned perimeters"},
+    {"@type":"Thing","position":2,"name":"High-value target for attacks"},
+    {"@type":"Thing","position":3,"name":"Multiple access points"},
+    {"@type":"Thing","position":4,"name":"Integration with existing security"},
+    {"@type":"Thing","position":5,"name":"K8/K12 crash-rated vehicle barriers"},
+    {"@type":"Thing","position":6,"name":"High-speed gates for authorized access"},
+    {"@type":"Thing","position":7,"name":"Integrated access control systems"},
+    {"@type":"Thing","position":8,"name":"Anti-climb fencing solutions"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What perimeter security upgrades should utilities prioritize first?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Utilities often prioritize anti-climb fencing, controlled gate access, and vehicle mitigation at vulnerable entry points."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can Safeguard Solutions integrate new perimeter controls with existing systems?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. New fencing, barriers, and gate automation can be aligned with existing access control and utility site workflows."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you support both utility owner-operators and utility contractors?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Safeguard Solutions supports owner-operators, utility contractors, and general contractors on utility security scopes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you provide repairs and retrofits for utility perimeter systems?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Repair and retrofit services are available for existing utility perimeter infrastructure."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body class="bg-black text-light">
+<div id="cursor-dot"></div>
+
+<nav id="main-nav" class="navbar navbar-expand-lg fixed-top py-2">
+  <div class="container">
+    <a class="navbar-brand" href="./index.html">
+      <img src="./assets/safeguard-solutions-logo-gr.png" alt="Safeguard Solutions" style="height:48px;width:auto;">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-1">
+        <li class="nav-item"><a class="nav-link ff-mono text-uppercase text-white fw-bold" href="./index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle ff-mono text-uppercase text-white fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
+          <ul class="dropdown-menu dropdown-menu-dark bg-dark2 border-dark3">
+            <li><a class="dropdown-item ff-mono text-uppercase" href="./about.html">About</a></li>
+            <li><a class="dropdown-item ff-mono text-uppercase" href="./team.html">Our Team</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link ff-mono text-uppercase text-white fw-bold" href="./services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link ff-mono text-uppercase text-white fw-bold" href="./industries.html">Industries</a></li>
+        <li class="nav-item"><a class="nav-link ff-mono text-uppercase text-white fw-bold" href="./index.html#blog">Resources</a></li>
+        <li class="nav-item"><a class="nav-link ff-mono text-uppercase text-white fw-bold" href="./contact.html">Contact</a></li>
+        <li class="nav-item ms-2"><a href="./contact.html#contact-form" class="btn-sentinel btn bg-danger text-white text-decoration-none d-inline-flex align-items-center gap-2">GET A QUOTE</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section id="hero" class="utilities-hero position-relative d-flex align-items-center overflow-hidden">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-vignette"></div>
+  <div class="hero-accent-bar d-none d-lg-block"></div>
+  <canvas id="hero-particles" class="hero-particles"></canvas>
+
+  <div class="container position-relative py-5 my-2" style="z-index:5;">
+    <div class="row">
+      <div class="col-lg-9 col-xl-7">
+        <div class="section-label">UTILITIES &amp; ENERGY</div>
+        <h1 class="ff-display text-white lh-1 mb-3">PERIMETER SECURITY FOR <span class="text-red">UTILITY INFRASTRUCTURE</span>.</h1>
+        <p class="text-gray mb-0">Utility contractors and operators trust Safeguard Solutions to protect power, gas, water, and wastewater assets with resilient perimeter systems.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-dark1 py-5 py-lg-6" id="utility-overview">
+  <div class="container">
+    <div class="row align-items-stretch g-4">
+      <div class="col-lg-5 reveal">
+        <div class="section-label">MARKET OVERVIEW</div>
+        <h2 class="ff-display text-white mb-3" style="font-size:clamp(2.1rem,3.8vw,4.4rem);">UTILITY CONTRACTORS &amp; CRITICAL ENERGY SITES</h2>
+        <p class="text-gray mb-0">From substations and generation assets to water and wastewater facilities, utility environments require layered perimeter protection that balances security, safety, and operational continuity.</p>
+      </div>
+      <div class="col-lg-7 reveal d-flex">
+        <div class="service-block h-100 w-100">
+          <div class="utility-overview-grid">
+            <div class="utility-overview-item"><p class="text-gray"><i class="bi bi-lightning-charge-fill text-red me-2"></i>Electric Utilities &amp; Substations</p></div>
+            <div class="utility-overview-item"><p class="text-gray"><i class="bi bi-droplet-fill text-red me-2"></i>Water &amp; Wastewater Facilities</p></div>
+            <div class="utility-overview-item"><p class="text-gray"><i class="bi bi-fuel-pump-fill text-red me-2"></i>Gas Distribution Infrastructure</p></div>
+            <div class="utility-overview-item"><p class="text-gray"><i class="bi bi-building-fill-gear text-red me-2"></i>Utility Contractor Projects</p></div>
+            <div class="utility-overview-item"><p class="text-gray"><i class="bi bi-shield-lock-fill text-red me-2"></i>High-Security Utility Sites</p></div>
+            <div class="utility-overview-item"><p class="text-gray"><i class="bi bi-diagram-3-fill text-red me-2"></i>Upgrades to Existing Security Systems</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-dark2 py-5 py-lg-6" id="industry-challenges">
+  <div class="container">
+    <div class="row justify-content-center text-center mb-5 reveal">
+      <div class="col-lg-9">
+        <div class="section-label justify-content-center">INDUSTRY FOCUS</div>
+        <h2 class="ff-display text-white mb-3">INDUSTRY CHALLENGES &amp; OUR SOLUTIONS</h2>
+        <p class="text-gray mx-auto">The utilities market faces unique perimeter threats. Our approach pairs field-proven physical security with practical integration for utility operations.</p>
+      </div>
+    </div>
+    <div class="row g-4 justify-content-center">
+      <div class="col-lg-5 reveal">
+        <article class="market-card challenges">
+          <h3>Industry Challenges</h3>
+          <ul>
+            <li><i class="bi bi-exclamation-triangle"></i><span>24/7 unmanned perimeters</span></li>
+            <li><i class="bi bi-exclamation-triangle"></i><span>High-value target for attacks</span></li>
+            <li><i class="bi bi-exclamation-triangle"></i><span>Multiple access points</span></li>
+            <li><i class="bi bi-exclamation-triangle"></i><span>Integration with existing security</span></li>
+          </ul>
+        </article>
+      </div>
+      <div class="col-lg-5 reveal">
+        <article class="market-card solutions">
+          <h3>Our Solutions</h3>
+          <ul>
+            <li><i class="bi bi-check-lg"></i><span>K8/K12 crash-rated vehicle barriers</span></li>
+            <li><i class="bi bi-check-lg"></i><span>High-speed gates for authorized access</span></li>
+            <li><i class="bi bi-check-lg"></i><span>Integrated access control systems</span></li>
+            <li><i class="bi bi-check-lg"></i><span>Anti-climb fencing solutions</span></li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-dark1 py-5 py-lg-6" id="utility-solutions">
+  <div class="container">
+    <div class="row justify-content-center text-center mb-5 reveal">
+      <div class="col-lg-9">
+        <div class="section-label justify-content-center">SPECIFIC SOLUTIONS</div>
+        <h2 class="ff-display text-white mb-3">SOLUTIONS FOR UTILITIES &amp; ENERGY INFRASTRUCTURE</h2>
+        <p class="text-gray mx-auto">Purpose-built perimeter systems to protect essential utility operations, reduce exposure, and keep authorized access efficient.</p>
+      </div>
+    </div>
+    <div class="row g-3">
+      <div class="col-lg-4 col-md-6 reveal"><article class="utility-solution-card"><img class="utility-solution-photo" src="./assets/perimeter-fencing.jpg" alt="Anti-climb and anti-cut utility fencing"><div class="utility-solution-copy"><h3 class="ff-display text-white">ANTI-CLIMB &amp; ANTI-CUT FENCING</h3><p>High-security perimeter fencing engineered for substations, treatment facilities, and utility compounds.</p></div></article></div>
+      <div class="col-lg-4 col-md-6 reveal"><article class="utility-solution-card"><img class="utility-solution-photo" src="./assets/barrier.jpg" alt="Crash-rated utility barrier systems"><div class="utility-solution-copy"><h3 class="ff-display text-white">CRASH-RATED BARRIERS (K8/K12)</h3><p>Vehicle mitigation strategies for vulnerable utility entry points and high-consequence assets.</p></div></article></div>
+      <div class="col-lg-4 col-md-6 reveal"><article class="utility-solution-card"><img class="utility-solution-photo" src="./assets/barrier-poles.jpg" alt="Automated high-speed gates for utility access"><div class="utility-solution-copy"><h3 class="ff-display text-white">HIGH-SPEED AUTOMATED GATES</h3><p>Fast, controlled access for authorized personnel, contractors, and emergency response teams.</p></div></article></div>
+      <div class="col-lg-4 col-md-6 reveal"><article class="utility-solution-card"><img class="utility-solution-photo" src="./assets/external-09.jpg" alt="Integrated access control for utility sites"><div class="utility-solution-copy"><h3 class="ff-display text-white">INTEGRATED ACCESS CONTROL</h3><p>Credential, visitor, and gate event management tied to existing site security protocols.</p></div></article></div>
+      <div class="col-lg-4 col-md-6 reveal"><article class="utility-solution-card"><img class="utility-solution-photo" src="./assets/external-01.jpg" alt="Bollards and barrier systems at critical utility points"><div class="utility-solution-copy"><h3 class="ff-display text-white">BOLLARDS &amp; BARRIER SYSTEMS</h3><p>Layered hardening around control buildings, access lanes, and perimeter choke points.</p></div></article></div>
+      <div class="col-lg-4 col-md-6 reveal"><article class="utility-solution-card"><img class="utility-solution-photo" src="./assets/external-07.jpg" alt="Utility perimeter security repairs and retrofits"><div class="utility-solution-copy"><h3 class="ff-display text-white">SECURITY REPAIRS &amp; RETROFITS</h3><p>Modernization and corrective services for aging fence, gate, and barrier infrastructure.</p></div></article></div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-dark2 py-5 py-lg-6" id="utility-why">
+  <div class="container">
+    <div class="row justify-content-center text-center mb-5 reveal">
+      <div class="col-lg-9">
+        <div class="section-label justify-content-center">WHY THIS MATTERS</div>
+        <h2 class="ff-display text-white mb-3">PERIMETER SECURITY IS OPERATIONAL RESILIENCE</h2>
+        <p class="text-gray mx-auto">For utility operators, perimeter performance directly impacts uptime, safety, and public trust.</p>
+      </div>
+    </div>
+    <div class="row g-3">
+      <div class="col-lg-4 col-md-6 reveal"><article class="utility-why-card"><div class="utility-why-head"><i class="bi bi-lightning-charge-fill"></i><h3 class="ff-display text-white">REDUCE SERVICE DISRUPTION RISK</h3></div><p class="text-gray mb-0">Strong perimeter controls lower the chance of unauthorized access events that can interrupt critical services.</p></article></div>
+      <div class="col-lg-4 col-md-6 reveal"><article class="utility-why-card"><div class="utility-why-head"><i class="bi bi-shield-lock-fill"></i><h3 class="ff-display text-white">PROTECT PEOPLE &amp; CRITICAL ASSETS</h3></div><p class="text-gray mb-0">Utilities manage high-value and potentially hazardous infrastructure that requires layered physical protection.</p></article></div>
+      <div class="col-lg-4 col-md-6 reveal"><article class="utility-why-card"><div class="utility-why-head"><i class="bi bi-clipboard2-check-fill"></i><h3 class="ff-display text-white">SUPPORT COMPLIANCE &amp; AUDIT READINESS</h3></div><p class="text-gray mb-0">Well-designed perimeter systems help teams align site controls with policy, reporting, and inspection requirements.</p></article></div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-dark1 py-5 py-lg-6" id="utility-compliance">
+  <div class="container">
+    <div class="row align-items-start g-4">
+      <div class="col-lg-5 reveal">
+        <div class="section-label">COMPLIANCE &amp; STANDARDS</div>
+        <h2 class="ff-display text-white mb-3" style="font-size:clamp(2.1rem,3.8vw,4.4rem);">ALIGNED WITH INDUSTRY EXPECTATIONS</h2>
+        <p class="text-gray mb-0">We design and install perimeter controls that support utility security programs and regulatory obligations.</p>
+      </div>
+      <div class="col-lg-7 reveal d-flex">
+        <div class="service-block h-100 w-100">
+          <div class="utility-standard-list mb-3">
+            <span class="utility-standard-pill">NERC CIP-Aligned Security Controls</span>
+            <span class="utility-standard-pill">TSA Pipeline Security Guidance</span>
+            <span class="utility-standard-pill">AWWA Utility Security Practices</span>
+            <span class="utility-standard-pill">Physical Security Risk Assessments</span>
+            <span class="utility-standard-pill">Site Access Policy Integration</span>
+            <span class="utility-standard-pill">Crash-Rated Barrier Requirements</span>
+          </div>
+          <p class="text-gray mb-0">Implementation scope is tailored to each utility's governing requirements, site classifications, and risk profile.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-dark2 py-5 py-lg-6" id="utility-faqs">
+  <div class="container">
+    <div class="row justify-content-center text-center mb-5 reveal">
+      <div class="col-lg-9">
+        <div class="section-label justify-content-center">FAQS</div>
+        <h2 class="ff-display text-white mb-3">UTILITIES SECURITY QUESTIONS</h2>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-10 reveal">
+        <div class="accordion faq-utilities" id="utilitiesFaqAccordion">
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne" aria-expanded="true" aria-controls="faqOne">
+                What perimeter security upgrades should utilities prioritize first?
+              </button>
+            </h3>
+            <div id="faqOne" class="accordion-collapse collapse show" data-bs-parent="#utilitiesFaqAccordion">
+              <div class="accordion-body">Most utility sites prioritize anti-climb fencing, controlled gate access, and key vehicle mitigation points to reduce immediate exposure and improve access accountability.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo" aria-expanded="false" aria-controls="faqTwo">
+                Can you integrate new perimeter controls with existing systems?
+              </button>
+            </h3>
+            <div id="faqTwo" class="accordion-collapse collapse" data-bs-parent="#utilitiesFaqAccordion">
+              <div class="accordion-body">Yes. We regularly align new fencing, barriers, and automated gates with existing access control, operational workflows, and site security procedures.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqThree" aria-expanded="false" aria-controls="faqThree">
+                Do you support utility contractors as well as owner-operators?
+              </button>
+            </h3>
+            <div id="faqThree" class="accordion-collapse collapse" data-bs-parent="#utilitiesFaqAccordion">
+              <div class="accordion-body">Yes. We support utility owner-operators, utility contractors, and general contractors delivering security scopes for critical infrastructure projects.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqFour" aria-expanded="false" aria-controls="faqFour">
+                Do you provide repairs and retrofits for existing utility perimeter systems?
+              </button>
+            </h3>
+            <div id="faqFour" class="accordion-collapse collapse" data-bs-parent="#utilitiesFaqAccordion">
+              <div class="accordion-body">Yes. We provide repair, retrofit, and modernization services for legacy perimeter components to improve reliability and extend service life.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cta" class="position-relative overflow-hidden py-5 py-lg-6" style="background:var(--dark2);">
+  <div class="position-absolute top-0 start-0 w-100 h-100" style="background:url('./assets/external-08.jpg') center/cover no-repeat;filter:grayscale(100%) brightness(.12);"></div>
+  <div class="position-absolute top-0 start-0 w-100 h-100" style="background:linear-gradient(135deg,rgba(220,53,69,.18) 0%,rgba(5,5,7,.95) 60%);"></div>
+  <div class="hero-grid position-absolute top-0 start-0 w-100 h-100" style="opacity:.35;"></div>
+  <div class="position-absolute top-0 start-0 h-100" style="width:3px;background:linear-gradient(180deg,transparent,var(--red) 30%,#660000 70%,transparent);opacity:.7;"></div>
+  <div class="container position-relative" style="z-index:1;">
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-8">
+        <div class="section-label justify-content-center">DISCUSS YOUR INDUSTRY NEEDS</div>
+        <h2 class="ff-display text-white lh-1 mb-4" style="font-size:clamp(2.6rem,4.8vw,5.8rem);">NEED A SECURITY PARTNER WHO<br><span class="text-red">UNDERSTANDS YOUR MARKET?</span></h2>
+        <p class="text-gray mb-5 mx-auto">Tell us your operating environment and risk profile. We will align perimeter strategy to your industry and site conditions.</p>
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+          <a href="./contact.html#contact-form" class="btn-sentinel btn bg-danger text-white text-decoration-none d-inline-flex align-items-center gap-2">REQUEST CONSULTATION</a>
+          <a href="tel:+13175198789" class="btn-sentinel-outline d-inline-flex align-items-center gap-2">+1 (317) 519-8789</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="red-bar"></div>
+<footer class="bg-black border-top border-dark3">
+  <div class="container py-5">
+    <div class="row g-5">
+      <div class="col-lg-4">
+        <a href="./index.html" class="d-inline-block mb-4">
+          <img src="./assets/safeguard-solutions-logo-gr.png" alt="Safeguard Solutions" style="height:40px;width:auto;">
+        </a>
+        <p class="text-gray mb-4" style="font-size:.9rem;line-height:1.7;max-width:280px;">Engineering the world's most secure perimeters. Where protection is not a product - it's a promise.</p>
+        <div class="d-flex gap-2">
+          <a href="#" class="social-link d-flex align-items-center justify-content-center text-gray text-decoration-none" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="#" class="social-link d-flex align-items-center justify-content-center text-gray text-decoration-none" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="social-link d-flex align-items-center justify-content-center text-gray text-decoration-none" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          <a href="#" class="social-link d-flex align-items-center justify-content-center text-gray text-decoration-none" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-sm-4">
+        <p class="ff-mono text-red text-uppercase mb-4" style="font-size:.7rem;letter-spacing:.25em;">Industries</p>
+        <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+          <li><a href="./utilities.html" class="footer-link">Utilities &amp; Energy</a></li>
+          <li><a href="./industries.html#government" class="footer-link">Government</a></li>
+          <li><a href="./industries.html#commercial-industrial" class="footer-link">Commercial &amp; Industrial</a></li>
+          <li><a href="./industries.html#data-centers" class="footer-link">Data Centers &amp; Critical IT</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-2 col-sm-4">
+        <p class="ff-mono text-red text-uppercase mb-4" style="font-size:.7rem;letter-spacing:.25em;">Company</p>
+        <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+          <li><a href="./about.html" class="footer-link">About Safeguard Solutions</a></li>
+          <li><a href="./index.html#featured" class="footer-link">Case Studies</a></li>
+          <li><a href="./index.html#blog" class="footer-link">Insights</a></li>
+          <li><a href="./contact.html" class="footer-link">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3 col-sm-4">
+        <p class="ff-mono text-red text-uppercase mb-4" style="font-size:.7rem;letter-spacing:.25em;">Contact</p>
+        <ul class="list-unstyled d-flex flex-column gap-3 mb-4">
+          <li><a href="tel:+13175198789" class="footer-link">+1 (317) 519-8789</a></li>
+          <li><a href="mailto:info@safeguardsolutionsgroup.com" class="footer-link">info@safeguardsolutionsgroup.com</a></li>
+          <li><span class="footer-link">1021 Hawthorne Bloom Dr<br>New Whiteland, IN 46184</span></li>
+        </ul>
+        <a href="./contact.html#contact-form" class="btn-sentinel btn bg-danger text-white text-decoration-none d-inline-flex align-items-center gap-2" style="font-size:.78rem;padding:12px 22px;">REQUEST ASSESSMENT -&gt;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="border-top border-dark3 py-3">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap gap-3">
+      <p class="ff-mono mb-0" style="font-size:.68rem;color:rgba(136,136,150,.4);letter-spacing:.08em;">© 2025 SAFEGUARD SOLUTIONS INC. ALL RIGHTS RESERVED. // CLEARED FOR PUBLIC DISTRIBUTION</p>
+      <div class="d-flex flex-wrap gap-4">
+        <a href="#" class="footer-legal-link">Privacy Policy</a>
+        <a href="#" class="footer-legal-link">Terms of Service</a>
+        <a href="#" class="footer-legal-link">Cookie Settings</a>
+        <a href="#" class="footer-legal-link">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+const dot = document.getElementById('cursor-dot');
+document.addEventListener('mousemove', e => { dot.style.left = e.clientX + 'px'; dot.style.top = e.clientY + 'px'; });
+const nav = document.getElementById('main-nav');
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 60));
+
+const obs = new IntersectionObserver(entries => entries.forEach(e => {
+  if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+}), { threshold:.1 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+(function initHeroParticles() {
+  const canvas = document.getElementById('hero-particles');
+  const hero = document.getElementById('hero');
+  if (!canvas || !hero) return;
+  const ctx = canvas.getContext('2d');
+  if (!ctx) return;
+
+  let particles = [];
+  let dpr = Math.min(window.devicePixelRatio || 1, 2);
+  let w = 0;
+  let h = 0;
+
+  function resize() {
+    const rect = hero.getBoundingClientRect();
+    w = Math.max(1, Math.floor(rect.width));
+    h = Math.max(1, Math.floor(rect.height));
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    canvas.width = Math.floor(w * dpr);
+    canvas.height = Math.floor(h * dpr);
+    canvas.style.width = w + 'px';
+    canvas.style.height = h + 'px';
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+    const count = Math.max(55, Math.min(130, Math.floor((w * h) / 13000)));
+    particles = Array.from({ length: count }, (_, i) => {
+      const accent = i % 9 === 0;
+      return {
+        x: Math.random() * w,
+        y: Math.random() * h,
+        r: accent ? (Math.random() * 1.9 + 1.2) : (Math.random() * 1.5 + 0.8),
+        vx: (Math.random() - 0.5) * (accent ? 0.30 : 0.22),
+        vy: (Math.random() - 0.5) * (accent ? 0.30 : 0.22),
+        a: accent ? (Math.random() * 0.28 + 0.28) : (Math.random() * 0.22 + 0.18)
+      };
+    });
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, w, h);
+
+    for (let i = 0; i < particles.length; i++) {
+      const p = particles[i];
+      p.x += p.vx;
+      p.y += p.vy;
+      if (p.x < -8) p.x = w + 8;
+      if (p.x > w + 8) p.x = -8;
+      if (p.y < -8) p.y = h + 8;
+      if (p.y > h + 8) p.y = -8;
+    }
+
+    const maxDist = Math.max(110, Math.min(170, w * 0.13));
+    const maxDistSq = maxDist * maxDist;
+
+    for (let i = 0; i < particles.length; i++) {
+      const a = particles[i];
+      for (let j = i + 1; j < particles.length; j++) {
+        const b = particles[j];
+        const dx = b.x - a.x;
+        const dy = b.y - a.y;
+        const d2 = dx * dx + dy * dy;
+        if (d2 > maxDistSq) continue;
+        const dist = Math.sqrt(d2);
+        const alpha = (1 - (dist / maxDist)) * 0.55;
+        ctx.strokeStyle = 'rgba(237,28,36,' + alpha.toFixed(3) + ')';
+        ctx.lineWidth = 1.05;
+        ctx.beginPath();
+        ctx.moveTo(a.x, a.y);
+        ctx.lineTo(b.x, b.y);
+        ctx.stroke();
+      }
+    }
+
+    for (let i = 0; i < particles.length; i++) {
+      const p = particles[i];
+      ctx.fillStyle = 'rgba(255,255,255,' + p.a.toFixed(3) + ')';
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    requestAnimationFrame(draw);
+  }
+
+  resize();
+  draw();
+  window.addEventListener('resize', () => {
+    resize();
+  });
+})();
+</script>
+</body>
+</html>
