@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>In The Community | Safeguard Solutions</title>
+<meta name="description" content="Learn how Safeguard Solutions supports local communities through workforce development, service partnerships, volunteer initiatives, and local project engagement.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="http://127.0.0.1:8000/dev/in-the-community.html">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Share+Tech+Mono&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --black:#050507;
+  --dark:#0d0d0f;
+  --dark2:#141418;
+  --dark3:#1c1c22;
+  --red:#ED1c24;
+  --red-hi:#ff3243;
+  --gray:#A7A8B5;
+  --bs-body-bg:#050507;
+  --bs-body-color:#E2E2EA;
+  --bs-body-font-family:'Rajdhani',sans-serif;
+}
+html { scroll-behavior:smooth; }
+body { cursor:crosshair; overflow-x:hidden; font-size:18px; line-height:1.8; }
+body::before { content:''; position:fixed; inset:0; pointer-events:none; z-index:9999; background:repeating-linear-gradient(0deg, transparent 0 2px, rgba(0,0,0,0.04) 2px 4px); }
+.ff-display { font-family:'Bebas Neue',sans-serif; }
+.ff-mono { font-family:'Share Tech Mono',monospace; }
+h1.ff-display, h2.ff-display { letter-spacing:.01em; line-height:1.05; }
+h2.ff-display { font-size:clamp(1.9rem,3vw,3.5rem)!important; }
+.text-red { color:var(--red)!important; }
+.text-gray { color:#d9dae6!important; }
+.bg-black { background-color:var(--black)!important; }
+.bg-dark1 { background-color:var(--dark)!important; }
+.bg-dark2 { background-color:var(--dark2)!important; }
+.bg-dark3 { background-color:var(--dark3)!important; }
+.border-dark3 { border-color:var(--dark3)!important; }
+
+#cursor-dot { width:8px; height:8px; background:var(--red); border-radius:50%; position:fixed; top:0; left:0; pointer-events:none; z-index:99999; transform:translate(-50%,-50%); }
+
+#main-nav { background:linear-gradient(180deg,rgba(5,5,7,.98) 0%, rgba(5,5,7,0) 100%); backdrop-filter:blur(2px); transition:padding .3s, background .3s; }
+#main-nav.scrolled { background:rgba(5,5,7,.97)!important; }
+.nav-link { font-family:'Share Tech Mono',monospace; font-size:.82rem; letter-spacing:.1em; position:relative; }
+.nav-link:not(.dropdown-toggle)::after { content:''; position:absolute; bottom:4px; left:16px; width:0; height:1px; background:var(--red); transition:width .3s; }
+.nav-link:not(.dropdown-toggle):hover::after { width:calc(100% - 32px); }
+.nav-link.dropdown-toggle { display:inline-flex; align-items:center; gap:.35rem; }
+.nav-link.dropdown-toggle::after { position:static; margin-left:0; vertical-align:middle; }
+.navbar-toggler { border-color:rgba(204,0,0,.4); }
+.navbar-toggler-icon { background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(204,0,0,.9)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); }
+
+.btn-sentinel { font-family:'Rajdhani',sans-serif; font-weight:700; font-size:.88rem; letter-spacing:.2em; text-transform:uppercase; padding:14px 32px; clip-path:polygon(12px 0%,100% 0%,calc(100% - 12px) 100%,0% 100%); transition:background .2s, transform .2s; }
+.btn-sentinel.bg-danger { background-color:var(--red)!important; border-color:var(--red)!important; }
+.btn-sentinel:hover { background:var(--red-hi)!important; transform:translateY(-2px); }
+
+.section-label { display:flex; align-items:center; gap:14px; font-family:'Rajdhani',sans-serif; font-size:1rem; font-weight:700; letter-spacing:.22em; text-transform:uppercase; color:var(--red-hi); text-shadow:0 0 12px rgba(204,0,0,.28); margin-bottom:16px; }
+.section-label::before { content:''; width:32px; height:1px; background:var(--red); }
+
+#hero { min-height:46.5vh; }
+.hero-bg { position:absolute; inset:0; background:url('./assets/external-03.jpg') center/cover no-repeat; filter:grayscale(60%) contrast(1.2) brightness(.45); }
+.hero-overlay { position:absolute; inset:0; z-index:1; background:radial-gradient(ellipse 120% 100% at 70% 50%, rgba(80,0,0,.08) 0%, rgba(5,5,7,.28) 60%); }
+.hero-grid { position:absolute; inset:0; z-index:2; background-image:linear-gradient(rgba(204,0,0,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(204,0,0,.08) 1px,transparent 1px); background-size:60px 60px; animation:gridPan 20s linear infinite; }
+.hero-vignette { position:absolute; inset:0; z-index:3; background:linear-gradient(90deg,rgba(5,5,7,.85) 38%,rgba(5,5,7,.0) 100%); }
+.hero-accent-bar { position:absolute; top:0; right:220px; width:3px; height:100%; background:linear-gradient(180deg,transparent,var(--red) 30%,#660000 70%,transparent); opacity:.6; z-index:4; }
+#hero.template-hero .hero-particles { position:absolute; inset:0; z-index:4; pointer-events:none; opacity:1; }
+#hero.template-hero h1.ff-display { font-size:clamp(2.2rem,4.2vw,4.4rem)!important; }
+#hero.template-hero .container { padding-top:6.25rem!important; padding-bottom:2.25rem!important; }
+@media (max-width:991.98px) {
+  #hero.template-hero h1.ff-display { white-space:normal; font-size:clamp(1.8rem,8vw,2.8rem)!important; }
+  #hero.template-hero .container { padding-top:5.5rem!important; padding-bottom:2rem!important; }
+}
+
+.article-shell { background:var(--dark3); border:1px solid var(--dark3); padding:30px; }
+.article-shell h2 { margin-top:1.2rem; }
+.article-shell h2.ff-display.h3 { font-size:1.75rem !important; line-height:1.2; }
+.article-meta { border-top:1px solid #2a2a34; border-bottom:1px solid #2a2a34; padding:10px 0; margin:16px 0 22px; }
+
+.sidebar-sticky { position:sticky; top:96px; }
+.side-card { background:var(--dark3); border:1px solid var(--dark3); padding:22px; margin-bottom:14px; }
+.side-card h3 { font-size:1.15rem; margin-bottom:.6rem; }
+.side-list { list-style:none; margin:0; padding:0; }
+.side-list li + li { margin-top:.5rem; }
+.side-link { color:#d9dae6; text-decoration:none; transition:color .2s, padding-left .2s; display:inline-block; }
+.side-link:hover { color:#fff; padding-left:5px; }
+.featured-project { border:1px solid #2a2a34; background:#202028; overflow:hidden; }
+.featured-project img { width:100%; aspect-ratio:16/10; object-fit:cover; filter:grayscale(45%) contrast(1.08) brightness(.75); }
+.featured-project .copy { padding:14px; }
+
+.red-bar { width:100%; height:3px; background:linear-gradient(90deg,transparent,var(--red),var(--red-hi),var(--red),transparent); }
+.footer-link { color:#d7d8e4; text-decoration:none; font-size:.97rem; line-height:1.55; transition:color .2s, padding-left .2s; display:inline-block; }
+.footer-link:hover { color:#fff; padding-left:5px; }
+.footer-legal-link { font-family:'Share Tech Mono',monospace; font-size:.72rem; color:rgba(226,226,234,.7); text-decoration:none; letter-spacing:.06em; transition:color .2s; }
+.footer-legal-link:hover { color:#fff; }
+
+@keyframes gridPan { from{background-position:0 0} to{background-position:60px 60px} }
+.reveal { opacity:0; transform:translateY(24px); transition:opacity .6s, transform .6s; }
+.reveal.visible { opacity:1; transform:translateY(0); }
+</style>
+</head>
+<body class="bg-black text-light">
+<div id="cursor-dot"></div>
+
+<nav id="main-nav" class="navbar navbar-expand-lg fixed-top py-2">
+  <div class="container">
+    <a class="navbar-brand" href="./index.html">
+      <img src="./assets/safeguard-solutions-logo-gr.png" alt="Safeguard Solutions" style="height:48px;width:auto;">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-1">
+        <li class="nav-item"><a class="nav-link ff-mono text-uppercase text-white fw-bold" href="./index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link ff-mono text-uppercase text-white fw-bold" href="./about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link ff-mono text-uppercase text-white fw-bold" href="#">Services</a></li>
+        <li class="nav-item"><a class="nav-link ff-mono text-uppercase text-white fw-bold" href="#">Industries</a></li>
+        <li class="nav-item"><a class="nav-link ff-mono text-uppercase text-white fw-bold" href="#">Resources</a></li>
+        <li class="nav-item"><a class="nav-link ff-mono text-uppercase text-white fw-bold" href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section id="hero" class="template-hero position-relative d-flex align-items-center overflow-hidden">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-vignette"></div>
+  <div class="hero-accent-bar d-none d-lg-block"></div>
+  <canvas id="hero-particles" class="hero-particles"></canvas>
+  <div class="container position-relative py-5 my-2" style="z-index:5;">
+    <div class="row"><div class="col-lg-9 col-xl-7">
+      <div class="section-label">COMMUNITY IMPACT</div>
+      <h1 class="ff-display text-white lh-1 mb-3">IN THE <span class="text-red">COMMUNITY</span>.</h1>
+      <p class="text-gray mb-0">Safeguard Solutions is committed to strengthening the communities where we live, work, and build.</p>
+    </div></div>
+  </div>
+</section>
+
+<section class="bg-dark1 py-5 py-lg-6" id="content-template">
+  <div class="container">
+    <div class="row g-4 align-items-start">
+      <div class="col-lg-8 reveal">
+        <article class="article-shell">
+          <p class="ff-mono text-red text-uppercase mb-2" style="font-size:.7rem;letter-spacing:.14em;">Community / Company Values</p>
+          <h2 class="ff-display h3 text-white mb-2">OUR COMMITMENT BEYOND THE JOBSITE</h2>
+          <div class="article-meta d-flex flex-wrap gap-3 ff-mono" style="font-size:.7rem;letter-spacing:.1em;color:#adb0bf;">
+            <span>Published: March 18, 2026</span>
+            <span>Read Time: 4 min</span>
+            <span>Author: Safeguard Solutions Team</span>
+          </div>
+
+          <p class="text-gray">Safeguard Solutions believes perimeter security work should create value beyond project delivery. Our team invests in local partnerships, supports workforce growth, and contributes to initiatives that improve safety and opportunity in the communities we serve.</p>
+          <h2 class="ff-display h3 text-white">HOW WE GIVE BACK</h2>
+          <p class="text-gray">Community involvement is integrated into how we operate. We prioritize relationship-driven outreach and practical support where our resources can make a measurable difference.</p>
+          <ul class="text-gray mb-4">
+            <li>Supporting local programs that promote education, safety, and neighborhood resilience</li>
+            <li>Participating in service projects that improve public and shared spaces</li>
+            <li>Collaborating with organizations focused on long-term community impact</li>
+          </ul>
+
+          <h2 class="ff-display h3 text-white">WORKFORCE &amp; LOCAL OPPORTUNITY</h2>
+          <p class="text-gray">As a growing company, we are committed to creating meaningful opportunities for people who want to build careers in construction and perimeter security. We value mentorship, practical training, and professional growth through real project experience.</p>
+
+          <h2 class="ff-display h3 text-white">PARTNER WITH US</h2>
+          <p class="text-gray">If your organization is leading a community initiative aligned with safety, infrastructure, workforce development, or neighborhood improvement, we welcome opportunities to connect and collaborate.</p>
+
+          <div class="mt-4 pt-3 border-top border-dark3">
+            <a href="./contact.html#contact-form" class="btn-sentinel btn bg-danger text-white text-decoration-none">REQUEST CONSULTATION</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-lg-4 reveal">
+        <aside class="sidebar-sticky">
+          <div class="side-card">
+            <h3 class="ff-display text-white">Related Pages</h3>
+            <ul class="side-list">
+              <li><a class="side-link" href="./about.html">About Safeguard Solutions</a></li>
+              <li><a class="side-link" href="#">Our Team</a></li>
+              <li><a class="side-link" href="#">Testimonials</a></li>
+              <li><a class="side-link" href="#">Join Our Team</a></li>
+            </ul>
+          </div>
+
+          <div class="side-card">
+            <h3 class="ff-display text-white">Featured Community Highlight</h3>
+            <article class="featured-project">
+              <img src="./assets/external-04.jpg" alt="Community highlight image">
+              <div class="copy">
+                <p class="ff-mono text-red text-uppercase mb-1" style="font-size:.66rem;letter-spacing:.12em;">Community</p>
+                <p class="text-white mb-2" style="font-weight:700;line-height:1.35;">Local partnership supporting safe and resilient public spaces.</p>
+                <a class="side-link" href="./contact.html">Connect With Us</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="side-card">
+            <h3 class="ff-display text-white">Quick Links</h3>
+            <ul class="side-list">
+              <li><a class="side-link" href="#">Services</a></li>
+              <li><a class="side-link" href="#">Industries</a></li>
+              <li><a class="side-link" href="#">Testimonials</a></li>
+              <li><a class="side-link" href="#">Where We Work</a></li>
+              <li><a class="side-link" href="#">Contact</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="red-bar"></div>
+<footer class="bg-black border-top border-dark3">
+  <div class="container py-5">
+    <div class="row g-5">
+      <div class="col-lg-4">
+        <a href="./index.html" class="d-inline-block mb-4"><img src="./assets/safeguard-solutions-logo-gr.png" alt="Safeguard Solutions" style="height:40px;width:auto;"></a>
+        <p class="text-gray mb-4" style="font-size:.9rem;line-height:1.7;max-width:280px;">Engineering the world's most secure perimeters. Where protection is not a product - it's a promise.</p>
+      </div>
+      <div class="col-lg-2 col-sm-4">
+        <p class="ff-mono text-red text-uppercase mb-4" style="font-size:.7rem;letter-spacing:.25em;">Company</p>
+        <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+          <li><a href="./about.html" class="footer-link">About Safeguard Solutions</a></li>
+          <li><a href="./team.html" class="footer-link">Our Team</a></li>
+          <li><a href="./testimonials.html" class="footer-link">Testimonials</a></li>
+          <li><a href="./where-we-work.html" class="footer-link">Where We Work</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-4">
+        <p class="ff-mono text-red text-uppercase mb-4" style="font-size:.7rem;letter-spacing:.25em;">Contact</p>
+        <ul class="list-unstyled d-flex flex-column gap-3 mb-4">
+          <li><a href="tel:+13175198789" class="footer-link">+1 (317) 519-8789</a></li>
+          <li><a href="mailto:info@safeguardsolutionsgroup.com" class="footer-link">info@safeguardsolutionsgroup.com</a></li>
+          <li><span class="footer-link">1021 Hawthorne Bloom Dr<br>New Whiteland, IN 46184</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="border-top border-dark3 py-3">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap gap-3">
+      <p class="ff-mono mb-0" style="font-size:.68rem;color:rgba(136,136,150,.4);letter-spacing:.08em;">© 2025 SAFEGUARD SOLUTIONS INC. ALL RIGHTS RESERVED. // CLEARED FOR PUBLIC DISTRIBUTION</p>
+      <div class="d-flex flex-wrap gap-4">
+        <a href="#" class="footer-legal-link">Privacy Policy</a>
+        <a href="#" class="footer-legal-link">Terms of Service</a>
+        <a href="#" class="footer-legal-link">Cookie Settings</a>
+        <a href="#" class="footer-legal-link">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+const dot = document.getElementById('cursor-dot');
+document.addEventListener('mousemove', e => { dot.style.left = e.clientX + 'px'; dot.style.top = e.clientY + 'px'; });
+const nav = document.getElementById('main-nav');
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 60));
+const obs = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } }), { threshold:.1 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+(function initHeroParticles() {
+  const canvas = document.getElementById('hero-particles');
+  const hero = document.getElementById('hero');
+  if (!canvas || !hero) return;
+  const ctx = canvas.getContext('2d');
+  if (!ctx) return;
+  let particles = [];
+  let w = 0;
+  let h = 0;
+  let dpr = 1;
+
+  function resize() {
+    const rect = hero.getBoundingClientRect();
+    w = Math.max(1, Math.floor(rect.width));
+    h = Math.max(1, Math.floor(rect.height));
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    canvas.width = Math.floor(w * dpr);
+    canvas.height = Math.floor(h * dpr);
+    canvas.style.width = w + 'px';
+    canvas.style.height = h + 'px';
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    const count = Math.max(55, Math.min(130, Math.floor((w * h) / 13000)));
+    particles = Array.from({ length: count }, (_, i) => ({
+      x: Math.random() * w,
+      y: Math.random() * h,
+      r: i % 9 === 0 ? (Math.random() * 1.9 + 1.2) : (Math.random() * 1.5 + 0.8),
+      vx: (Math.random() - 0.5) * 0.24,
+      vy: (Math.random() - 0.5) * 0.24,
+      a: i % 9 === 0 ? (Math.random() * 0.28 + 0.28) : (Math.random() * 0.22 + 0.18)
+    }));
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, w, h);
+    for (let i = 0; i < particles.length; i++) {
+      const p = particles[i];
+      p.x += p.vx;
+      p.y += p.vy;
+      if (p.x < -8) p.x = w + 8;
+      if (p.x > w + 8) p.x = -8;
+      if (p.y < -8) p.y = h + 8;
+      if (p.y > h + 8) p.y = -8;
+    }
+    const maxDist = Math.max(110, Math.min(170, w * 0.13));
+    const maxDistSq = maxDist * maxDist;
+    for (let i = 0; i < particles.length; i++) {
+      const a = particles[i];
+      for (let j = i + 1; j < particles.length; j++) {
+        const b = particles[j];
+        const dx = b.x - a.x;
+        const dy = b.y - a.y;
+        const d2 = dx*dx + dy*dy;
+        if (d2 > maxDistSq) continue;
+        const alpha = (1 - (Math.sqrt(d2) / maxDist)) * 0.52;
+        ctx.strokeStyle = 'rgba(237,28,36,' + alpha.toFixed(3) + ')';
+        ctx.lineWidth = 1.0;
+        ctx.beginPath();
+        ctx.moveTo(a.x, a.y);
+        ctx.lineTo(b.x, b.y);
+        ctx.stroke();
+      }
+    }
+    for (let i = 0; i < particles.length; i++) {
+      const p = particles[i];
+      ctx.fillStyle = 'rgba(255,255,255,' + p.a.toFixed(3) + ')';
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    requestAnimationFrame(draw);
+  }
+
+  resize();
+  draw();
+  window.addEventListener('resize', resize);
+})();
+</script>
+</body>
+</html>

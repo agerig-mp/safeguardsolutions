@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Our Team | Safeguard Solutions</title>
-<meta name="description" content="Meet the Safeguard Solutions team delivering perimeter security projects for utilities, government, enterprise, and critical infrastructure clients.">
+<title>Testimonials | Safeguard Solutions</title>
+<meta name="description" content="Read client testimonials about Safeguard Solutions delivering perimeter security projects for utilities, government, commercial, and critical infrastructure facilities.">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Share+Tech+Mono&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
@@ -56,41 +56,28 @@ h2.ff-display { font-size:clamp(1.9rem,3vw,3.5rem)!important; }
 .section-label::before { content:''; width:32px; height:1px; background:var(--red); }
 
 #hero { min-height:46.5vh; }
-.hero-bg { position:absolute; inset:0; background:url('./assets/external-07.jpg') center/cover no-repeat; filter:grayscale(60%) contrast(1.2) brightness(.45); }
+.hero-bg { position:absolute; inset:0; background:url('./assets/external-08.jpg') center/cover no-repeat; filter:grayscale(60%) contrast(1.2) brightness(.45); }
 .hero-overlay { position:absolute; inset:0; z-index:1; background:radial-gradient(ellipse 120% 100% at 70% 50%, rgba(80,0,0,.08) 0%, rgba(5,5,7,.28) 60%); }
 .hero-grid { position:absolute; inset:0; z-index:2; background-image:linear-gradient(rgba(204,0,0,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(204,0,0,.08) 1px,transparent 1px); background-size:60px 60px; animation:gridPan 20s linear infinite; }
 .hero-vignette { position:absolute; inset:0; z-index:3; background:linear-gradient(90deg,rgba(5,5,7,.85) 38%,rgba(5,5,7,.0) 100%); }
 .hero-accent-bar { position:absolute; top:0; right:220px; width:3px; height:100%; background:linear-gradient(180deg,transparent,var(--red) 30%,#660000 70%,transparent); opacity:.6; z-index:4; }
-#hero.team-hero .hero-particles { position:absolute; inset:0; z-index:4; pointer-events:none; opacity:1; }
-#hero.team-hero h1.ff-display { font-size:clamp(2.2rem,4.2vw,4.4rem)!important; }
-#hero.team-hero .container { padding-top:6.25rem!important; padding-bottom:2.25rem!important; }
+#hero.testimonials-hero .hero-particles { position:absolute; inset:0; z-index:4; pointer-events:none; opacity:1; }
+#hero.testimonials-hero h1.ff-display { font-size:clamp(2.2rem,4.2vw,4.4rem)!important; }
+#hero.testimonials-hero .container { padding-top:6.25rem!important; padding-bottom:2.25rem!important; }
 @media (max-width:991.98px) {
-  #hero.team-hero h1.ff-display { white-space:normal; font-size:clamp(1.8rem,8vw,2.8rem)!important; }
-  #hero.team-hero .container { padding-top:5.5rem!important; padding-bottom:2rem!important; }
+  #hero.testimonials-hero h1.ff-display { white-space:normal; font-size:clamp(1.8rem,8vw,2.8rem)!important; }
+  #hero.testimonials-hero .container { padding-top:5.5rem!important; padding-bottom:2rem!important; }
 }
 
-.member-card { position:relative; aspect-ratio:4/3; overflow:hidden; border:1px solid var(--dark3); background:var(--dark3); cursor:pointer; }
-.member-card img { width:100%; height:100%; object-fit:cover; filter:grayscale(80%) contrast(1.1) brightness(.65); transition:filter .5s, transform .5s; }
-.member-card:hover img { filter:grayscale(20%) brightness(.55); transform:scale(1.06); }
-.member-overlay { position:absolute; inset:0; background:linear-gradient(0deg,rgba(5,5,7,.96) 0%,rgba(5,5,7,.2) 60%); display:flex; flex-direction:column; justify-content:flex-end; padding:28px; z-index:1; }
-.member-corner { position:absolute; top:18px; right:18px; width:18px; height:18px; border-top:1px solid rgba(204,0,0,.5); border-right:1px solid rgba(204,0,0,.5); z-index:2; }
-.member-eyebrow { display:inline-flex; align-self:flex-start; font-family:'Rajdhani',sans-serif; font-size:.84rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; background:var(--red); color:#fff; padding:4px 12px; border:1px solid rgba(255,255,255,.22); box-shadow:0 0 12px rgba(237,28,36,.25); text-shadow:0 0 8px rgba(0,0,0,.35); }
-.member-card h3 { color:#fff; text-shadow:0 2px 10px rgba(0,0,0,.5); margin-bottom:.35rem; font-size:1.55rem; }
-.member-role { color:#ffb2b9!important; font-size:.69rem; letter-spacing:.12em; text-transform:uppercase; margin-bottom:.35rem; text-shadow:0 1px 8px rgba(0,0,0,.45); }
-.member-desc { color:#dfe0ea!important; font-size:.9rem; line-height:1.65; text-shadow:0 1px 8px rgba(0,0,0,.45); max-height:0; overflow:hidden; opacity:0; transition:max-height .4s, opacity .4s; margin-bottom:0; }
-.member-card:hover .member-desc { max-height:110px; opacity:1; }
-.member-head { display:flex; align-items:flex-start; justify-content:space-between; gap:12px; margin-bottom:.25rem; }
-.member-meta { min-width:0; }
-.member-head .member-eyebrow { align-self:flex-start; white-space:nowrap; margin-top:2px; }
-.member-bio-btn { appearance:none; -webkit-appearance:none; line-height:1; cursor:pointer; }
-.bio-modal .modal-content { background:var(--dark2); border:1px solid var(--dark3); }
-.bio-modal .modal-header { border-bottom-color:var(--dark3); }
-.bio-modal .modal-title { font-size:2rem; letter-spacing:.01em; line-height:1; }
-.bio-modal .btn-close { filter:invert(1) grayscale(1); opacity:.8; }
-.vcard-link { font-size:.72rem; letter-spacing:.12em; text-transform:uppercase; }
+.t-card { background:var(--dark3); border:1px solid var(--dark3); padding:26px; height:100%; transition:border-color .25s, background .25s, transform .25s; }
+.t-card:hover { border-color:rgba(237,28,36,.35); background:#202028; transform:translateY(-2px); }
+.t-stars { color:#ffb25a; font-size:.86rem; letter-spacing:.08em; }
+.t-quote { color:#e2e3ec; line-height:1.65; margin-bottom:1rem; }
+.t-meta { font-family:'Share Tech Mono',monospace; font-size:.72rem; letter-spacing:.1em; text-transform:uppercase; color:#ff7a85; }
+.t-name { font-family:'Bebas Neue',sans-serif; letter-spacing:.02em; color:#fff; font-size:1.35rem; line-height:1.05; margin-bottom:.25rem; }
 
-.stat-card { background:var(--dark3); border:1px solid var(--dark3); padding:26px; }
-.stat-num { font-family:'Bebas Neue',sans-serif; font-size:3.1rem; color:var(--red); line-height:1; }
+.stat-card { background:var(--dark3); border:1px solid var(--dark3); padding:24px; text-align:center; height:100%; }
+.stat-num { font-family:'Bebas Neue',sans-serif; font-size:3rem; color:var(--red); line-height:1; }
 
 .red-bar { width:100%; height:3px; background:linear-gradient(90deg,transparent,var(--red),var(--red-hi),var(--red),transparent); }
 .social-link { width:40px; height:40px; border:1px solid var(--dark3); font-size:.72rem; transition:border-color .2s, color .2s, background .2s; }
@@ -132,7 +119,7 @@ footer .ff-mono.text-red { color:#ff7a85!important; }
   </div>
 </nav>
 
-<section id="hero" class="team-hero position-relative d-flex align-items-center overflow-hidden">
+<section id="hero" class="testimonials-hero position-relative d-flex align-items-center overflow-hidden">
   <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
   <div class="hero-grid"></div>
@@ -141,107 +128,38 @@ footer .ff-mono.text-red { color:#ff7a85!important; }
   <canvas id="hero-particles" class="hero-particles"></canvas>
   <div class="container position-relative py-5 my-2" style="z-index:5;">
     <div class="row"><div class="col-lg-8 col-xl-7">
-      <div class="section-label">THE SAFEGUARD SOLUTIONS TEAM</div>
-      <h1 class="ff-display text-white lh-1 mb-3">EXPERIENCED PEOPLE. <span class="text-red">MISSION-FOCUSED EXECUTION.</span></h1>
+      <div class="section-label">CLIENT FEEDBACK</div>
+      <h1 class="ff-display text-white lh-1 mb-3">WHAT CLIENTS SAY ABOUT <span class="text-red">SAFEGUARD SOLUTIONS</span>.</h1>
+      <p class="text-gray mb-0">Trusted by utility, government, and commercial teams to deliver high-security perimeter projects with precision and accountability.</p>
     </div></div>
   </div>
 </section>
 
-<section class="bg-dark1 py-5 py-lg-6">
+<section class="bg-dark1 py-5 py-lg-6" id="testimonials-grid">
   <div class="container">
     <div class="row justify-content-center text-center mb-5 reveal">
-      <div class="col-lg-8">
-        <h2 class="ff-display text-white mb-3" style="font-size:clamp(2.2rem,4vw,4.8rem);">MEET THE LEADERSHIP TEAM</h2>
-        <p class="text-gray mx-auto">Leadership at Safeguard Solutions combines deep perimeter security expertise with proven project delivery for critical infrastructure environments.</p>
+      <div class="col-lg-9">
+        <div class="section-label justify-content-center">TESTIMONIALS</div>
+        <h2 class="ff-display text-white mb-3">RESULTS THAT EARN LONG-TERM TRUST</h2>
       </div>
     </div>
-
-    <div class="row g-3 justify-content-center">
-      <div class="col-lg-4 col-md-6 reveal"><article class="member-card">
-        <img src="./assets/Tedd-Brown-V-Headshot.webp" alt="Ted Brown V">
-        <div class="member-overlay">
-          <div class="member-head">
-            <div class="member-meta">
-              <h3 class="ff-display">TED BROWN V</h3>
-              <p class="member-role ff-mono">Owner &amp; Director of Operations</p>
-            </div>
-            <button type="button" class="member-eyebrow member-bio-btn" data-bs-toggle="modal" data-bs-target="#teamBioModal" data-name="Ted Brown V" data-role="Owner &amp; Director of Operations" data-bio="Ted Brown V leads Safeguard Solutions with a field-first mindset built on commercial and industrial construction delivery. He oversees project planning, execution quality, and operational performance to keep complex perimeter security projects on schedule and aligned with client expectations.">See Bio</button>
-          </div>
-          <p class="member-desc">Commercial and industrial construction leader with project management expertise and field-first execution discipline.</p>
-        </div>
-        <div class="member-corner"></div>
-      </article></div>
-
-      <div class="col-lg-4 col-md-6 reveal"><article class="member-card">
-        <img src="./assets/Tedd-Brown-IV-Headshot.webp" alt="Ted Brown IV">
-        <div class="member-overlay">
-          <div class="member-head">
-            <div class="member-meta">
-              <h3 class="ff-display">TED BROWN IV</h3>
-              <p class="member-role ff-mono">Co-Founder / Senior Account Executive</p>
-            </div>
-            <button type="button" class="member-eyebrow member-bio-btn" data-bs-toggle="modal" data-bs-target="#teamBioModal" data-name="Ted Brown IV" data-role="Co-Founder / Senior Account Executive" data-bio="Ted Brown IV brings more than two decades of perimeter security experience supporting complex facilities and high-consequence environments. He works directly with clients to define requirements, shape practical solutions, and align scope with long-term security outcomes.">See Bio</button>
-          </div>
-          <p class="member-desc">Perimeter security specialist with over two decades of experience securing critical assets across complex facilities.</p>
-        </div>
-        <div class="member-corner"></div>
-      </article></div>
+    <div class="row g-3">
+      <div class="col-lg-4 col-md-6 reveal"><article class="t-card"><div class="t-stars mb-3">★★★★★</div><p class="t-quote">Safeguard delivered a complex perimeter upgrade with excellent field coordination and minimal disruption to operations.</p><p class="t-name mb-0">Utility Program Manager</p><p class="t-meta mb-0">Utilities &amp; Energy</p></article></div>
+      <div class="col-lg-4 col-md-6 reveal"><article class="t-card"><div class="t-stars mb-3">★★★★★</div><p class="t-quote">Their team translated security requirements into practical scopes that were buildable, durable, and on schedule.</p><p class="t-name mb-0">Director of Facilities</p><p class="t-meta mb-0">Municipal Government</p></article></div>
+      <div class="col-lg-4 col-md-6 reveal"><article class="t-card"><div class="t-stars mb-3">★★★★★</div><p class="t-quote">From site walkthrough to turnover, communication was clear and execution quality was consistently strong.</p><p class="t-name mb-0">Operations Executive</p><p class="t-meta mb-0">Industrial Manufacturing</p></article></div>
+      <div class="col-lg-4 col-md-6 reveal"><article class="t-card"><div class="t-stars mb-3">★★★★★</div><p class="t-quote">The installation standards and safety discipline exceeded expectations across multiple active work zones.</p><p class="t-name mb-0">Project Superintendent</p><p class="t-meta mb-0">General Contractor</p></article></div>
+      <div class="col-lg-4 col-md-6 reveal"><article class="t-card"><div class="t-stars mb-3">★★★★★</div><p class="t-quote">They modernized our perimeter access approach while keeping compatibility with existing controls.</p><p class="t-name mb-0">Security Systems Lead</p><p class="t-meta mb-0">Critical Infrastructure</p></article></div>
+      <div class="col-lg-4 col-md-6 reveal"><article class="t-card"><div class="t-stars mb-3">★★★★★</div><p class="t-quote">Safeguard is responsive, detail-oriented, and dependable under tight schedules and high visibility constraints.</p><p class="t-name mb-0">Site Program Lead</p><p class="t-meta mb-0">Commercial Enterprise</p></article></div>
     </div>
   </div>
 </section>
 
 <section class="bg-dark2 py-5 py-lg-6">
   <div class="container">
-    <div class="row justify-content-center text-center mb-5 reveal">
-      <div class="col-lg-8">
-        <div class="section-label justify-content-center">OPERATIONS</div>
-        <h2 class="ff-display text-white mb-3" style="font-size:clamp(2.2rem,4vw,4.8rem);">FIELD &amp; PROJECT OPERATIONS</h2>
-        <p class="text-gray mx-auto">Our operations team supports every phase of delivery, from planning and field coordination to closeout and long-term service.</p>
-      </div>
-    </div>
-    <div class="row g-3">
-      <div class="col-lg-4 col-md-6 reveal"><article class="member-card">
-        <img src="./assets/external-04.jpg" alt="Operations placeholder">
-        <div class="member-overlay">
-          <div class="member-head">
-            <div class="member-meta">
-              <h3 class="ff-display">PROJECT OPERATIONS LEAD</h3>
-              <p class="member-role ff-mono">Operations</p>
-            </div>
-            <button type="button" class="member-eyebrow member-bio-btn" data-bs-toggle="modal" data-bs-target="#teamBioModal" data-name="Project Operations Lead" data-role="Operations" data-bio="The Project Operations Lead coordinates day-to-day delivery across crews, logistics, and schedules. This role ensures field resources, sequencing, and communication stay aligned so project milestones are met consistently.">See Bio</button>
-          </div>
-          <p class="member-desc">Coordinates crews, schedules, and site readiness to keep projects on target.</p>
-        </div>
-        <div class="member-corner"></div>
-      </article></div>
-      <div class="col-lg-4 col-md-6 reveal"><article class="member-card">
-        <img src="./assets/external-05.jpg" alt="Operations placeholder">
-        <div class="member-overlay">
-          <div class="member-head">
-            <div class="member-meta">
-              <h3 class="ff-display">FIELD OPERATIONS SUPERVISOR</h3>
-              <p class="member-role ff-mono">Operations</p>
-            </div>
-            <button type="button" class="member-eyebrow member-bio-btn" data-bs-toggle="modal" data-bs-target="#teamBioModal" data-name="Field Operations Supervisor" data-role="Operations" data-bio="The Field Operations Supervisor maintains installation quality, site safety, and execution standards across active jobs. This role supports reliable field performance through inspections, coordination, and continuous improvement practices.">See Bio</button>
-          </div>
-          <p class="member-desc">Oversees installation quality, jobsite safety, and consistent execution standards.</p>
-        </div>
-        <div class="member-corner"></div>
-      </article></div>
-      <div class="col-lg-4 col-md-6 reveal"><article class="member-card">
-        <img src="./assets/external-06.jpg" alt="Operations placeholder">
-        <div class="member-overlay">
-          <div class="member-head">
-            <div class="member-meta">
-              <h3 class="ff-display">SERVICE &amp; SUPPORT COORDINATOR</h3>
-              <p class="member-role ff-mono">Operations</p>
-            </div>
-            <button type="button" class="member-eyebrow member-bio-btn" data-bs-toggle="modal" data-bs-target="#teamBioModal" data-name="Service &amp; Support Coordinator" data-role="Operations" data-bio="The Service and Support Coordinator manages post-installation service flow, maintenance requests, and dispatch prioritization. This role helps sustain system reliability and responsive support after project handoff.">See Bio</button>
-          </div>
-          <p class="member-desc">Manages maintenance requests, dispatch flow, and post-installation support.</p>
-        </div>
-        <div class="member-corner"></div>
-      </article></div>
+    <div class="row g-3 reveal">
+      <div class="col-md-4"><div class="stat-card"><div class="stat-num">95%+</div><p class="ff-mono text-uppercase text-red mb-2" style="font-size:.7rem;letter-spacing:.14em;">Repeat Engagement</p><p class="text-gray mb-0">Clients continue working with us across phases and sites.</p></div></div>
+      <div class="col-md-4"><div class="stat-card"><div class="stat-num">2.5 Years</div><p class="ff-mono text-uppercase text-red mb-2" style="font-size:.7rem;letter-spacing:.14em;">Focused Delivery</p><p class="text-gray mb-0">Rapid growth driven by accountability and execution quality.</p></div></div>
+      <div class="col-md-4"><div class="stat-card"><div class="stat-num">Critical Sites</div><p class="ff-mono text-uppercase text-red mb-2" style="font-size:.7rem;letter-spacing:.14em;">Core Project Type</p><p class="text-gray mb-0">Security-first scopes across high-consequence facilities.</p></div></div>
     </div>
   </div>
 </section>
@@ -255,31 +173,11 @@ footer .ff-mono.text-red { color:#ff7a85!important; }
     <div class="row justify-content-center text-center"><div class="col-lg-8">
       <div class="section-label justify-content-center">WORK WITH OUR TEAM</div>
       <h2 class="ff-display text-white lh-1 mb-4" style="font-size:clamp(2.6rem,4.8vw,5.8rem);">READY TO PLAN YOUR<br><span class="text-red">NEXT SECURITY PROJECT?</span></h2>
-      <p class="text-gray mb-5 mx-auto">Connect with our team to discuss your scope, security priorities, and delivery timeline.</p>
+      <p class="text-gray mb-5 mx-auto">Connect with Safeguard Solutions to scope a perimeter strategy aligned to your facility and risk profile.</p>
       <a href="./contact.html#contact-form" class="btn-sentinel btn bg-danger text-white text-decoration-none d-inline-flex align-items-center gap-2">REQUEST CONSULTATION</a>
     </div></div>
   </div>
 </section>
-
-<div class="modal fade bio-modal" id="teamBioModal" tabindex="-1" aria-labelledby="teamBioModalTitle" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
-    <div class="modal-content text-light">
-      <div class="modal-header">
-        <div>
-          <p id="teamBioModalRole" class="ff-mono member-role mb-2 fs-6"></p>
-          <h3 id="teamBioModalTitle" class="modal-title ff-display text-white mb-0"></h3>
-        </div>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body pt-2">
-        <p id="teamBioModalText" class="text-gray mb-0"></p>
-        <div class="mt-4">
-          <a id="teamBioVcardLink" class="btn btn-outline-light ff-mono vcard-link" href="#" download>Download vCard</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
 <div class="red-bar"></div>
 <footer class="bg-black border-top border-dark3">
@@ -300,7 +198,7 @@ footer .ff-mono.text-red { color:#ff7a85!important; }
         <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
           <li><a href="./about.html" class="footer-link">About Safeguard Solutions</a></li>
           <li><a href="./team.html" class="footer-link">Our Team</a></li>
-          <li><a href="./services.html" class="footer-link">Services</a></li>
+          <li><a href="./testimonials.html" class="footer-link">Testimonials</a></li>
           <li><a href="./contact.html" class="footer-link">Contact</a></li>
         </ul>
       </div>
@@ -335,52 +233,6 @@ const nav = document.getElementById('main-nav');
 window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 60));
 const obs = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } }), { threshold:.1 });
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-const teamBioModal = document.getElementById('teamBioModal');
-if (teamBioModal) {
-  const createVcardDataUri = (name, role) => {
-    const safeName = (name || '').trim();
-    const parts = safeName.split(/\s+/);
-    const first = parts.length > 1 ? parts.slice(0, -1).join(' ') : safeName;
-    const last = parts.length > 1 ? parts[parts.length - 1] : '';
-    const org = 'Safeguard Solutions';
-    const email = 'info@safeguardsolutionsgroup.com';
-    const phone = '+1 (317) 519-8789';
-    const adr = ';;1021 Hawthorne Bloom Dr;New Whiteland;IN;46184;USA';
-    const url = 'https://www.safeguardsolutionsgroup.com/';
-    const lines = [
-      'BEGIN:VCARD',
-      'VERSION:3.0',
-      `N:${last};${first};;;`,
-      `FN:${safeName}`,
-      `ORG:${org}`,
-      `TITLE:${role || ''}`,
-      `TEL;TYPE=WORK,VOICE:${phone}`,
-      `EMAIL;TYPE=INTERNET,WORK:${email}`,
-      `ADR;TYPE=WORK:${adr}`,
-      `URL:${url}`,
-      'END:VCARD'
-    ];
-    return 'data:text/vcard;charset=utf-8,' + encodeURIComponent(lines.join('\r\n'));
-  };
-
-  teamBioModal.addEventListener('show.bs.modal', event => {
-    const trigger = event.relatedTarget;
-    if (!trigger) return;
-    const title = teamBioModal.querySelector('#teamBioModalTitle');
-    const role = teamBioModal.querySelector('#teamBioModalRole');
-    const text = teamBioModal.querySelector('#teamBioModalText');
-    const vcardLink = teamBioModal.querySelector('#teamBioVcardLink');
-    const nameVal = trigger.getAttribute('data-name') || '';
-    const roleVal = trigger.getAttribute('data-role') || '';
-    if (title) title.textContent = trigger.getAttribute('data-name') || '';
-    if (role) role.textContent = trigger.getAttribute('data-role') || '';
-    if (text) text.textContent = trigger.getAttribute('data-bio') || '';
-    if (vcardLink) {
-      vcardLink.href = createVcardDataUri(nameVal, roleVal);
-      vcardLink.setAttribute('download', nameVal.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') + '.vcf');
-    }
-  });
-}
 
 (function initHeroParticles() {
   const canvas = document.getElementById('hero-particles');
