@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Projects | Perimeter Security Installations | Safeguard Solutions</title>
-<meta name="description" content="Browse Safeguard Solutions perimeter security projects, including utility, municipal, industrial, healthcare, and high-security site deployments.">
+<title>Gallery | Perimeter Security Installations | Safeguard Solutions</title>
+<meta name="description" content="Browse Safeguard Solutions installation gallery featuring high-security fencing, perimeter hardening, barrier integration, and field retrofit work.">
 <meta name="robots" content="index,follow">
-<link rel="canonical" href="http://127.0.0.1:8000/dev/projects.html">
-<meta property="og:title" content="Projects | Safeguard Solutions">
-<meta property="og:description" content="Explore perimeter security project spotlights from Safeguard Solutions across critical infrastructure environments.">
+<link rel="canonical" href="http://127.0.0.1:8000/dev/gallery.html">
+<meta property="og:title" content="Gallery | Safeguard Solutions">
+<meta property="og:description" content="Explore field imagery from Safeguard Solutions high-security fencing and perimeter security installations.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="http://127.0.0.1:8000/dev/projects.html">
+<meta property="og:url" content="http://127.0.0.1:8000/dev/gallery.html">
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
@@ -52,7 +52,6 @@ h2.ff-display { font-size:clamp(1.9rem,3vw,3.5rem)!important; }
   position:fixed; top:0; left:0; pointer-events:none; z-index:99999;
   transform:translate(-50%,-50%);
 }
-
 #main-nav {
   background:linear-gradient(180deg,rgba(5,5,7,.98) 0%, rgba(5,5,7,0) 100%);
   backdrop-filter:blur(2px);
@@ -66,7 +65,6 @@ h2.ff-display { font-size:clamp(1.9rem,3vw,3.5rem)!important; }
 .nav-link.dropdown-toggle::after { position:static; margin-left:0; vertical-align:middle; }
 .navbar-toggler { border-color:rgba(204,0,0,.4); }
 .navbar-toggler-icon { background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(204,0,0,.9)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); }
-
 .btn-sentinel {
   font-family:'Rajdhani',sans-serif; font-weight:700; font-size:.88rem;
   letter-spacing:.2em; text-transform:uppercase; padding:14px 32px;
@@ -82,7 +80,6 @@ h2.ff-display { font-size:clamp(1.9rem,3vw,3.5rem)!important; }
   color:#fff; text-decoration:none;
 }
 .btn-sentinel-outline:hover { border-color:var(--red); background:rgba(204,0,0,.08); }
-
 .section-label {
   display:flex; align-items:center; gap:14px;
   font-family:'Rajdhani',sans-serif; font-size:1rem; font-weight:700;
@@ -90,50 +87,32 @@ h2.ff-display { font-size:clamp(1.9rem,3vw,3.5rem)!important; }
   text-shadow:0 0 12px rgba(204,0,0,.28); margin-bottom:16px;
 }
 .section-label::before { content:''; width:32px; height:1px; background:var(--red); }
-
 #hero { min-height:46.5vh; }
-.hero-bg { position:absolute; inset:0; background:url('./assets/perimeter-fencing.jpg') center/cover no-repeat; filter:grayscale(60%) contrast(1.2) brightness(.45); }
+.hero-bg { position:absolute; inset:0; background:url('./assets/perimeter-fencing.jpg') center/cover no-repeat; filter:grayscale(65%) contrast(1.15) brightness(.42); }
 .hero-overlay { position:absolute; inset:0; z-index:1; background:radial-gradient(ellipse 120% 100% at 70% 50%, rgba(80,0,0,.08) 0%, rgba(5,5,7,.28) 60%); }
 .hero-grid { position:absolute; inset:0; z-index:2; background-image:linear-gradient(rgba(204,0,0,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(204,0,0,.08) 1px,transparent 1px); background-size:60px 60px; animation:gridPan 20s linear infinite; }
 .hero-vignette { position:absolute; inset:0; z-index:3; background:linear-gradient(90deg,rgba(5,5,7,.5) 38%,rgba(5,5,7,.0) 100%); }
 .hero-accent-bar { position:absolute; top:0; right:220px; width:3px; height:100%; background:linear-gradient(180deg,transparent,var(--red) 30%,#660000 70%,transparent); opacity:.6; z-index:4; }
-#hero.projects-hero .hero-particles { position:absolute; inset:0; z-index:4; pointer-events:none; opacity:1; }
-#hero.projects-hero h1.ff-display { font-size:clamp(2.2rem,4.2vw,4.4rem)!important; }
-#hero.projects-hero .container { padding-top:6.25rem!important; padding-bottom:2.25rem!important; }
+#hero.gallery-hero .hero-particles { position:absolute; inset:0; z-index:4; pointer-events:none; opacity:1; }
+#hero.gallery-hero h1.ff-display { font-size:clamp(2.2rem,4.2vw,4.4rem)!important; }
+#hero.gallery-hero .container { padding-top:6.25rem!important; padding-bottom:2.25rem!important; }
 @media (max-width:991.98px) {
-  #hero.projects-hero h1.ff-display { white-space:normal; font-size:clamp(1.8rem,8vw,2.8rem)!important; }
-  #hero.projects-hero .container { padding-top:5.5rem!important; padding-bottom:2rem!important; }
+  #hero.gallery-hero h1.ff-display { white-space:normal; font-size:clamp(1.8rem,8vw,2.8rem)!important; }
+  #hero.gallery-hero .container { padding-top:5.5rem!important; padding-bottom:2rem!important; }
 }
-
-.service-block {
-  background:var(--dark3); border:1px solid var(--dark3);
-  padding:28px; height:100%; transition:border-color .25s, transform .25s, background .25s;
+.gallery-tile { position:relative; border:0; background:transparent; padding:0; overflow:hidden; aspect-ratio:16/10; text-align:left; }
+.gallery-tile img { width:100%; height:100%; object-fit:cover; filter:grayscale(65%) brightness(.7); transition:transform .4s, filter .4s; }
+.gallery-tile:hover img { transform:scale(1.05); filter:grayscale(20%) brightness(.62); }
+.gallery-tile span { position:absolute; left:18px; bottom:16px; z-index:2; color:#fff; font-family:'Share Tech Mono',monospace; font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; text-shadow:0 2px 10px rgba(0,0,0,.65); }
+.gallery-tile::after { content:''; position:absolute; inset:0; background:linear-gradient(180deg,rgba(5,5,7,.06),rgba(5,5,7,.84)); }
+.gallery-modal .modal-content { background:var(--black); border:1px solid var(--dark3); }
+.gallery-modal .btn-close { filter:invert(1) grayscale(1); opacity:.85; }
+.gallery-nav {
+  width:48px; height:48px; border-radius:50%; border:1px solid rgba(255,255,255,.22);
+  background:rgba(5,5,7,.72); color:#fff; display:flex; align-items:center; justify-content:center;
+  font-size:1.2rem; transition:background .2s, border-color .2s;
 }
-.service-block:hover { border-color:rgba(237,28,36,.35); background:#202028; transform:translateY(-2px); }
-/* Home-matching solution cards */
-.service-card { position:relative; aspect-ratio:4/3; overflow:hidden; cursor:pointer; }
-.service-card img { width:100%; height:100%; object-fit:cover; filter:grayscale(80%) contrast(1.1) brightness(.65); transition:filter .5s, transform .5s; }
-.service-card:hover img { filter:grayscale(20%) brightness(.55); transform:scale(1.06); }
-.service-overlay { position:absolute; inset:0; background:linear-gradient(0deg,rgba(5,5,7,.96) 0%,rgba(5,5,7,.2) 60%); display:flex; flex-direction:column; justify-content:flex-end; padding:28px; z-index:1; }
-.svc-corner { position:absolute; top:18px; right:18px; width:18px; height:18px; border-top:1px solid rgba(204,0,0,.5); border-right:1px solid rgba(204,0,0,.5); z-index:2; }
-.svc-eyebrow {
-  display:inline-flex;
-  align-self:flex-start;
-  font-family:'Rajdhani',sans-serif;
-  font-weight:700;
-  font-size:.78rem;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-  color:#fff;
-  background:var(--red);
-  border:1px solid rgba(255,255,255,.22);
-  padding: 0px 11px;
-  box-shadow:0 8px 18px rgba(0,0,0,.35);
-}
-.service-card h3 { color:#fff; text-shadow:0 2px 10px rgba(0,0,0,.5); }
-.service-card p { color:#dfe0ea!important; font-size:.86rem; line-height:1.65; text-shadow:0 1px 8px rgba(0,0,0,.45); max-height:0; overflow:hidden; opacity:0; transition:max-height .4s, opacity .4s; }
-.service-card:hover p { max-height:90px; opacity:1; }
-
+.gallery-nav:hover { background:rgba(237,28,36,.18); border-color:rgba(237,28,36,.45); }
 .red-bar { width:100%; height:3px; background:linear-gradient(90deg,transparent,var(--red),var(--red-hi),var(--red),transparent); }
 .social-link { width:40px; height:40px; border:1px solid var(--dark3); font-size:.72rem; transition:border-color .2s, color .2s, background .2s; }
 .social-link i { font-size:1.1rem; line-height:1; }
@@ -142,28 +121,10 @@ h2.ff-display { font-size:clamp(1.9rem,3vw,3.5rem)!important; }
 .footer-link:hover { color:#fff; padding-left:5px; }
 .footer-legal-link { font-family:'Share Tech Mono',monospace; font-size:.72rem; color:rgba(226,226,234,.7); text-decoration:none; letter-spacing:.06em; transition:color .2s; }
 .footer-legal-link:hover { color:#fff; }
-footer .ff-mono.text-red { color:#ff7a85!important; }
-
 @keyframes gridPan { from{background-position:0 0} to{background-position:60px 60px} }
 .reveal { opacity:0; transform:translateY(24px); transition:opacity .6s, transform .6s; }
 .reveal.visible { opacity:1; transform:translateY(0); }
 </style>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  "name": "Safeguard Solutions Perimeter Security Projects",
-  "itemListElement": [
-    {"@type":"CreativeWork","position":1,"name":"Utility Substation Perimeter Hardening Program"},
-    {"@type":"CreativeWork","position":2,"name":"Municipal Water Facility Security Upgrade"},
-    {"@type":"CreativeWork","position":3,"name":"Industrial Campus Gate Modernization"},
-    {"@type":"CreativeWork","position":4,"name":"Distribution Center Access Control Retrofit"},
-    {"@type":"CreativeWork","position":5,"name":"Healthcare Campus Barrier Reinforcement"},
-    {"@type":"CreativeWork","position":6,"name":"Public Venue Bollard Deployment"}
-  ]
-}
-</script>
 </head>
 <body class="bg-black text-light">
 <div id="cursor-dot"></div>
@@ -221,123 +182,63 @@ footer .ff-mono.text-red { color:#ff7a85!important; }
   </div>
 </nav>
 
-<section id="hero" class="projects-hero position-relative d-flex align-items-center overflow-hidden">
+<section id="hero" class="gallery-hero position-relative d-flex align-items-center overflow-hidden">
   <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
   <div class="hero-grid"></div>
   <div class="hero-vignette"></div>
-  <div class="hero-accent-bar d-none d-lg-block"></div>
   <canvas id="hero-particles" class="hero-particles"></canvas>
-
-  <div class="container position-relative py-5 my-2" style="z-index:5;">
-    <div class="row">
-      <div class="col-lg-9 col-xl-7">
-        <div class="section-label">FEATURED PROJECTS</div>
-        <h1 class="ff-display text-white lh-1 mb-3">PROVEN <span class="text-red">PERIMETER SECURITY</span> DEPLOYMENTS FOR HIGH-CONSEQUENCE SITES.</h1>
+  <div class="hero-accent-bar"></div>
+  <div class="container position-relative" style="z-index:5;">
+    <div class="row align-items-end">
+      <div class="col-lg-8">
+        <div class="section-label">FIELD GALLERY</div>
+        <h1 class="ff-display text-white lh-1 mb-3">HIGH-SECURITY FENCING <span class="text-red">IN THE FIELD</span></h1>
+        <p class="text-gray mb-0" style="max-width:760px;">Browse installation imagery from perimeter hardening, anti-climb deployment, integrated barrier work, and field retrofit projects.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="bg-dark1 py-5 py-lg-6" id="project-spotlights">
+<section class="bg-dark2 py-5 py-lg-6" id="service-gallery">
   <div class="container">
     <div class="row justify-content-center text-center mb-5 reveal">
       <div class="col-lg-9">
-        <div class="section-label justify-content-center">PROJECT SPOTLIGHTS</div>
-        <h2 class="ff-display text-white mb-3">DELIVERED ACROSS CRITICAL ENVIRONMENTS</h2>
-        <p class="text-gray mx-auto">Representative deployments showing how Safeguard Solutions designs and installs perimeter systems that protect operations, people, and assets.</p>
+        <div class="section-label justify-content-center">PROJECT GALLERY</div>
+        <h2 class="ff-display text-white mb-3">INSTALLATION HIGHLIGHTS</h2>
+        <p class="text-gray mx-auto">Select any image to view full size. Use previous and next controls inside the lightbox.</p>
       </div>
     </div>
-
-    <div class="row g-1">
-      <div class="col-lg-4 col-sm-6 reveal" id="project-utility-substation"><div class="service-card">
-        <img src="./assets/perimeter-fencing.jpg" alt="Utility substation perimeter hardening project with anti-climb fencing">
-        <div class="service-overlay">
-          <span class="svc-eyebrow mb-2">UTILITY</span>
-          <h3 class="ff-display mb-2" style="font-size:1.6rem;"><a href="./utility-substation-project.html" class="text-white text-decoration-none stretched-link">SUBSTATION PERIMETER HARDENING</a></h3>
-          <p class="mb-0">Integrated anti-climb fencing, controlled gates, and barrier solutions for critical utility infrastructure.</p>
-        </div>
-        <div class="svc-corner"></div>
-      </div></div>
-
-      <div class="col-lg-4 col-sm-6 reveal" id="project-municipal-facility"><div class="service-card">
-        <img src="./assets/external-02.jpg" alt="Municipal water facility security upgrade project">
-        <div class="service-overlay">
-          <span class="svc-eyebrow mb-2">MUNICIPAL</span>
-          <h3 class="ff-display mb-2" style="font-size:1.6rem;">WATER FACILITY ACCESS UPGRADE</h3>
-          <p class="mb-0">Crash-rated entry points, improved access lanes, and perimeter control for public utility continuity.</p>
-        </div>
-        <div class="svc-corner"></div>
-      </div></div>
-
-      <div class="col-lg-4 col-sm-6 reveal" id="project-industrial-campus"><div class="service-card">
-        <img src="./assets/external-03.jpg" alt="Industrial campus gate modernization project">
-        <div class="service-overlay">
-          <span class="svc-eyebrow mb-2">INDUSTRIAL</span>
-          <h3 class="ff-display mb-2" style="font-size:1.6rem;">CAMPUS GATE MODERNIZATION</h3>
-          <p class="mb-0">Gate operator replacement and perimeter reconfiguration to improve access reliability and safety.</p>
-        </div>
-        <div class="svc-corner"></div>
-      </div></div>
-
-      <div class="col-lg-4 col-sm-6 reveal" id="project-distribution-center"><div class="service-card">
-        <img src="./assets/external-09.jpg" alt="Distribution center perimeter and access retrofit project">
-        <div class="service-overlay">
-          <span class="svc-eyebrow mb-2">LOGISTICS</span>
-          <h3 class="ff-display mb-2" style="font-size:1.6rem;">DISTRIBUTION CENTER RETROFIT</h3>
-          <p class="mb-0">Barrier arms, vehicle control hardware, and traffic-separated pedestrian protection zones.</p>
-        </div>
-        <div class="svc-corner"></div>
-      </div></div>
-
-      <div class="col-lg-4 col-sm-6 reveal" id="project-healthcare-campus"><div class="service-card">
-        <img src="./assets/barrier.jpg" alt="Healthcare campus perimeter reinforcement project with vehicle barriers">
-        <div class="service-overlay">
-          <span class="svc-eyebrow mb-2">HEALTHCARE</span>
-          <h3 class="ff-display mb-2" style="font-size:1.6rem;">HOSPITAL PERIMETER REINFORCEMENT</h3>
-          <p class="mb-0">Targeted fence and gate upgrades to secure sensitive zones while preserving patient access flow.</p>
-        </div>
-        <div class="svc-corner"></div>
-      </div></div>
-
-      <div class="col-lg-4 col-sm-6 reveal" id="project-public-venue"><div class="service-card">
-        <img src="./assets/external-06.jpg" alt="Public venue bollard deployment for crowd and vehicle safety">
-        <div class="service-overlay">
-          <span class="svc-eyebrow mb-2">PUBLIC SAFETY</span>
-          <h3 class="ff-display mb-2" style="font-size:1.6rem;">VENUE BOLLARD DEPLOYMENT</h3>
-          <p class="mb-0">Perimeter bollard installations for crowd protection and controlled vehicle exclusion zones.</p>
-        </div>
-        <div class="svc-corner"></div>
-      </div></div>
+    <div class="row g-3">
+      <div class="col-lg-4 col-md-6 reveal"><button class="gallery-tile w-100" type="button" data-gallery-src="./assets/perimeter-fencing.jpg" data-gallery-caption="Perimeter fencing at critical facility"><img src="./assets/perimeter-fencing.jpg" alt="Perimeter fencing installation"><span>Perimeter Fencing Installation</span></button></div>
+      <div class="col-lg-4 col-md-6 reveal"><button class="gallery-tile w-100" type="button" data-gallery-src="./assets/who-we-are-fence.jpg" data-gallery-caption="Anti-climb fence deployment"><img src="./assets/who-we-are-fence.jpg" alt="Anti-climb fencing"><span>Anti-Climb Fence Deployment</span></button></div>
+      <div class="col-lg-4 col-md-6 reveal"><button class="gallery-tile w-100" type="button" data-gallery-src="./assets/barrier.jpg" data-gallery-caption="Hardened site access perimeter"><img src="./assets/barrier.jpg" alt="Hardened site access"><span>Hardened Site Access</span></button></div>
+      <div class="col-lg-4 col-md-6 reveal"><button class="gallery-tile w-100" type="button" data-gallery-src="./assets/external-01.jpg" data-gallery-caption="Perimeter and vehicle control zone"><img src="./assets/external-01.jpg" alt="Perimeter control zone"><span>Perimeter Control Zone</span></button></div>
+      <div class="col-lg-4 col-md-6 reveal"><button class="gallery-tile w-100" type="button" data-gallery-src="./assets/barrier-poles.jpg" data-gallery-caption="Integrated barrier and fence lines"><img src="./assets/barrier-poles.jpg" alt="Integrated barrier and fencing"><span>Integrated Barrier and Fencing</span></button></div>
+      <div class="col-lg-4 col-md-6 reveal"><button class="gallery-tile w-100" type="button" data-gallery-src="./assets/external-07.jpg" data-gallery-caption="Field retrofit and modernization"><img src="./assets/external-07.jpg" alt="Field retrofit project"><span>Field Retrofit and Modernization</span></button></div>
+    </div>
+    <div class="d-flex flex-wrap justify-content-center gap-3 mt-5 reveal">
+      <a href="./services.html" class="btn-sentinel-outline text-light text-decoration-none d-inline-flex align-items-center gap-2">SEE OUR SERVICES</a>
+      <a href="./projects.html" class="btn-sentinel btn bg-danger text-white text-decoration-none d-inline-flex align-items-center gap-2">SEE FEATURED PROJECTS</a>
     </div>
   </div>
 </section>
 
-<section class="bg-dark2 py-5 py-lg-6" id="project-capabilities">
-  <div class="container">
-    <div class="row align-items-start g-4">
-      <div class="col-lg-5 reveal">
-        <div class="section-label">DELIVERY CAPABILITIES</div>
-        <h2 class="ff-display text-white mb-3" style="font-size:clamp(2.1rem,3.8vw,4.4rem);">HOW WE EXECUTE PROJECTS</h2>
-        <p class="text-gray mb-0">From concept through handoff, our team coordinates technical design, installation, and field execution for complex perimeter security scopes.</p>
+<div class="modal fade gallery-modal" id="serviceGalleryModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header border-dark3">
+        <p id="galleryCaption" class="ff-mono text-uppercase mb-0 text-gray" style="font-size:.72rem;letter-spacing:.12em;"></p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="col-lg-7 reveal">
-        <div class="service-block">
-          <div class="row g-3">
-            <div class="col-md-6"><p class="mb-0 text-gray"><i class="bi bi-check2 text-red me-2"></i>Security Site Assessments</p></div>
-            <div class="col-md-6"><p class="mb-0 text-gray"><i class="bi bi-check2 text-red me-2"></i>Perimeter Design-Build Coordination</p></div>
-            <div class="col-md-6"><p class="mb-0 text-gray"><i class="bi bi-check2 text-red me-2"></i>High-Security Fence &amp; Gate Installation</p></div>
-            <div class="col-md-6"><p class="mb-0 text-gray"><i class="bi bi-check2 text-red me-2"></i>Crash-Rated Barrier Deployment</p></div>
-            <div class="col-md-6"><p class="mb-0 text-gray"><i class="bi bi-check2 text-red me-2"></i>Gate Automation &amp; Access Integration</p></div>
-            <div class="col-md-6"><p class="mb-0 text-gray"><i class="bi bi-check2 text-red me-2"></i>Construction Management</p></div>
-            <div class="col-md-6"><p class="mb-0 text-gray"><i class="bi bi-check2 text-red me-2"></i>Repairs, Retrofit, and Expansion Scopes</p></div>
-            <div class="col-md-6"><p class="mb-0 text-gray"><i class="bi bi-check2 text-red me-2"></i>Lifecycle Planning for Long-Term Security</p></div>
-          </div>
-        </div>
+      <div class="modal-body p-0 position-relative">
+        <img id="galleryModalImage" src="" alt="" class="w-100" style="max-height:78vh;object-fit:contain;background:#050507;">
+        <button type="button" id="galleryPrev" class="gallery-nav position-absolute top-50 start-0 translate-middle-y ms-3">&larr;</button>
+        <button type="button" id="galleryNext" class="gallery-nav position-absolute top-50 end-0 translate-middle-y me-3">&rarr;</button>
       </div>
     </div>
   </div>
-</section>
+</div>
 
 <section id="cta" class="position-relative overflow-hidden py-5 py-lg-6" style="background:var(--dark2);">
   <div class="position-absolute top-0 start-0 w-100 h-100" style="background:url('./assets/external-08.jpg') center/cover no-repeat;filter:grayscale(100%) brightness(.12);"></div>
@@ -347,12 +248,12 @@ footer .ff-mono.text-red { color:#ff7a85!important; }
   <div class="container position-relative" style="z-index:1;">
     <div class="row justify-content-center text-center">
       <div class="col-lg-8">
-        <div class="section-label justify-content-center">START YOUR NEXT PROJECT</div>
-        <h2 class="ff-display text-white lh-1 mb-4" style="font-size:clamp(2.6rem,4.8vw,5.8rem);">PLANNING A NEW SITE OR UPGRADE?<br><span class="text-red">LET'S BUILD THE RIGHT SECURITY SCOPE.</span></h2>
-        <p class="text-gray mb-5 mx-auto">Share your project requirements and timeline. We will help define the perimeter strategy, products, and implementation path.</p>
+        <div class="section-label justify-content-center">NEXT STEP</div>
+        <h2 class="ff-display text-white lh-1 mb-4" style="font-size:clamp(2.6rem,4.8vw,5.8rem);">READY TO TALK ABOUT <span class="text-red">YOUR SITE?</span></h2>
+        <p class="text-gray mb-5 mx-auto">Connect with Safeguard Solutions to discuss perimeter risk, scope priorities, and field-ready deployment options.</p>
         <div class="d-flex flex-wrap justify-content-center gap-3">
           <a href="./contact.html#contact-form" class="btn-sentinel btn bg-danger text-white text-decoration-none d-inline-flex align-items-center gap-2">REQUEST CONSULTATION</a>
-          <a href="tel:+13175198789" class="btn-sentinel-outline d-inline-flex align-items-center gap-2">+1 (317) 519-8789</a>
+          <a href="./projects.html" class="btn-sentinel-outline text-light text-decoration-none d-inline-flex align-items-center gap-2">VIEW PROJECTS</a>
         </div>
       </div>
     </div>
@@ -367,7 +268,7 @@ footer .ff-mono.text-red { color:#ff7a85!important; }
         <a href="./index.html" class="d-inline-block mb-4">
           <img src="./assets/safeguard-solutions-logo-gr.png" alt="Safeguard Solutions" style="height:40px;width:auto;">
         </a>
-        <p class="text-gray mb-4" style="font-size:.9rem;line-height:1.7;max-width:280px;">Engineering the world's most secure perimeters. Where protection is not a product - it's a promise.</p>
+        <p class="text-gray mb-4" style="font-size:.9rem;line-height:1.7;max-width:280px;">Engineering resilient perimeter security systems for critical infrastructure, government, and high-consequence facilities.</p>
         <div class="d-flex gap-2">
           <a href="#" class="social-link d-flex align-items-center justify-content-center text-gray text-decoration-none" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
           <a href="#" class="social-link d-flex align-items-center justify-content-center text-gray text-decoration-none" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
@@ -375,43 +276,36 @@ footer .ff-mono.text-red { color:#ff7a85!important; }
           <a href="#" class="social-link d-flex align-items-center justify-content-center text-gray text-decoration-none" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
         </div>
       </div>
-
-      <div class="col-lg-2 col-sm-4">
-        <p class="ff-mono text-red text-uppercase mb-4" style="font-size:.7rem;letter-spacing:.25em;">Projects</p>
-        <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
-          <li><a href="#project-spotlights" class="footer-link">Featured Projects</a></li>
-          <li><a href="#project-utility-substation" class="footer-link">Utility Deployments</a></li>
-          <li><a href="#project-industrial-campus" class="footer-link">Industrial Upgrades</a></li>
-          <li><a href="#project-capabilities" class="footer-link">Delivery Capabilities</a></li>
+      <div class="col-lg-2 col-md-4">
+        <div class="ff-mono text-red mb-3 text-uppercase" style="font-size:.75rem;letter-spacing:.16em;">Services</div>
+        <ul class="list-unstyled d-grid gap-2 mb-0">
+          <li><a href="./services.html" class="footer-link">Services Overview</a></li>
+          <li><a href="./high-security-fencing.html" class="footer-link">High-Security Fencing</a></li>
+          <li><a href="./industries.html" class="footer-link">Industries</a></li>
         </ul>
       </div>
-
-      <div class="col-lg-2 col-sm-4">
-        <p class="ff-mono text-red text-uppercase mb-4" style="font-size:.7rem;letter-spacing:.25em;">Company</p>
-        <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
-          <li><a href="./about.html" class="footer-link">About Safeguard Solutions</a></li>
-          <li><a href="./index.html#featured" class="footer-link">Case Studies</a></li>
-          <li><a href="./index.html#blog" class="footer-link">Insights</a></li>
-          <li><a href="./contact.html" class="footer-link">Contact</a></li>
+      <div class="col-lg-2 col-md-4">
+        <div class="ff-mono text-red mb-3 text-uppercase" style="font-size:.75rem;letter-spacing:.16em;">Resources</div>
+        <ul class="list-unstyled d-grid gap-2 mb-0">
+          <li><a href="./projects.html" class="footer-link">Featured Projects</a></li>
+          <li><a href="./gallery.html" class="footer-link">Gallery</a></li>
+          <li><a href="./testimonials.html" class="footer-link">Testimonials</a></li>
         </ul>
       </div>
-
-      <div class="col-lg-3 col-sm-4">
-        <p class="ff-mono text-red text-uppercase mb-4" style="font-size:.7rem;letter-spacing:.25em;">Contact</p>
-        <ul class="list-unstyled d-flex flex-column gap-3 mb-4">
+      <div class="col-lg-4 col-md-4">
+        <div class="ff-mono text-red mb-3 text-uppercase" style="font-size:.75rem;letter-spacing:.16em;">Contact</div>
+        <ul class="list-unstyled d-grid gap-2 mb-0">
           <li><a href="tel:+13175198789" class="footer-link">+1 (317) 519-8789</a></li>
           <li><a href="mailto:info@safeguardsolutionsgroup.com" class="footer-link">info@safeguardsolutionsgroup.com</a></li>
-          <li><span class="footer-link">1021 Hawthorne Bloom Dr<br>New Whiteland, IN 46184</span></li>
+          <li><a href="./contact.html" class="footer-link">1021 Hawthorne Bloom Dr<br>New Whiteland, IN 46184</a></li>
         </ul>
-        <a href="./contact.html#contact-form" class="btn-sentinel btn bg-danger text-white text-decoration-none d-inline-flex align-items-center gap-2" style="font-size:.78rem;padding:12px 22px;">REQUEST ASSESSMENT -&gt;</a>
       </div>
     </div>
   </div>
-
-  <div class="border-top border-dark3 py-3">
-    <div class="container d-flex justify-content-between align-items-center flex-wrap gap-3">
-      <p class="ff-mono mb-0" style="font-size:.68rem;color:rgba(136,136,150,.4);letter-spacing:.08em;">© 2025 SAFEGUARD SOLUTIONS INC. ALL RIGHTS RESERVED. // CLEARED FOR PUBLIC DISTRIBUTION</p>
-      <div class="d-flex flex-wrap gap-4">
+  <div class="border-top border-dark3">
+    <div class="container py-3 d-flex flex-column flex-lg-row justify-content-between align-items-center gap-2">
+      <div class="ff-mono text-gray" style="font-size:.72rem;letter-spacing:.06em;">© 2026 Safeguard Solutions. All rights reserved.</div>
+      <div class="d-flex flex-wrap gap-3 justify-content-center">
         <a href="#" class="footer-legal-link">Privacy Policy</a>
         <a href="#" class="footer-legal-link">Terms of Service</a>
         <a href="#" class="footer-legal-link">Cookie Settings</a>
@@ -427,24 +321,57 @@ const dot = document.getElementById('cursor-dot');
 document.addEventListener('mousemove', e => { dot.style.left = e.clientX + 'px'; dot.style.top = e.clientY + 'px'; });
 const nav = document.getElementById('main-nav');
 window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 60));
-
 const obs = new IntersectionObserver(entries => entries.forEach(e => {
   if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
 }), { threshold:.1 });
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-
+const galleryButtons = Array.from(document.querySelectorAll('.gallery-tile'));
+const galleryModalEl = document.getElementById('serviceGalleryModal');
+if (galleryButtons.length && galleryModalEl) {
+  const galleryModal = new bootstrap.Modal(galleryModalEl);
+  const galleryImage = document.getElementById('galleryModalImage');
+  const galleryCaption = document.getElementById('galleryCaption');
+  const galleryPrev = document.getElementById('galleryPrev');
+  const galleryNext = document.getElementById('galleryNext');
+  let currentIndex = 0;
+  const updateGallery = () => {
+    const item = galleryButtons[currentIndex];
+    if (!item || !galleryImage || !galleryCaption) return;
+    galleryImage.src = item.getAttribute('data-gallery-src') || '';
+    galleryImage.alt = item.getAttribute('data-gallery-caption') || 'Gallery image';
+    galleryCaption.textContent = item.getAttribute('data-gallery-caption') || '';
+  };
+  galleryButtons.forEach((btn, index) => {
+    btn.addEventListener('click', () => {
+      currentIndex = index;
+      updateGallery();
+      galleryModal.show();
+    });
+  });
+  if (galleryPrev) {
+    galleryPrev.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + galleryButtons.length) % galleryButtons.length;
+      updateGallery();
+    });
+  }
+  if (galleryNext) {
+    galleryNext.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % galleryButtons.length;
+      updateGallery();
+    });
+  }
+}
 (function initHeroParticles() {
   const canvas = document.getElementById('hero-particles');
   const hero = document.getElementById('hero');
   if (!canvas || !hero) return;
   const ctx = canvas.getContext('2d');
   if (!ctx) return;
-
   let particles = [];
   let dpr = Math.min(window.devicePixelRatio || 1, 2);
   let w = 0;
   let h = 0;
-
+  let rafId = null;
   function resize() {
     const rect = hero.getBoundingClientRect();
     w = Math.max(1, Math.floor(rect.width));
@@ -455,72 +382,59 @@ document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
     canvas.style.width = w + 'px';
     canvas.style.height = h + 'px';
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-
-    const count = Math.max(55, Math.min(130, Math.floor((w * h) / 13000)));
-    particles = Array.from({ length: count }, (_, i) => {
-      const accent = i % 9 === 0;
-      return {
-        x: Math.random() * w,
-        y: Math.random() * h,
-        r: accent ? (Math.random() * 1.9 + 1.2) : (Math.random() * 1.5 + 0.8),
-        vx: (Math.random() - 0.5) * (accent ? 0.30 : 0.22),
-        vy: (Math.random() - 0.5) * (accent ? 0.30 : 0.22),
-        a: accent ? (Math.random() * 0.28 + 0.28) : (Math.random() * 0.22 + 0.18)
-      };
-    });
+    const count = Math.max(22, Math.floor((w * h) / 28000));
+    particles = Array.from({ length: count }, (_, i) => ({
+      x: Math.random() * w,
+      y: Math.random() * h,
+      vx: (Math.random() - 0.5) * 0.22,
+      vy: (Math.random() - 0.5) * 0.22,
+      r: i % 6 === 0 ? 2.2 : 1.45,
+      a: i % 6 === 0 ? 0.9 : 0.6,
+      accent: i % 6 === 0
+    }));
   }
-
   function draw() {
     ctx.clearRect(0, 0, w, h);
-
-    for (let i = 0; i < particles.length; i++) {
-      const p = particles[i];
+    particles.forEach(p => {
       p.x += p.vx;
       p.y += p.vy;
-      if (p.x < -8) p.x = w + 8;
-      if (p.x > w + 8) p.x = -8;
-      if (p.y < -8) p.y = h + 8;
-      if (p.y > h + 8) p.y = -8;
-    }
-
-    const maxDist = Math.max(110, Math.min(170, w * 0.13));
-    const maxDistSq = maxDist * maxDist;
-
+      if (p.x < -10) p.x = w + 10;
+      if (p.x > w + 10) p.x = -10;
+      if (p.y < -10) p.y = h + 10;
+      if (p.y > h + 10) p.y = -10;
+    });
+    const maxDist = 110;
     for (let i = 0; i < particles.length; i++) {
       const a = particles[i];
       for (let j = i + 1; j < particles.length; j++) {
         const b = particles[j];
-        const dx = b.x - a.x;
-        const dy = b.y - a.y;
+        const dx = a.x - b.x;
+        const dy = a.y - b.y;
         const d2 = dx * dx + dy * dy;
-        if (d2 > maxDistSq) continue;
-        const dist = Math.sqrt(d2);
-        const alpha = (1 - (dist / maxDist)) * 0.55;
-        ctx.strokeStyle = 'rgba(237,28,36,' + alpha.toFixed(3) + ')';
-        ctx.lineWidth = 1.05;
+        if (d2 > maxDist * maxDist) continue;
+        const d = Math.sqrt(d2);
+        const alpha = (1 - d / maxDist) * 0.25;
         ctx.beginPath();
         ctx.moveTo(a.x, a.y);
         ctx.lineTo(b.x, b.y);
+        ctx.lineWidth = 1;
+        ctx.strokeStyle = `rgba(255,132,142,${alpha.toFixed(3)})`;
         ctx.stroke();
       }
     }
-
-    for (let i = 0; i < particles.length; i++) {
-      const p = particles[i];
-      ctx.fillStyle = 'rgba(255,255,255,' + p.a.toFixed(3) + ')';
+    for (const p of particles) {
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.shadowBlur = p.accent ? 14 : 9;
+      ctx.shadowColor = p.accent ? 'rgba(220,53,69,.55)' : 'rgba(255,255,255,.45)';
+      ctx.fillStyle = p.accent ? `rgba(220,53,69,${p.a.toFixed(3)})` : `rgba(226,226,234,${p.a.toFixed(3)})`;
       ctx.fill();
     }
-
-    requestAnimationFrame(draw);
+    rafId = requestAnimationFrame(draw);
   }
-
-  resize();
-  draw();
-  window.addEventListener('resize', () => {
-    resize();
-  });
+  requestAnimationFrame(() => { resize(); draw(); });
+  window.addEventListener('resize', resize);
+  window.addEventListener('beforeunload', () => { if (rafId) cancelAnimationFrame(rafId); });
 })();
 </script>
 </body>

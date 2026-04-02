@@ -383,6 +383,7 @@ footer .ff-mono.text-red { color:#ff7a85!important; }
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle ff-mono text-uppercase text-white fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Industries</a>
           <ul class="dropdown-menu dropdown-menu-dark bg-dark2 border-dark3">
+            <li><a class="dropdown-item ff-mono text-uppercase" href="./industries.html">Overview</a></li>
             <li><a class="dropdown-item ff-mono text-uppercase" href="./utilities.html">Utilities</a></li>
           </ul>
         </li>
@@ -390,6 +391,7 @@ footer .ff-mono.text-red { color:#ff7a85!important; }
           <a class="nav-link dropdown-toggle ff-mono text-uppercase text-white fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Resources</a>
           <ul class="dropdown-menu dropdown-menu-dark bg-dark2 border-dark3">
             <li><a class="dropdown-item ff-mono text-uppercase" href="./projects.html">Featured Projects</a></li>
+            <li><a class="dropdown-item ff-mono text-uppercase" href="./gallery.html">Gallery</a></li>
           </ul>
         </li>
         <li class="nav-item"><a class="nav-link ff-mono text-uppercase text-white fw-bold" href="./contact.html">Contact</a></li>
@@ -475,6 +477,12 @@ footer .ff-mono.text-red { color:#ff7a85!important; }
       <div class="col-lg-4 col-md-6 reveal"><button class="gallery-tile w-100" type="button" data-gallery-src="./assets/external-01.jpg" data-gallery-caption="Perimeter and vehicle control zone"><img src="./assets/external-01.jpg" alt="Perimeter control zone"><span>Perimeter Control Zone</span></button></div>
       <div class="col-lg-4 col-md-6 reveal"><button class="gallery-tile w-100" type="button" data-gallery-src="./assets/barrier-poles.jpg" data-gallery-caption="Integrated barrier and fence lines"><img src="./assets/barrier-poles.jpg" alt="Integrated barrier and fencing"><span>Integrated Barrier and Fencing</span></button></div>
       <div class="col-lg-4 col-md-6 reveal"><button class="gallery-tile w-100" type="button" data-gallery-src="./assets/external-07.jpg" data-gallery-caption="Field retrofit and modernization"><img src="./assets/external-07.jpg" alt="Field retrofit project"><span>Field Retrofit and Modernization</span></button></div>
+    </div>
+    <div class="d-flex flex-wrap justify-content-center gap-3 mt-5 reveal">
+      <a href="./gallery.html" class="btn-sentinel btn bg-danger text-white text-decoration-none d-inline-flex align-items-center gap-2">SEE GALLERY</a>
+      <a href="./utility-substation-project.html" class="btn-sentinel-outline text-light text-decoration-none d-inline-flex align-items-center gap-2">
+        SEE FEATURED PROJECT
+      </a>
     </div>
   </div>
 </section>
@@ -653,6 +661,7 @@ if (galleryButtons.length && galleryModalEl) {
   const galleryCaption = document.getElementById('galleryCaption');
   const galleryPrev = document.getElementById('galleryPrev');
   const galleryNext = document.getElementById('galleryNext');
+  const openServiceGallery = document.getElementById('openServiceGallery');
   let currentIndex = 0;
 
   const updateGallery = () => {
@@ -670,6 +679,14 @@ if (galleryButtons.length && galleryModalEl) {
       galleryModal.show();
     });
   });
+
+  if (openServiceGallery) {
+    openServiceGallery.addEventListener('click', () => {
+      currentIndex = 0;
+      updateGallery();
+      galleryModal.show();
+    });
+  }
 
   if (galleryPrev) {
     galleryPrev.addEventListener('click', () => {
