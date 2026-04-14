@@ -426,6 +426,12 @@ h2.ff-display { font-size:clamp(1.9rem,3vw,3.5rem)!important; }
 footer .ff-mono.text-red { color:#ff7a85!important; }
 
 @keyframes gridPan { from{background-position:0 0} to{background-position:60px 60px} }
+.t-card { background:var(--dark3); border:1px solid var(--dark3); padding:26px; height:100%; transition:border-color .25s, background .25s, transform .25s; }
+.t-card:hover { border-color:rgba(237,28,36,.35); background:#202028; transform:translateY(-2px); }
+.t-stars { color:#ffb25a; font-size:.86rem; letter-spacing:.08em; }
+.t-quote { color:#e2e3ec; line-height:1.65; margin-bottom:1rem; }
+.t-name { font-family:'Bebas Neue',sans-serif; letter-spacing:.02em; color:#fff; font-size:1.35rem; line-height:1.05; margin-bottom:.25rem; }
+.t-meta { font-family:'Share Tech Mono',monospace; font-size:.72rem; letter-spacing:.1em; text-transform:uppercase; color:#ff7a85; }
 .reveal { opacity:0; transform:translateY(24px); transition:opacity .6s, transform .6s; }
 .reveal.visible { opacity:1; transform:translateY(0); }
 </style>
@@ -671,7 +677,49 @@ footer .ff-mono.text-red { color:#ff7a85!important; }
   </div>
 </section>
 
-<section class="bg-dark2 py-5 py-lg-6" id="utility-faqs">
+<!-- ═══════ TESTIMONIALS ═══════ -->
+<section class="bg-dark2 py-5 py-lg-6">
+  <div class="container">
+    <div class="row justify-content-center text-center mb-5 reveal">
+      <div class="col-lg-8">
+        <div class="section-label justify-content-center">CLIENT FEEDBACK</div>
+        <h2 class="ff-display text-white mb-3">WHAT THE CLIENT <span class="text-red">SAY ABOUT US</span></h2>
+        <p class="text-gray mx-auto">Feedback from utility program manager and facility team who have worked with Safeguard Solutions on this perimeter hardening project.</p>
+      </div>
+    </div>
+    <div class="row g-3">
+      <div class="col-lg-4 col-md-6 reveal">
+        <article class="t-card">
+          <div class="t-stars mb-3">★★★★★</div>
+          <p class="t-quote">"Safeguard delivered a complex perimeter upgrade with excellent field coordination and minimal disruption to active substation operations."</p>
+          <p class="t-name mb-0">John Rivera / Utility Program Manager</p>
+          <p class="t-meta mb-0">Utilities &amp; Energy</p>
+        </article>
+      </div>
+      <div class="col-lg-4 col-md-6 reveal">
+        <article class="t-card">
+          <div class="t-stars mb-3">★★★★★</div>
+          <p class="t-quote">"Their team understood our operational constraints from day one. The phased approach kept our facility running without a single unplanned outage."</p>
+          <p class="t-name mb-0">Karen Hollis / Facilities Director</p>
+          <p class="t-meta mb-0">Municipal Utility</p>
+        </article>
+      </div>
+      <div class="col-lg-4 col-md-6 reveal">
+        <article class="t-card">
+          <div class="t-stars mb-3">★★★★★</div>
+          <p class="t-quote">"Installation standards and safety discipline exceeded our expectations across every active work zone on the site."</p>
+          <p class="t-name mb-0">Tom Hargrove / Project Superintendent</p>
+          <p class="t-meta mb-0">Critical Infrastructure</p>
+        </article>
+      </div>
+    </div>
+    <div class="text-center mt-4 reveal">
+      <a href="./testimonials.html" class="btn-sentinel-outline text-decoration-none d-inline-flex align-items-center gap-2">READ MORE TESTIMONIALS</a>
+    </div>
+  </div>
+</section>
+
+<section class="bg-dark1 py-5 py-lg-6" id="utility-faqs">
   <div class="container">
     <div class="row justify-content-center text-center mb-5 reveal">
       <div class="col-lg-9">

@@ -70,7 +70,7 @@ h2.ff-display { font-size:clamp(1.9rem,3vw,3.5rem)!important; }
 }
 
 .member-card { position:relative; aspect-ratio:4/3; overflow:hidden; border:1px solid var(--dark3); background:var(--dark3); cursor:pointer; }
-.member-card img { width:100%; height:100%; object-fit:cover; filter:grayscale(80%) contrast(1.1) brightness(.65); transition:filter .5s, transform .5s; }
+.member-card img { width:100%; height:100%; object-fit:cover; filter:grayscale(30%) contrast(1.1) brightness(.65); transition:filter .5s, transform .5s; }
 .member-card:hover img { filter:grayscale(20%) brightness(.55); transform:scale(1.06); }
 .member-overlay { position:absolute; inset:0; background:linear-gradient(0deg,rgba(5,5,7,.96) 0%,rgba(5,5,7,.2) 60%); display:flex; flex-direction:column; justify-content:flex-end; padding:28px; z-index:1; }
 .member-corner { position:absolute; top:18px; right:18px; width:18px; height:18px; border-top:1px solid rgba(204,0,0,.5); border-right:1px solid rgba(204,0,0,.5); z-index:2; }
@@ -178,7 +178,7 @@ footer .ff-mono.text-red { color:#ff7a85!important; }
   </div>
 </section>
 
-<section class="bg-dark1 py-5 py-lg-6">
+<section class="bg-dark2 py-5 py-lg-6">
   <div class="container">
     <div class="row justify-content-center text-center mb-5 reveal">
       <div class="col-lg-8">
@@ -221,7 +221,63 @@ footer .ff-mono.text-red { color:#ff7a85!important; }
   </div>
 </section>
 
-<section class="bg-dark2 py-5 py-lg-6">
+<section class="bg-dark1 py-5 py-lg-6">
+  <div class="container">
+    <div class="row justify-content-center text-center mb-5 reveal">
+      <div class="col-lg-8">
+        <div class="section-label justify-content-center">ADMINISTRATIVE</div>
+        <h2 class="ff-display text-white mb-3" style="font-size:clamp(2.2rem,4vw,4.8rem);">ADMINISTRATIVE TEAM</h2>
+        <p class="text-gray mx-auto">Our administrative team keeps the business running smoothly, supporting operations, communications, and client relationships behind the scenes.</p>
+      </div>
+    </div>
+    <div class="row g-3">
+      <div class="col-lg-4 col-md-6 reveal"><article class="member-card">
+        <img src="./assets/admin-01.jpg" alt="Office Manager">
+        <div class="member-overlay">
+          <div class="member-head">
+            <div class="member-meta">
+              <h3 class="ff-display">OFFICE MANAGER</h3>
+              <p class="member-role ff-mono">Administrative</p>
+            </div>
+            <button type="button" class="member-eyebrow member-bio-btn" data-bs-toggle="modal" data-bs-target="#teamBioModal" data-name="Office Manager" data-role="Administrative" data-bio="The Office Manager oversees day-to-day administrative operations including scheduling, correspondence, and internal coordination. This role ensures the office runs efficiently so the field and project teams can focus on delivery.">See Bio</button>
+          </div>
+          <p class="member-desc">Manages day-to-day office operations, scheduling, and internal coordination.</p>
+        </div>
+        <div class="member-corner"></div>
+      </article></div>
+      <div class="col-lg-4 col-md-6 reveal"><article class="member-card">
+        <img src="./assets/admin-02.jpg" alt="Contracts &amp; Compliance">
+        <div class="member-overlay">
+          <div class="member-head">
+            <div class="member-meta">
+              <h3 class="ff-display">CONTRACTS &amp; COMPLIANCE</h3>
+              <p class="member-role ff-mono">Administrative</p>
+            </div>
+            <button type="button" class="member-eyebrow member-bio-btn" data-bs-toggle="modal" data-bs-target="#teamBioModal" data-name="Contracts &amp; Compliance" data-role="Administrative" data-bio="The Contracts and Compliance role manages project documentation, subcontractor agreements, and regulatory compliance tracking. This position ensures all project paperwork is accurate, complete, and aligned with contract requirements.">See Bio</button>
+          </div>
+          <p class="member-desc">Handles project documentation, agreements, and compliance tracking.</p>
+        </div>
+        <div class="member-corner"></div>
+      </article></div>
+      <div class="col-lg-4 col-md-6 reveal"><article class="member-card">
+        <img src="./assets/admin-03.jpg" alt="Client Relations">
+        <div class="member-overlay">
+          <div class="member-head">
+            <div class="member-meta">
+              <h3 class="ff-display">CLIENT RELATIONS</h3>
+              <p class="member-role ff-mono">Administrative</p>
+            </div>
+            <button type="button" class="member-eyebrow member-bio-btn" data-bs-toggle="modal" data-bs-target="#teamBioModal" data-name="Client Relations" data-role="Administrative" data-bio="The Client Relations role serves as the primary point of contact for ongoing client communication, RFI responses, and satisfaction follow-up. This position strengthens long-term partnerships and ensures clients stay informed throughout every phase.">See Bio</button>
+          </div>
+          <p class="member-desc">Primary contact for client communication, RFIs, and relationship management.</p>
+        </div>
+        <div class="member-corner"></div>
+      </article></div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-dark1 py-5 py-lg-6">
   <div class="container">
     <div class="row justify-content-center text-center mb-5 reveal">
       <div class="col-lg-8">
@@ -232,7 +288,7 @@ footer .ff-mono.text-red { color:#ff7a85!important; }
     </div>
     <div class="row g-3">
       <div class="col-lg-4 col-md-6 reveal"><article class="member-card">
-        <img src="./assets/external-04.jpg" alt="Operations placeholder">
+        <img src="./assets/ops-01.jpg" alt="Project Operations Lead">
         <div class="member-overlay">
           <div class="member-head">
             <div class="member-meta">
@@ -246,7 +302,7 @@ footer .ff-mono.text-red { color:#ff7a85!important; }
         <div class="member-corner"></div>
       </article></div>
       <div class="col-lg-4 col-md-6 reveal"><article class="member-card">
-        <img src="./assets/external-05.jpg" alt="Operations placeholder">
+        <img src="./assets/ops-02.jpg" alt="Field Operations Supervisor">
         <div class="member-overlay">
           <div class="member-head">
             <div class="member-meta">
@@ -260,7 +316,7 @@ footer .ff-mono.text-red { color:#ff7a85!important; }
         <div class="member-corner"></div>
       </article></div>
       <div class="col-lg-4 col-md-6 reveal"><article class="member-card">
-        <img src="./assets/external-06.jpg" alt="Operations placeholder">
+        <img src="./assets/ops-03.jpg" alt="Service &amp; Support Coordinator">
         <div class="member-overlay">
           <div class="member-head">
             <div class="member-meta">

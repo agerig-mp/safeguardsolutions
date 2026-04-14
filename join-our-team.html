@@ -69,9 +69,27 @@ h2.ff-display { font-size:clamp(1.9rem,3vw,3.5rem)!important; }
   #hero.careers-hero .container { padding-top:5.5rem!important; padding-bottom:2rem!important; }
 }
 
-.open-card { background:var(--dark3); border:1px solid var(--dark3); padding:24px; }
-.open-item { background:#202028; border:1px solid #2b2b35; padding:14px 16px; margin-bottom:10px; font-family:'Share Tech Mono',monospace; font-size:.86rem; letter-spacing:.08em; text-transform:uppercase; color:#f1f2f8; }
-.form-shell { background:var(--dark3); border:1px solid var(--dark3); padding:24px; }
+.job-list-item { background:var(--dark3); border:1px solid var(--dark3); padding:18px 20px; cursor:pointer; transition:border-color .2s, background .2s; }
+.job-list-item:hover { border-color:rgba(237,28,36,.3); background:#202028; }
+.job-list-item.active { border-color:var(--red); background:#202028; }
+.job-list-item .job-title { font-family:'Bebas Neue',sans-serif; font-size:1.2rem; letter-spacing:.02em; color:#fff; line-height:1.1; margin-bottom:.3rem; }
+.job-list-item .job-tags { display:flex; flex-wrap:wrap; gap:6px; padding-bottom:10px; }
+.job-tag { font-family:'Share Tech Mono',monospace; font-size:.66rem; letter-spacing:.1em; text-transform:uppercase; padding:3px 8px; border:1px solid #3a3a48; color:#c8c9d8; }
+.job-tag.tag-type { border-color:rgba(237,28,36,.5); color:#ff9aa2; }
+.job-apply-link { font-family:'Rajdhani',sans-serif; font-weight:700; font-size:.82rem; letter-spacing:.18em; text-transform:uppercase; color:#fff; text-decoration:none; margin-top:12px; display:inline-flex; align-items:center; gap:6px; border:1px solid rgba(237,28,36,.6); padding:5px 12px; background:rgba(237,28,36,.15); transition:background .2s, color .2s, border-color .2s; }
+.job-apply-link:hover { background:rgba(237,28,36,.3); color:#fff; border-color:var(--red); }
+
+.job-detail { background:var(--dark3); border:1px solid var(--dark3); padding:32px; min-height:460px; }
+.job-detail-title { font-family:'Bebas Neue',sans-serif; font-size:clamp(1.8rem,3vw,2.6rem); letter-spacing:.02em; color:#fff; line-height:1.05; margin-bottom:.5rem; }
+.job-detail-meta { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:1.5rem; }
+.job-detail-divider { width:100%; height:1px; background:var(--dark3); border:none; margin:1.5rem 0; }
+.job-section-label { font-family:'Bebas Neue',sans-serif; font-size:1.15rem; letter-spacing:.1em; text-transform:uppercase; color:var(--red-hi); margin-bottom:.75rem; }
+.job-list-ul { list-style:none; padding:0; margin:0 0 0 0; }
+.job-list-ul li { color:#dfe0ea; font-size:.97rem; line-height:1.6; padding:.25rem 0 .25rem 1.2rem; position:relative; }
+.job-list-ul li::before { content:'//'; position:absolute; left:0; color:var(--red); font-family:'Share Tech Mono',monospace; font-size:.75rem; top:.35rem; }
+.job-summary { color:#dfe0ea; line-height:1.7; margin-bottom:0; }
+
+.form-shell { background:var(--dark3); border:1px solid var(--dark3); padding:32px; }
 .form-control, .form-select { background:#202028; border:1px solid #2b2b35; color:#f2f3f9; }
 .form-control:focus, .form-select:focus { background:#202028; color:#fff; border-color:rgba(237,28,36,.45); box-shadow:0 0 0 .2rem rgba(237,28,36,.12); }
 .form-control::placeholder { color:#a7a9b8; }
@@ -159,20 +177,265 @@ h2.ff-display { font-size:clamp(1.9rem,3vw,3.5rem)!important; }
   </div>
 </section>
 
+<!-- ═══════ OPEN POSITIONS ═══════ -->
 <section class="bg-dark1 py-5 py-lg-6" id="careers-content">
   <div class="container">
-    <div class="row g-4">
-      <div class="col-lg-4 reveal">
-        <div class="open-card h-100">
-          <div class="section-label mb-3">OPEN POSITIONS</div>
-          <div class="open-item">Job 1</div>
-          <div class="open-item">Job 2</div>
-          <div class="open-item mb-0">Job 3</div>
+    <div class="row justify-content-center text-center mb-5 reveal">
+      <div class="col-lg-8">
+        <div class="section-label justify-content-center">OPEN POSITIONS</div>
+        <h2 class="ff-display text-white mb-3">BUILD YOUR CAREER IN <span class="text-red">PERIMETER SECURITY</span></h2>
+        <p class="text-gray mx-auto">We're growing and looking for driven professionals to join our field, operations, and project delivery teams.</p>
+      </div>
+    </div>
+    <div class="row g-4 reveal">
+      <!-- Job List -->
+      <div class="col-lg-4">
+        <div class="d-flex flex-column gap-2" id="jobList">
+          <div class="job-list-item active" data-job="installer">
+            <div class="job-title">Fence Installation Technician</div>
+            <div class="job-tags">
+              <span class="job-tag tag-type">Full-Time</span>
+              <span class="job-tag">Field Operations</span>
+              <span class="job-tag">Multiple States</span>
+            </div>
+            <a href="#application-form" class="job-apply-link" onclick="event.stopPropagation();setPosition('Fence Installation Technician')">Apply Now ↓</a>
+          </div>
+          <div class="job-list-item" data-job="supervisor">
+            <div class="job-title">Field Supervisor</div>
+            <div class="job-tags">
+              <span class="job-tag tag-type">Full-Time</span>
+              <span class="job-tag">Field Operations</span>
+              <span class="job-tag">Multiple States</span>
+            </div>
+            <a href="#application-form" class="job-apply-link" onclick="event.stopPropagation();setPosition('Field Supervisor')">Apply Now ↓</a>
+          </div>
+          <div class="job-list-item" data-job="pm">
+            <div class="job-title">Project Manager</div>
+            <div class="job-tags">
+              <span class="job-tag tag-type">Full-Time</span>
+              <span class="job-tag">Project Management</span>
+              <span class="job-tag">New Whiteland, IN</span>
+            </div>
+            <a href="#application-form" class="job-apply-link" onclick="event.stopPropagation();setPosition('Project Manager')">Apply Now ↓</a>
+          </div>
+          <div class="job-list-item" data-job="estimator">
+            <div class="job-title">Estimator</div>
+            <div class="job-tags">
+              <span class="job-tag tag-type">Full-Time</span>
+              <span class="job-tag">Pre-Construction</span>
+              <span class="job-tag">Hybrid</span>
+            </div>
+            <a href="#application-form" class="job-apply-link" onclick="event.stopPropagation();setPosition('Estimator')">Apply Now ↓</a>
+          </div>
+          <div class="job-list-item" data-job="coordinator">
+            <div class="job-title">Operations Coordinator</div>
+            <div class="job-tags">
+              <span class="job-tag tag-type">Full-Time</span>
+              <span class="job-tag">Administrative</span>
+              <span class="job-tag">New Whiteland, IN</span>
+            </div>
+            <a href="#application-form" class="job-apply-link" onclick="event.stopPropagation();setPosition('Operations Coordinator')">Apply Now ↓</a>
+          </div>
         </div>
       </div>
-      <div class="col-lg-8 reveal">
-        <div class="form-shell h-100">
-          <div class="section-label mb-3">APPLICATION FORM</div>
+      <!-- Job Detail -->
+      <div class="col-lg-8">
+        <div class="job-detail" id="jobDetail">
+
+          <!-- INSTALLER -->
+          <div class="job-detail-panel" id="job-installer">
+            <p class="job-section-label mb-2">FIELD OPERATIONS // FULL-TIME</p>
+            <h2 class="job-detail-title">FENCE INSTALLATION TECHNICIAN</h2>
+            <div class="job-detail-meta">
+              <span class="job-tag tag-type">Full-Time</span>
+              <span class="job-tag">Multiple States</span>
+              <span class="job-tag">Travel Required</span>
+            </div>
+            <p class="job-summary">Safeguard Solutions is seeking experienced Fence Installation Technicians to join our growing field operations team. In this role you will install high-security perimeter fencing systems at utility substations, government facilities, and critical infrastructure sites across the country. You will work as part of a tight-knit crew with clear expectations, competitive pay, and consistent project flow.</p>
+            <hr class="job-detail-divider">
+            <p class="job-section-label">Responsibilities</p>
+            <ul class="job-list-ul mb-4">
+              <li>Install chain-link, ornamental, and high-security fencing systems per project specifications</li>
+              <li>Set posts, stretch fabric, install hardware, and complete gate systems</li>
+              <li>Read and follow project drawings, layouts, and installation standards</li>
+              <li>Maintain a clean, safe, and organized jobsite at all times</li>
+              <li>Communicate daily progress and issues to the Field Supervisor</li>
+              <li>Operate equipment and hand tools safely and efficiently</li>
+            </ul>
+            <p class="job-section-label">Requirements</p>
+            <ul class="job-list-ul mb-4">
+              <li>1+ years of fence installation or general construction experience preferred</li>
+              <li>Ability to work outdoors in all weather conditions and perform physical labor</li>
+              <li>Valid driver's license and reliable transportation</li>
+              <li>Ability to pass a background check (required for federal/utility site access)</li>
+              <li>OSHA 10 certification a plus — training available</li>
+              <li>Willingness to travel and work away from home for project durations</li>
+            </ul>
+            <a href="#application-form" class="btn-sentinel btn bg-danger text-white text-decoration-none d-inline-flex align-items-center gap-2" onclick="setPosition('Fence Installation Technician')">
+              <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M7 1L13 7L7 13M1 7H13" stroke="currentColor" stroke-width="1.5"/></svg>
+              APPLY FOR THIS POSITION
+            </a>
+          </div>
+
+          <!-- SUPERVISOR -->
+          <div class="job-detail-panel d-none" id="job-supervisor">
+            <p class="job-section-label mb-2">FIELD OPERATIONS // FULL-TIME</p>
+            <h2 class="job-detail-title">FIELD SUPERVISOR</h2>
+            <div class="job-detail-meta">
+              <span class="job-tag tag-type">Full-Time</span>
+              <span class="job-tag">Multiple States</span>
+              <span class="job-tag">Travel Required</span>
+            </div>
+            <p class="job-summary">The Field Supervisor leads installation crews on active project sites, ensuring quality standards, safety compliance, and on-schedule delivery. This is a hands-on leadership role for an experienced construction professional who can direct a team, troubleshoot in the field, and maintain strong client-facing communication throughout the project lifecycle.</p>
+            <hr class="job-detail-divider">
+            <p class="job-section-label">Responsibilities</p>
+            <ul class="job-list-ul mb-4">
+              <li>Lead and direct field installation crews across one or multiple active project sites</li>
+              <li>Ensure work is completed per drawings, specs, and Safeguard quality standards</li>
+              <li>Conduct daily safety briefings, site inspections, and toolbox talks</li>
+              <li>Coordinate with the Project Manager on sequencing, materials, and schedule</li>
+              <li>Document daily field reports, crew hours, and any site issues</li>
+              <li>Serve as the on-site point of contact for client representatives and inspectors</li>
+            </ul>
+            <p class="job-section-label">Requirements</p>
+            <ul class="job-list-ul mb-4">
+              <li>3+ years of fence installation or commercial construction experience</li>
+              <li>Prior supervisory or crew lead experience strongly preferred</li>
+              <li>OSHA 30 certification preferred — training available</li>
+              <li>Ability to read construction drawings and interpret project specifications</li>
+              <li>Valid driver's license; CDL a plus</li>
+              <li>Ability to pass a background check for federal and utility site access</li>
+            </ul>
+            <a href="#application-form" class="btn-sentinel btn bg-danger text-white text-decoration-none d-inline-flex align-items-center gap-2" onclick="setPosition('Field Supervisor')">
+              <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M7 1L13 7L7 13M1 7H13" stroke="currentColor" stroke-width="1.5"/></svg>
+              APPLY FOR THIS POSITION
+            </a>
+          </div>
+
+          <!-- PROJECT MANAGER -->
+          <div class="job-detail-panel d-none" id="job-pm">
+            <p class="job-section-label mb-2">PROJECT MANAGEMENT // FULL-TIME</p>
+            <h2 class="job-detail-title">PROJECT MANAGER</h2>
+            <div class="job-detail-meta">
+              <span class="job-tag tag-type">Full-Time</span>
+              <span class="job-tag">New Whiteland, IN</span>
+              <span class="job-tag">Some Travel</span>
+            </div>
+            <p class="job-summary">Safeguard Solutions is looking for a Project Manager to own the end-to-end delivery of perimeter security projects. You will manage scope, schedule, budget, subcontractors, and client communication from award through closeout. This role requires a structured, detail-oriented professional who thrives in fast-paced construction environments and can manage multiple active projects simultaneously.</p>
+            <hr class="job-detail-divider">
+            <p class="job-section-label">Responsibilities</p>
+            <ul class="job-list-ul mb-4">
+              <li>Manage all phases of project delivery from kickoff through final closeout and punch list</li>
+              <li>Maintain project schedules, budgets, and resource plans</li>
+              <li>Coordinate with Field Supervisors, subcontractors, vendors, and clients</li>
+              <li>Review submittals, RFIs, and change orders in a timely manner</li>
+              <li>Proactively identify and resolve schedule, cost, or scope risks</li>
+              <li>Prepare and deliver regular project status reports to leadership and clients</li>
+            </ul>
+            <p class="job-section-label">Requirements</p>
+            <ul class="job-list-ul mb-4">
+              <li>3–7 years of construction project management experience</li>
+              <li>Experience with commercial, industrial, or government construction preferred</li>
+              <li>Proficiency with project management tools (Procore, Buildertrend, or similar)</li>
+              <li>Strong written and verbal communication skills</li>
+              <li>Ability to read and interpret construction drawings and specifications</li>
+              <li>PMP or similar certification a plus</li>
+            </ul>
+            <a href="#application-form" class="btn-sentinel btn bg-danger text-white text-decoration-none d-inline-flex align-items-center gap-2" onclick="setPosition('Project Manager')">
+              <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M7 1L13 7L7 13M1 7H13" stroke="currentColor" stroke-width="1.5"/></svg>
+              APPLY FOR THIS POSITION
+            </a>
+          </div>
+
+          <!-- ESTIMATOR -->
+          <div class="job-detail-panel d-none" id="job-estimator">
+            <p class="job-section-label mb-2">PRE-CONSTRUCTION // FULL-TIME</p>
+            <h2 class="job-detail-title">ESTIMATOR</h2>
+            <div class="job-detail-meta">
+              <span class="job-tag tag-type">Full-Time</span>
+              <span class="job-tag">New Whiteland, IN</span>
+              <span class="job-tag">Hybrid</span>
+            </div>
+            <p class="job-summary">The Estimator is responsible for developing accurate, competitive bids for perimeter security projects across utility, government, and commercial markets. You will perform quantity takeoffs, price materials and labor, evaluate subcontractor quotes, and collaborate with the sales and project management teams to deliver bids that win work and protect margin.</p>
+            <hr class="job-detail-divider">
+            <p class="job-section-label">Responsibilities</p>
+            <ul class="job-list-ul mb-4">
+              <li>Perform detailed quantity takeoffs from drawings, specs, and site walk information</li>
+              <li>Source and evaluate material and subcontractor pricing</li>
+              <li>Build and maintain accurate bid models accounting for labor, equipment, and overhead</li>
+              <li>Review bid packages, identify scope gaps, and flag risk items to leadership</li>
+              <li>Support handoff from estimating to project management upon award</li>
+              <li>Maintain a library of historical cost data to improve future bid accuracy</li>
+            </ul>
+            <p class="job-section-label">Requirements</p>
+            <ul class="job-list-ul mb-4">
+              <li>2+ years of construction estimating experience; fencing or site security a plus</li>
+              <li>Ability to read and interpret construction drawings and specifications</li>
+              <li>Strong proficiency with Excel; experience with estimating software preferred</li>
+              <li>High attention to detail with strong analytical and mathematical skills</li>
+              <li>Ability to manage multiple bids simultaneously under deadline pressure</li>
+              <li>Experience bidding government or prevailing wage work is a plus</li>
+            </ul>
+            <a href="#application-form" class="btn-sentinel btn bg-danger text-white text-decoration-none d-inline-flex align-items-center gap-2" onclick="setPosition('Estimator')">
+              <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M7 1L13 7L7 13M1 7H13" stroke="currentColor" stroke-width="1.5"/></svg>
+              APPLY FOR THIS POSITION
+            </a>
+          </div>
+
+          <!-- COORDINATOR -->
+          <div class="job-detail-panel d-none" id="job-coordinator">
+            <p class="job-section-label mb-2">ADMINISTRATIVE // FULL-TIME</p>
+            <h2 class="job-detail-title">OPERATIONS COORDINATOR</h2>
+            <div class="job-detail-meta">
+              <span class="job-tag tag-type">Full-Time</span>
+              <span class="job-tag">New Whiteland, IN</span>
+              <span class="job-tag">On-Site</span>
+            </div>
+            <p class="job-summary">The Operations Coordinator keeps the day-to-day business running by supporting project teams, managing office logistics, and handling vendor and subcontractor communications. This role is central to how Safeguard Solutions maintains responsiveness and organization across a growing project portfolio, and is well-suited to a sharp, proactive professional who thrives in a fast-moving environment.</p>
+            <hr class="job-detail-divider">
+            <p class="job-section-label">Responsibilities</p>
+            <ul class="job-list-ul mb-4">
+              <li>Support project managers with scheduling, documentation, and vendor coordination</li>
+              <li>Manage incoming correspondence, contract tracking, and compliance filings</li>
+              <li>Coordinate material orders, deliveries, and logistics with field teams</li>
+              <li>Maintain organized digital and physical project files and records</li>
+              <li>Assist with onboarding documentation and subcontractor qualification packages</li>
+              <li>Handle general office operations including supplies, scheduling, and communications</li>
+            </ul>
+            <p class="job-section-label">Requirements</p>
+            <ul class="job-list-ul mb-4">
+              <li>2+ years of administrative or operations support experience</li>
+              <li>Construction industry experience strongly preferred</li>
+              <li>Proficiency with Microsoft Office Suite (Word, Excel, Outlook)</li>
+              <li>Exceptional organizational skills and attention to detail</li>
+              <li>Strong written and verbal communication; professional phone presence</li>
+              <li>Ability to juggle multiple priorities and stay calm under pressure</li>
+            </ul>
+            <a href="#application-form" class="btn-sentinel btn bg-danger text-white text-decoration-none d-inline-flex align-items-center gap-2" onclick="setPosition('Operations Coordinator')">
+              <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M7 1L13 7L7 13M1 7H13" stroke="currentColor" stroke-width="1.5"/></svg>
+              APPLY FOR THIS POSITION
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ APPLICATION FORM ═══════ -->
+<section class="bg-dark2 py-5 py-lg-6" id="application-form">
+  <div class="container">
+    <div class="row justify-content-center text-center mb-5 reveal">
+      <div class="col-lg-8">
+        <div class="section-label justify-content-center">APPLY NOW</div>
+        <h2 class="ff-display text-white mb-3">SUBMIT YOUR <span class="text-red">APPLICATION</span></h2>
+        <p class="text-gray mx-auto">Fill out the form below and attach your resume. We review every submission and follow up with qualified candidates.</p>
+      </div>
+    </div>
+    <div class="row justify-content-center reveal">
+      <div class="col-lg-8">
+        <div class="form-shell">
           <form action="#" method="post" enctype="multipart/form-data" class="row g-3">
             <div class="col-md-6">
               <label for="fullName" class="ff-mono text-uppercase text-red" style="font-size:.7rem;letter-spacing:.12em;">Full Name</label>
@@ -190,9 +453,11 @@ h2.ff-display { font-size:clamp(1.9rem,3vw,3.5rem)!important; }
               <label for="position" class="ff-mono text-uppercase text-red" style="font-size:.7rem;letter-spacing:.12em;">Position</label>
               <select id="position" name="position" class="form-select" required>
                 <option value="" selected disabled>Select a position</option>
-                <option>Job 1</option>
-                <option>Job 2</option>
-                <option>Job 3</option>
+                <option>Fence Installation Technician</option>
+                <option>Field Supervisor</option>
+                <option>Project Manager</option>
+                <option>Estimator</option>
+                <option>Operations Coordinator</option>
               </select>
             </div>
             <div class="col-12">
@@ -261,6 +526,26 @@ const nav = document.getElementById('main-nav');
 window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 60));
 const obs = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } }), { threshold:.1 });
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+// Job switcher
+document.querySelectorAll('.job-list-item').forEach(item => {
+  item.addEventListener('click', () => {
+    const jobId = item.dataset.job;
+    document.querySelectorAll('.job-list-item').forEach(i => i.classList.remove('active'));
+    item.classList.add('active');
+    document.querySelectorAll('.job-detail-panel').forEach(p => p.classList.add('d-none'));
+    const panel = document.getElementById('job-' + jobId);
+    if (panel) panel.classList.remove('d-none');
+  });
+});
+
+function setPosition(title) {
+  const sel = document.getElementById('position');
+  if (!sel) return;
+  for (let i = 0; i < sel.options.length; i++) {
+    if (sel.options[i].text === title) { sel.selectedIndex = i; break; }
+  }
+}
 
 (function initHeroParticles() {
   const canvas = document.getElementById('hero-particles');
