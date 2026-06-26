@@ -237,6 +237,29 @@ h2.ff-display { font-size:clamp(1.9rem,3vw,3.5rem)!important; }
   transition:transform .4s, filter .4s;
 }
 .gallery-tile:hover img { transform:scale(1.05); filter:grayscale(20%) brightness(.62); }
+.gallery-tile.featured-project {
+  outline:1px solid rgba(237,28,36,.42);
+  box-shadow:0 0 0 1px rgba(237,28,36,.12) inset;
+}
+.gallery-tile.featured-project::before {
+  content:'Featured Project';
+  position:absolute;
+  top:18px;
+  left:18px;
+  z-index:3;
+  display:inline-flex;
+  align-items:center;
+  padding:4px 12px;
+  font-family:'Rajdhani',sans-serif;
+  font-weight:700;
+  font-size:.72rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:#fff;
+  background:rgba(237,28,36,.96);
+  border:1px solid rgba(255,255,255,.18);
+  box-shadow:0 10px 24px rgba(0,0,0,.32);
+}
 .gallery-tile span {
   position:absolute;
   left:18px;
@@ -331,6 +354,22 @@ h2.ff-display { font-size:clamp(1.9rem,3vw,3.5rem)!important; }
 .footer-legal-link { font-family:'Share Tech Mono',monospace; font-size:.72rem; color:rgba(226,226,234,.7); text-decoration:none; letter-spacing:.06em; transition:color .2s; }
 .footer-legal-link:hover { color:#fff; }
 footer .ff-mono.text-red { color:#ff7a85!important; }
+@media (max-width:767.98px) {
+  footer .container {
+    overflow:hidden;
+  }
+  footer .footer-link,
+  footer .footer-legal-link {
+    overflow-wrap:anywhere;
+    word-break:break-word;
+  }
+  footer .btn-sentinel {
+    width:100%;
+    justify-content:center;
+    white-space:normal;
+    text-align:center;
+  }
+}
 
 @keyframes gridPan { from{background-position:0 0} to{background-position:60px 60px} }
 .reveal { opacity:0; transform:translateY(24px); transition:opacity .6s, transform .6s; }
@@ -578,8 +617,8 @@ footer .ff-mono.text-red { color:#ff7a85!important; }
     </div>
     <div class="swiper utility-gallery-swiper reveal">
       <div class="swiper-wrapper">
-        <div class="swiper-slide"><button class="gallery-tile" type="button" data-gallery-src="./assets/perimeter-fencing.jpg" data-gallery-caption="Perimeter fencing at a utility facility"><img src="./assets/perimeter-fencing.jpg" alt="Perimeter fencing at a utility facility"><span>Perimeter Fence Upgrade</span></button></div>
-        <div class="swiper-slide"><button class="gallery-tile" type="button" data-gallery-src="./assets/barrier.jpg" data-gallery-caption="Crash-rated barrier deployment for utilities"><img src="./assets/barrier.jpg" alt="Crash-rated barrier deployment for utilities"><span>Crash-Rated Barrier Zone</span></button></div>
+        <div class="swiper-slide"><button class="gallery-tile featured-project" type="button" data-gallery-src="./assets/perimeter-fencing.jpg" data-gallery-caption="Perimeter fencing at a utility facility"><img src="./assets/perimeter-fencing.jpg" alt="Perimeter fencing at a utility facility"><span>Perimeter Fence Upgrade</span></button></div>
+        <div class="swiper-slide"><button class="gallery-tile featured-project" type="button" data-gallery-src="./assets/barrier.jpg" data-gallery-caption="Crash-rated barrier deployment for utilities"><img src="./assets/barrier.jpg" alt="Crash-rated barrier deployment for utilities"><span>Crash-Rated Barrier Zone</span></button></div>
         <div class="swiper-slide"><button class="gallery-tile" type="button" data-gallery-src="./assets/barrier-poles.jpg" data-gallery-caption="Integrated barrier and fence lines"><img src="./assets/barrier-poles.jpg" alt="Integrated barrier and fence lines"><span>Integrated Barrier Lines</span></button></div>
         <div class="swiper-slide"><button class="gallery-tile" type="button" data-gallery-src="./assets/who-we-are-fence.jpg" data-gallery-caption="Anti-climb fence deployment at a hardened perimeter"><img src="./assets/who-we-are-fence.jpg" alt="Anti-climb fence deployment at a hardened perimeter"><span>Anti-Climb Fence Deployment</span></button></div>
         <div class="swiper-slide"><button class="gallery-tile" type="button" data-gallery-src="./assets/external-01.jpg" data-gallery-caption="Perimeter and vehicle control zone"><img src="./assets/external-01.jpg" alt="Perimeter and vehicle control zone"><span>Vehicle Control Zone</span></button></div>
