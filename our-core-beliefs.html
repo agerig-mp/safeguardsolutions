@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Our Core Beliefs | Safeguard Solutions</title>
+<meta name="description" content="Safeguard Solutions operates on FACTS — Family, Ambition, Consistency, Trustworthiness, and Support. See the values behind every project we build.">
 
 <!-- Bootstrap 5 -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -348,16 +349,118 @@ small, .ff-mono[style*="font-size:.62rem"], .ff-mono[style*="font-size:.63rem"],
   width:100%;
   height:100%;
   object-fit:cover;
-  filter:grayscale(72%) contrast(1.06) brightness(.62);
+  filter:grayscale(35%) contrast(1.04) brightness(.7);
 }
 .foundation-image-overlay {
   position:absolute;
   inset:0;
-  background:linear-gradient(0deg, rgba(5,5,7,.88) 0%, rgba(5,5,7,.18) 62%);
+  background:linear-gradient(0deg, rgba(5,5,7,.66) 0%, rgba(5,5,7,.12) 62%);
 }
 @media (max-width:991.98px) {
   .foundation-image-card {
     min-height:320px;
+  }
+}
+
+/* ── PRIORITY STACK ── */
+.priority-stack {
+  display:grid;
+  gap:14px;
+}
+.priority-stack-card {
+  background:var(--dark3);
+  border:1px solid rgba(237,28,36,.18);
+  padding:28px 28px 26px;
+  position:relative;
+  overflow:hidden;
+  display:grid;
+  grid-template-columns:92px 1fr;
+  gap:22px;
+  align-items:start;
+}
+.priority-stack-card::before {
+  content:'';
+  position:absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height:2px;
+  background:var(--red);
+}
+.priority-stack-index {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:64px;
+  height:64px;
+  border-radius:50%;
+  background:var(--red);
+  color:var(--black);
+  font-family:'Rajdhani',sans-serif;
+  font-weight:700;
+  font-size:2.6rem;
+  line-height:1;
+  margin-top:2px;
+}
+.priority-stack-content h3 {
+  font-size:1.45rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  margin-bottom:.7rem;
+}
+.priority-stack-content p {
+  margin:0;
+  color:#dfe0ea;
+  max-width:none;
+}
+@media (max-width:767.98px) {
+  .priority-stack-card {
+    grid-template-columns:1fr;
+    gap:14px;
+  }
+}
+
+/* ── FACTS VALUES ── */
+.facts-grid {
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0, 1fr));
+  gap:14px;
+}
+.facts-card {
+  background:var(--dark3);
+  border:1px solid rgba(255,255,255,.08);
+  padding:24px;
+  height:100%;
+}
+.facts-card.full {
+  grid-column:1 / -1;
+}
+.facts-card h3 {
+  font-size:1.6rem;
+  line-height:1.1;
+  margin-bottom:1rem;
+  text-transform:uppercase;
+  letter-spacing:.05em;
+}
+.facts-letter {
+  color:var(--red-hi);
+  display:inline-block;
+  font-size:1.75em;
+  line-height:.82;
+  margin-right:.14em;
+  vertical-align:-0.08em;
+}
+.facts-card p {
+  margin:0;
+  color:#dfe0ea;
+  max-width:none;
+}
+@media (max-width:767.98px) {
+  .facts-grid {
+    grid-template-columns:1fr;
+  }
+  .facts-card.full {
+    grid-column:auto;
   }
 }
 
@@ -576,7 +679,7 @@ footer .ff-mono.text-red { color:#ff7a85 !important; }
 
         <div class="section-label anim-1">OUR CORE BELIEFS</div>
 
-        <h1 class="ff-display text-white anim-2 lh-1 mb-3">THE VALUES THAT <span class="text-red">DRIVE OUR CULTURE.</span></h1>
+        <h1 class="ff-display text-white anim-2 lh-1 mb-3">THE VALUES THAT DRIVE <span class="text-red">EVERYTHING WE BUILD.</span></h1>
 
       </div>
     </div>
@@ -591,15 +694,15 @@ footer .ff-mono.text-red { color:#ff7a85 !important; }
         <div class="foundation-panel reveal">
           <div class="foundation-copy">
             <div class="section-label">OUR FOUNDATION</div>
-            <h3 class="ff-display mb-3">THE FOUNDATION OF OUR CULTURE</h3>
-            <p class="mb-0">We lead with faith, family values, and disciplined service to clients who depend on resilient perimeter security.</p>
+            <h3 class="ff-display mb-3">WHERE CHARACTER MEETS CRAFTSMANSHIP</h3>
+            <p class="mb-0">Every decision we make at Safeguard starts in the same place. We lead with faith, protect our families, and bring that same care to every client we serve. These aren't words on a wall — they're the reason we show up the way we do.</p>
           </div>
         </div>
       </div>
       <div class="col-lg-6">
         <div class="foundation-panel foundation-image-wrap reveal">
           <div class="foundation-image-card">
-            <img src="./assets/person-praying.jpg" alt="God first foundation">
+            <img src="./assets/safeguard-family.png" alt="Safeguard Solutions field team standing together">
             <div class="foundation-image-overlay"></div>
           </div>
         </div>
@@ -611,49 +714,77 @@ footer .ff-mono.text-red { color:#ff7a85 !important; }
 <!-- ═══════ VALUES ═══════ -->
 <section id="values" class="bg-dark1 py-5 py-lg-6">
   <div class="container">
-    <div class="row align-items-center g-4">
-      <div class="col-lg-5">
-        <div class="section-label">HOW WE WORK</div>
-        <h2 class="ff-display text-white lh-1 mb-3" style="font-size:clamp(2.2rem,3.8vw,4.8rem);">
-          PRIORITIES THAT <br><span class="text-red">KEEP US</span><br>ALIGNED
-        </h2>
-        <p class="text-gray mb-0">Our culture follows a clear order: faith first, family second, and Safeguard third. That structure keeps our character strong and our service disciplined.</p>
+    <div class="row justify-content-center text-center mb-5">
+      <div class="col-lg-9 reveal">
+        <div class="section-label justify-content-center">HOW WE WORK</div>
+        <h2 class="ff-display text-white mb-3">PRIORITIES THAT KEEP US GROUNDED</h2>
+        <p class="text-gray mx-auto">Three priorities. In that order. Every day. That's not a slogan — it's the operating system behind every hire we make, every project we take on, and every relationship we build.</p>
       </div>
-      <div class="col-lg-7">
-        <div class="row g-2">
-          <div class="col-sm-6"><div class="why-card p-4 h-100">
-            <div class="why-head">
-              <span class="why-icon priority-icon">1</span>
-              <h3 class="ff-mono why-title text-uppercase mb-0">God First</h3>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-10 reveal">
+        <div class="priority-stack">
+          <article class="priority-stack-card">
+            <span class="priority-stack-index">1</span>
+            <div class="priority-stack-content">
+              <h3 class="ff-mono text-white mb-0">God First</h3>
+              <p>Faith is our anchor. It shapes how we lead, how we treat our team, and how we carry integrity into every decision we make.</p>
             </div>
-            <p class="why-text mb-0">Faith is our anchor. It shapes how we lead, how we serve, and how we carry integrity into every decision.</p>
-          </div></div>
-          <div class="col-sm-6"><div class="why-card p-4 h-100">
-            <div class="why-head">
-              <span class="why-icon priority-icon">2</span>
-              <h3 class="ff-mono why-title text-uppercase mb-0">Family Second</h3>
+          </article>
+          <article class="priority-stack-card">
+            <span class="priority-stack-index">2</span>
+            <div class="priority-stack-content">
+              <h3 class="ff-mono text-white mb-0">Family Second</h3>
+              <p>Strong families build strong teams. We protect that priority so every person at Safeguard can show up as their best self.</p>
             </div>
-            <p class="why-text mb-0">Strong families create strong teams. We protect that priority so our people can lead with clarity and stability.</p>
-          </div></div>
-          <div class="col-sm-6"><div class="why-card p-4 h-100">
-            <div class="why-head">
-              <span class="why-icon priority-icon">3</span>
-              <h3 class="ff-mono why-title text-uppercase mb-0">Safeguard Third</h3>
+          </article>
+          <article class="priority-stack-card">
+            <span class="priority-stack-index">3</span>
+            <div class="priority-stack-content">
+              <h3 class="ff-mono text-white mb-0">Safeguard Third</h3>
+              <p>The company comes third by design. That order keeps us focused on doing the work right — not just doing more work.</p>
             </div>
-            <p class="why-text mb-0">The company comes third by design, keeping us focused on service, stewardship, and building the business the right way.</p>
-          </div></div>
+          </article>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════ CULTURE NOTE ═══════ -->
+<!-- ═══════ CORE VALUES ═══════ -->
 <section id="culture-note" class="bg-black py-5 py-lg-6">
   <div class="container">
+    <div class="row justify-content-center text-center mb-5">
+      <div class="col-lg-9 reveal">
+        <div class="section-label justify-content-center">CORE VALUES</div>
+        <h2 class="ff-display text-white mb-3">SAFEGUARD SOLUTIONS OPERATES ON <span class="text-red">FACTS</span></h2>
+      </div>
+    </div>
     <div class="row justify-content-center">
-      <div class="col-lg-10">
-        <div class="culture-note">
+      <div class="col-lg-10 reveal">
+        <div class="facts-grid">
+          <article class="facts-card">
+            <h3 class="ff-display text-white"><span class="facts-letter">F</span> — Family</h3>
+            <p>We treat our team and our clients the same way — with respect, honesty, and genuine care. This isn't a culture initiative. It's just how we're built.</p>
+          </article>
+          <article class="facts-card">
+            <h3 class="ff-display text-white"><span class="facts-letter">A</span> — Ambition</h3>
+            <p>We didn't build this company to stay in one lane. Every project, every hire, every relationship is a chance to grow — and we take that seriously.</p>
+          </article>
+          <article class="facts-card">
+            <h3 class="ff-display text-white"><span class="facts-letter">C</span> — Consistency</h3>
+            <p>We show up the same way every time. Same professionalism. Same communication. Same quality. That reliability is what keeps clients coming back.</p>
+          </article>
+          <article class="facts-card">
+            <h3 class="ff-display text-white"><span class="facts-letter">T</span> — Trustworthy</h3>
+            <p>We say what we mean and we do what we say. Integrity isn't a value we talk about — it's the standard we hold ourselves to on every job.</p>
+          </article>
+          <article class="facts-card full">
+            <h3 class="ff-display text-white"><span class="facts-letter">S</span> — Support</h3>
+            <p>We win as a team. Our people back each other up in the field and in the office, and we bring that same commitment to every client relationship.</p>
+          </article>
+        </div>
+        <div class="culture-note mt-4">
           <div class="culture-note-grid">
             <div class="culture-note-mark">
               <i class="bi bi-shield-check"></i>
@@ -685,16 +816,15 @@ footer .ff-mono.text-red { color:#ff7a85 !important; }
       <div class="col-lg-8">
         <div class="section-label justify-content-center">LET'S WORK TOGETHER</div>
         <h2 class="ff-display text-white lh-1 mb-4" style="font-size:clamp(2.6rem,4.8vw,5.8rem);">
-          READY TO BUILD A<br><span class="text-red">MORE RESILIENT</span><br>PERIMETER?
+          READY TO WORK WITH A TEAM<br><span class="text-red">THAT ACTUALLY SHOWS UP?</span>
         </h2>
-        <p class="text-gray mb-5 mx-auto">Connect with Safeguard Solutions to discuss your site profile, threat concerns, and deployment priorities.</p>
+        <p class="text-gray mb-5 mx-auto">Tell us about your site. We'll put 80+ years of expertise behind exactly what it needs.</p>
         <div class="d-flex flex-wrap justify-content-center gap-3">
-          <a href="./index.html#cta" class="btn-sentinel btn bg-danger text-white text-decoration-none d-inline-flex align-items-center gap-2">
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1L13 7L7 13M1 7H13" stroke="currentColor" stroke-width="1.5"/></svg>
-            REQUEST CONSULTATION
+          <a href="./contact.html#contact-form" class="btn-sentinel btn bg-danger text-white text-decoration-none d-inline-flex align-items-center gap-2">
+            Request a Consultation
           </a>
           <a href="tel:+13175198789" class="btn-sentinel-outline text-light text-decoration-none d-inline-flex align-items-center gap-2">
-            +1 (317) 519-8789
+            (317) 519-8789
           </a>
         </div>
       </div>
