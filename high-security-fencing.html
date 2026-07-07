@@ -255,6 +255,26 @@ h2.ff-display { font-size:clamp(1.9rem,3vw,3.5rem)!important; }
   transition:transform .35s, filter .35s;
 }
 .gallery-tile:hover img { transform:scale(1.05); filter:grayscale(20%) brightness(.62); }
+.gallery-tile.featured-project {
+  border-color:rgba(237,28,36,.5);
+  box-shadow:0 0 0 1px rgba(237,28,36,.2) inset;
+}
+.gallery-tile.featured-project::before {
+  content:'FEATURED PROJECT';
+  position:absolute;
+  top:18px;
+  left:18px;
+  z-index:2;
+  font-family:'Share Tech Mono',monospace;
+  font-size:.68rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:#fff;
+  background:var(--red);
+  padding:10px 14px 8px;
+  line-height:1;
+  box-shadow:0 10px 18px rgba(0,0,0,.32);
+}
 .gallery-tile span {
   position:absolute;
   left:0; right:0; bottom:0;
@@ -471,8 +491,8 @@ footer .ff-mono.text-red { color:#ff7a85!important; }
       </div>
     </div>
     <div class="row g-3">
-      <div class="col-lg-4 col-md-6 reveal"><button class="gallery-tile w-100" type="button" data-gallery-src="./assets/perimeter-fencing.jpg" data-gallery-caption="Perimeter fencing at critical facility"><img src="./assets/perimeter-fencing.jpg" alt="Perimeter fencing installation"><span>Perimeter Fencing Installation</span></button></div>
-      <div class="col-lg-4 col-md-6 reveal"><button class="gallery-tile w-100" type="button" data-gallery-src="./assets/who-we-are-fence.jpg" data-gallery-caption="Anti-climb fence deployment"><img src="./assets/who-we-are-fence.jpg" alt="Anti-climb fencing"><span>Anti-Climb Fence Deployment</span></button></div>
+      <div class="col-lg-4 col-md-6 reveal"><button class="gallery-tile featured-project w-100" type="button" data-gallery-src="./assets/perimeter-fencing.jpg" data-gallery-caption="Perimeter fencing at critical facility"><img src="./assets/perimeter-fencing.jpg" alt="Perimeter fencing installation"><span>Perimeter Fencing Installation</span></button></div>
+      <div class="col-lg-4 col-md-6 reveal"><button class="gallery-tile featured-project w-100" type="button" data-gallery-src="./assets/who-we-are-fence.jpg" data-gallery-caption="Anti-climb fence deployment"><img src="./assets/who-we-are-fence.jpg" alt="Anti-climb fencing"><span>Anti-Climb Fence Deployment</span></button></div>
       <div class="col-lg-4 col-md-6 reveal"><button class="gallery-tile w-100" type="button" data-gallery-src="./assets/barrier.jpg" data-gallery-caption="Hardened site access perimeter"><img src="./assets/barrier.jpg" alt="Hardened site access"><span>Hardened Site Access</span></button></div>
       <div class="col-lg-4 col-md-6 reveal"><button class="gallery-tile w-100" type="button" data-gallery-src="./assets/external-01.jpg" data-gallery-caption="Perimeter and vehicle control zone"><img src="./assets/external-01.jpg" alt="Perimeter control zone"><span>Perimeter Control Zone</span></button></div>
       <div class="col-lg-4 col-md-6 reveal"><button class="gallery-tile w-100" type="button" data-gallery-src="./assets/barrier-poles.jpg" data-gallery-caption="Integrated barrier and fence lines"><img src="./assets/barrier-poles.jpg" alt="Integrated barrier and fencing"><span>Integrated Barrier and Fencing</span></button></div>

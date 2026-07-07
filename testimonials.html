@@ -78,6 +78,31 @@ h2.ff-display { font-size:clamp(1.9rem,3vw,3.5rem)!important; }
 
 .stat-card { background:var(--dark3); border:1px solid var(--dark3); padding:24px; text-align:center; height:100%; }
 .stat-num { font-family:'Bebas Neue',sans-serif; font-size:3rem; color:var(--red); line-height:1; }
+.stat-num.counter-num {
+  display:grid;
+  grid-template-columns:repeat(4, minmax(0, 1fr));
+  gap:18px;
+  align-items:end;
+}
+.counter-block {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:8px;
+  position:relative;
+}
+.counter-block:not(:last-child)::after {
+  content: ':';
+  position:absolute;
+  top:4px;
+  right:-14px;
+  font-family:'Bebas Neue',sans-serif;
+  font-size:2.2rem;
+  line-height:1;
+  color:rgba(237,28,36,.9);
+}
+.counter-value { font-size:clamp(2rem,4vw,3rem); letter-spacing:.04em; line-height:1; }
+.counter-unit { font-family:'Share Tech Mono',monospace; font-size:.68rem; letter-spacing:.14em; text-transform:uppercase; color:#d9dae6; }
 
 .red-bar { width:100%; height:3px; background:linear-gradient(90deg,transparent,var(--red),var(--red-hi),var(--red),transparent); }
 .social-link { width:40px; height:40px; border:1px solid var(--dark3); font-size:.72rem; transition:border-color .2s, color .2s, background .2s; }
@@ -189,7 +214,7 @@ footer .ff-mono.text-red { color:#ff7a85!important; }
   <div class="container">
     <div class="row g-3 reveal">
       <div class="col-md-4"><div class="stat-card"><div class="stat-num">95%+</div><p class="ff-mono text-uppercase text-red mb-2" style="font-size:.7rem;letter-spacing:.14em;">Repeat Engagement</p><p class="text-gray mb-0">Clients continue working with us across phases and sites.</p></div></div>
-      <div class="col-md-4"><div class="stat-card"><div class="stat-num">2.5 Years</div><p class="ff-mono text-uppercase text-red mb-2" style="font-size:.7rem;letter-spacing:.14em;">Focused Delivery</p><p class="text-gray mb-0">Rapid growth driven by accountability and execution quality.</p></div></div>
+      <div class="col-md-4"><div class="stat-card"><div class="stat-num counter-num" id="delivery-counter"><div class="counter-block"><span class="counter-value" data-unit="days">0000</span><span class="counter-unit">Days</span></div><div class="counter-block"><span class="counter-value" data-unit="hours">00</span><span class="counter-unit">Hrs</span></div><div class="counter-block"><span class="counter-value" data-unit="minutes">00</span><span class="counter-unit">Min</span></div><div class="counter-block"><span class="counter-value" data-unit="seconds">00</span><span class="counter-unit">Sec</span></div></div><p class="text-gray mb-0 mt-3">Rapid growth driven by accountability and execution quality.</p></div></div>
       <div class="col-md-4"><div class="stat-card"><div class="stat-num">Critical Sites</div><p class="ff-mono text-uppercase text-red mb-2" style="font-size:.7rem;letter-spacing:.14em;">Core Project Type</p><p class="text-gray mb-0">Security-first scopes across high-consequence facilities.</p></div></div>
     </div>
   </div>
@@ -264,6 +289,38 @@ const nav = document.getElementById('main-nav');
 window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 60));
 const obs = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } }), { threshold:.1 });
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+(function initDeliveryCounter() {
+  const counter = document.getElementById('delivery-counter');
+  if (!counter) return;
+  const dayEl = counter.querySelector('[data-unit="days"]');
+  const hourEl = counter.querySelector('[data-unit="hours"]');
+  const minuteEl = counter.querySelector('[data-unit="minutes"]');
+  const secondEl = counter.querySelector('[data-unit="seconds"]');
+  if (!dayEl || !hourEl || !minuteEl || !secondEl) return;
+  const start = new Date(2023, 6, 1, 0, 0, 0).getTime();
+
+  function pad(value) {
+    return String(value).padStart(2, '0');
+  }
+
+  function render() {
+    const now = Date.now();
+    const elapsed = Math.max(0, now - start);
+    const totalSeconds = Math.floor(elapsed / 1000);
+    const days = Math.floor(totalSeconds / 86400);
+    const hours = Math.floor((totalSeconds % 86400) / 3600);
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
+    const seconds = totalSeconds % 60;
+    dayEl.textContent = String(days).padStart(4, '0');
+    hourEl.textContent = pad(hours);
+    minuteEl.textContent = pad(minutes);
+    secondEl.textContent = pad(seconds);
+  }
+
+  render();
+  window.setInterval(render, 1000);
+})();
 
 (function initHeroParticles() {
   const canvas = document.getElementById('hero-particles');
