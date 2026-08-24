@@ -309,6 +309,57 @@ h2.ff-display { font-size:clamp(1.9rem,3vw,3.5rem)!important; }
   letter-spacing:.08em;
   text-transform:uppercase;
 }
+.project-partnership {
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(115deg,#111116 0%,#1a1a21 56%,#121216 100%);
+  border-top:1px solid rgba(237,28,36,.78);
+  border-bottom:1px solid rgba(237,28,36,.28);
+}
+.project-partnership::after {
+  content:'';
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(90deg,rgba(237,28,36,.08),transparent 38%);
+}
+.project-partnership .container { position:relative; z-index:1; }
+.partner-lockup {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:clamp(1.25rem,4vw,3.5rem);
+  min-height:150px;
+  padding:1.5rem;
+  background:rgba(5,5,7,.25);
+  border:1px solid rgba(255,255,255,.1);
+}
+.partner-lockup img { width:min(100%,230px); height:auto; }
+.partner-lockup-divider { width:1px; height:58px; background:rgba(237,28,36,.7); }
+.partner-wordmark {
+  color:#fff;
+  font-family:'Rajdhani',sans-serif;
+  font-size:clamp(1.35rem,2.5vw,2rem);
+  font-weight:700;
+  letter-spacing:.06em;
+  line-height:.9;
+  text-align:left;
+  text-transform:uppercase;
+}
+.partner-wordmark span {
+  display:block;
+  margin-top:.45rem;
+  color:#d9dae6;
+  font-family:'Share Tech Mono',monospace;
+  font-size:.55em;
+  font-weight:400;
+  letter-spacing:.11em;
+}
+@media (max-width:575.98px) {
+  .partner-lockup { flex-direction:column; gap:1rem; }
+  .partner-lockup-divider { width:58px; height:1px; }
+  .partner-wordmark { text-align:center; }
+}
 .faq-utilities .accordion-item {
   background:var(--dark3);
   border:1px solid var(--dark3);
@@ -672,6 +723,27 @@ footer .ff-mono.text-red { color:#ff7a85!important; }
             <li><i class="bi bi-check2"></i><span>Phased implementation plan to support continuous operations</span></li>
           </ul>
         </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ MADE IN INDIANA ═══════ -->
+<section class="project-partnership py-5 py-lg-6" id="made-in-indiana">
+  <div class="container">
+    <div class="row align-items-center g-4 g-lg-5">
+      <div class="col-lg-7 reveal">
+        <div class="section-label">MADE IN INDIANA</div>
+        <h2 class="ff-display text-white mb-3">MADE IN INDIANA. <span class="text-red">BUILT TO PROTECT.</span></h2>
+        <p class="text-gray mb-0">Two Indiana companies, one standard. BASteel Perimeter Systems engineers and manufactures its high-security fence right here in Indiana. Safeguard Solutions installs it with Indiana crews who treat every site like it's their own. Indiana steel. Indiana hands. Protecting critical infrastructure close to home.</p>
+      </div>
+      <div class="col-lg-5 reveal">
+        <div class="partner-lockup" aria-label="Safeguard Solutions and BASteel Perimeter Systems">
+          <img src="./assets/safeguard-solutions-logo-gr.png" alt="Safeguard Solutions">
+          <span class="partner-lockup-divider" aria-hidden="true"></span>
+          <!-- Replace this text lockup with the approved BASteel logo asset when supplied. -->
+          <div class="partner-wordmark">BASTEEL<span>Perimeter Systems</span></div>
+        </div>
       </div>
     </div>
   </div>
