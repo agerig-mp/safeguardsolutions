@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>In The Community | Safeguard Solutions</title>
-<meta name="description" content="Learn how Safeguard Solutions supports local communities through workforce development, service partnerships, volunteer initiatives, and local project engagement.">
+<title>Disaster Relief &amp; Community Impact | Safeguard Solutions</title>
+<meta name="description" content="When Indiana flooded and Hurricane Helene cut off North Carolina, Safeguard Solutions closed the doors and went to work. This is our culture in action.">
 <meta name="robots" content="index,follow">
-<link rel="canonical" href="http://127.0.0.1:8000/dev/in-the-community.html">
+<link rel="canonical" href="https://safeguardsolutionsgroup.com/in-the-community">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Share+Tech+Mono&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
@@ -96,6 +96,193 @@ h2.ff-display { font-size:clamp(1.9rem,3vw,3.5rem)!important; }
 @keyframes gridPan { from{background-position:0 0} to{background-position:60px 60px} }
 .reveal { opacity:0; transform:translateY(24px); transition:opacity .6s, transform .6s; }
 .reveal.visible { opacity:1; transform:translateY(0); }
+
+/* Reused from utility-substation-project.html: stats, gallery, partnership, testimonials. */
+.project-stats-band {
+  background:var(--dark3);
+  border:1px solid var(--dark3);
+  padding:28px;
+}
+.project-stat {
+  text-align:center;
+  padding:12px 10px;
+}
+.project-stat-value {
+  display:block;
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(2.1rem,4vw,3.8rem);
+  line-height:1;
+  color:var(--red);
+}
+.project-stat-label {
+  display:block;
+  margin-top:8px;
+  font-family:'Share Tech Mono',monospace;
+  font-size:.72rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:#d9dae6;
+}
+.project-partnership {
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(115deg,#111116 0%,#1a1a21 56%,#121216 100%);
+  border-top:1px solid rgba(237,28,36,.78);
+  border-bottom:1px solid rgba(237,28,36,.28);
+}
+.project-partnership::after {
+  content:'';
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(90deg,rgba(237,28,36,.08),transparent 38%);
+}
+.project-partnership .container { position:relative; z-index:1; }
+.partner-lockup {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:clamp(1.25rem,4vw,3.5rem);
+  min-height:150px;
+  padding:1.5rem;
+  background:rgba(5,5,7,.25);
+  border:1px solid rgba(255,255,255,.1);
+}
+.partner-lockup img { width:min(100%,230px); height:auto; }
+.partner-lockup-divider { width:1px; height:58px; background:rgba(237,28,36,.7); }
+.partner-wordmark {
+  color:#fff;
+  font-family:'Rajdhani',sans-serif;
+  font-size:clamp(1.35rem,2.5vw,2rem);
+  font-weight:700;
+  letter-spacing:.06em;
+  line-height:.9;
+  text-align:left;
+  text-transform:uppercase;
+}
+.partner-wordmark span {
+  display:block;
+  margin-top:.45rem;
+  color:#d9dae6;
+  font-family:'Share Tech Mono',monospace;
+  font-size:.55em;
+  font-weight:400;
+  letter-spacing:.11em;
+}.gallery-tile {
+  position:relative;
+  display:block;
+  border:1px solid var(--dark3);
+  overflow:hidden;
+  background:var(--dark3);
+  cursor:pointer;
+  padding:0;
+}
+.gallery-tile img {
+  width:100%;
+  aspect-ratio:16/10;
+  object-fit:cover;
+  filter:grayscale(60%) contrast(1.08) brightness(.72);
+  transition:transform .35s, filter .35s;
+}
+.gallery-tile:hover img { transform:scale(1.05); filter:grayscale(20%) brightness(.62); }
+.gallery-tile span {
+  position:absolute;
+  left:0; right:0; bottom:0;
+  padding:10px 12px;
+  font-family:'Share Tech Mono',monospace;
+  font-size:.72rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:#fff;
+  background:linear-gradient(180deg,rgba(5,5,7,0) 0%, rgba(5,5,7,.9) 80%);
+}
+.gallery-modal .modal-content { background:var(--black); border:1px solid var(--dark3); }
+.gallery-modal .btn-close { filter:invert(1) grayscale(1); opacity:.85; }
+.gallery-nav {
+  border:1px solid rgba(255,255,255,.25);
+  background:rgba(5,5,7,.65);
+  color:#fff;
+  width:42px;
+  height:42px;
+  line-height:1;
+}
+.project-overview-gallery {
+  position:relative;
+}
+.project-gallery-viewport {
+  overflow:hidden;
+}
+.project-gallery-track {
+  display:flex;
+  gap:12px;
+  transition:transform .5s cubic-bezier(.22,.61,.36,1);
+  will-change:transform;
+}
+.project-gallery-track .gallery-slide {
+  flex:0 0 clamp(360px, 42vw, 540px);
+}
+.project-gallery-nav {
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  z-index:4;
+  width:42px;
+  height:42px;
+  border:1px solid rgba(255,255,255,.25);
+  background:rgba(5,5,7,.72);
+  color:#fff;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  line-height:1;
+}
+.project-gallery-nav.prev { left:8px; }
+.project-gallery-nav.next { right:8px; }
+.project-gallery-nav:hover { background:rgba(237,28,36,.25); border-color:rgba(237,28,36,.75); }
+.project-overview-gallery .gallery-tile img {
+  aspect-ratio:2.35/1;
+  min-height:270px;
+  max-height:340px;
+}
+@media (max-width:991.98px) {
+  .project-gallery-track .gallery-slide { flex:0 0 clamp(300px, 72vw, 460px); }
+  .project-gallery-nav { width:36px; height:36px; }
+  .project-overview-gallery .gallery-tile img {
+    aspect-ratio:16/9;
+    min-height:0;
+    max-height:260px;
+  }
+}
+
+.t-card { background:var(--dark3); border:1px solid var(--dark3); padding:26px; height:100%; transition:border-color .25s, background .25s, transform .25s; }
+.t-card:hover { border-color:rgba(237,28,36,.35); background:#202028; transform:translateY(-2px); }
+.t-stars { color:#ffb25a; font-size:.86rem; letter-spacing:.08em; }
+.t-quote { color:#e2e3ec; line-height:1.65; margin-bottom:1rem; }
+.t-name { font-family:'Bebas Neue',sans-serif; letter-spacing:.02em; color:#fff; font-size:1.35rem; line-height:1.05; margin-bottom:.25rem; }
+.t-meta { font-family:'Share Tech Mono',monospace; font-size:.72rem; letter-spacing:.1em; text-transform:uppercase; color:#ff7a85; }
+
+/* Page composition; inherited fonts, colors, Bootstrap grid and existing modules. */
+@media(min-width:992px){.py-lg-6{padding-top:5.5rem!important;padding-bottom:5.5rem!important}}
+#community-zone-4{padding-bottom:2.25rem!important}
+#community-zone-5{padding-top:2.25rem!important}
+#hero.template-hero{min-height:620px}.hero-bg{background-image:url('./assets/community-hero.png');filter:brightness(.5)}
+#hero.template-hero .container{padding-top:10rem!important;padding-bottom:5rem!important}
+#hero.template-hero h1.ff-display{font-size:clamp(3.3rem,6.4vw,6rem)!important;max-width:880px}
+.community-lead{font-size:1.25rem;line-height:1.65;max-width:680px}
+.community-copy{max-width:760px}.community-copy p{margin-bottom:1.3rem;font-size:1.12rem}
+.community-image{width:100%;aspect-ratio:4/3;object-fit:cover;filter:grayscale(.55);border:1px solid var(--dark3)}
+.filler-note{display:none}
+.gallery-tile{margin:0;cursor:default}.gallery-tile img{display:block}.gallery-tile figcaption{position:absolute;left:0;right:0;bottom:0;padding:10px 12px;font-family:'Share Tech Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:linear-gradient(180deg,rgba(5,5,7,0) 0%,rgba(5,5,7,.9) 80%)}
+.alongside-strip .partner-lockup{min-height:100px;line-height:1.2;text-align:center}.alongside-strip .section-label{margin-bottom:8px}
+.community-quote{background:var(--dark3);border:1px solid var(--dark3);padding:26px;margin:0}.community-quote .t-quote{font-size:1.3rem}
+.community-portrait{width:80px;height:80px;object-fit:cover;object-position:top;border-radius:50%}
+.community-testimonial-portrait{width:64px;height:64px;object-fit:cover;border-radius:50%;margin-bottom:1rem}
+.community-transit{border-top:1px solid #393940;border-bottom:1px solid #393940;padding:2rem 0}.community-transit p{font-size:clamp(2rem,4vw,3.5rem);line-height:1.15}
+.north-carolina-photo-set .gallery-tile{height:100%}.north-carolina-photo-set .gallery-tile img{aspect-ratio:3/2;height:100%;min-height:280px}
+#community-zone-9 h2{max-width:960px}a:focus-visible,button:focus-visible{outline:2px solid #fff;outline-offset:5px}
+@media(max-width:767px){#hero.template-hero{min-height:560px}.community-quote{padding-left:1.2rem}.project-stats-band{padding:14px}.project-gallery-track .gallery-slide{flex-basis:85%}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+
 </style>
 </head>
 <body class="bg-black text-light">
@@ -106,7 +293,7 @@ h2.ff-display { font-size:clamp(1.9rem,3vw,3.5rem)!important; }
     <a class="navbar-brand" href="./index.html">
       <img src="./assets/safeguard-solutions-logo-gr.png" alt="Safeguard Solutions" style="height:48px;width:auto;">
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+    <button class="navbar-toggler" type="button" aria-label="Toggle navigation" aria-controls="navMenu" aria-expanded="false" data-bs-toggle="collapse" data-bs-target="#navMenu">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navMenu">
@@ -123,6 +310,8 @@ h2.ff-display { font-size:clamp(1.9rem,3vw,3.5rem)!important; }
             <li><a class="dropdown-item ff-mono text-uppercase" href="./testimonials.html">Testimonials</a></li>
             <li><a class="dropdown-item ff-mono text-uppercase" href="./join-our-team.html">Join Our Team</a></li>
             <li><a class="dropdown-item ff-mono text-uppercase" href="./in-the-community.html">In The Community</a></li>
+            <li><a class="dropdown-item ff-mono text-uppercase" href="./credentials-and-registrations.html">Credentials and Registrations</a></li>
+            <li><a class="dropdown-item ff-mono text-uppercase" href="./safety.html">Safety</a></li>
             <li><a class="dropdown-item ff-mono text-uppercase" href="./inside-template.html">Inside Template</a></li>
           </ul>
         </li>
@@ -154,96 +343,7 @@ h2.ff-display { font-size:clamp(1.9rem,3vw,3.5rem)!important; }
   </div>
 </nav>
 
-<section id="hero" class="template-hero position-relative d-flex align-items-center overflow-hidden">
-  <div class="hero-bg"></div>
-  <div class="hero-overlay"></div>
-  <div class="hero-grid"></div>
-  <div class="hero-vignette"></div>
-  <div class="hero-accent-bar d-none d-lg-block"></div>
-  <canvas id="hero-particles" class="hero-particles"></canvas>
-  <div class="container position-relative py-5 my-2" style="z-index:5;">
-    <div class="row"><div class="col-lg-9 col-xl-7">
-      <div class="section-label">COMMUNITY IMPACT</div>
-      <h1 class="ff-display text-white lh-1 mb-3">IN THE <span class="text-red">COMMUNITY</span>.</h1>
-      <p class="text-gray mb-0">Safeguard Solutions is committed to strengthening the communities where we live, work, and build.</p>
-    </div></div>
-  </div>
-</section>
-
-<section class="bg-dark1 py-5 py-lg-6" id="content-template">
-  <div class="container">
-    <div class="row g-4 align-items-start">
-      <div class="col-lg-8 reveal">
-        <article class="article-shell">
-          <p class="ff-mono text-red text-uppercase mb-2" style="font-size:.7rem;letter-spacing:.14em;">Community / Company Values</p>
-          <h2 class="ff-display h3 text-white mb-2">OUR COMMITMENT BEYOND THE JOBSITE</h2>
-          <div class="article-meta d-flex flex-wrap gap-3 ff-mono" style="font-size:.7rem;letter-spacing:.1em;color:#adb0bf;">
-            <span>Published: March 18, 2026</span>
-            <span>Read Time: 4 min</span>
-            <span>Author: Safeguard Solutions Team</span>
-          </div>
-
-          <p class="text-gray">Safeguard Solutions believes perimeter security work should create value beyond project delivery. Our team invests in local partnerships, supports workforce growth, and contributes to initiatives that improve safety and opportunity in the communities we serve.</p>
-          <h2 class="ff-display h3 text-white">HOW WE GIVE BACK</h2>
-          <p class="text-gray">Community involvement is integrated into how we operate. We prioritize relationship-driven outreach and practical support where our resources can make a measurable difference.</p>
-          <ul class="text-gray mb-4">
-            <li>Supporting local programs that promote education, safety, and neighborhood resilience</li>
-            <li>Participating in service projects that improve public and shared spaces</li>
-            <li>Collaborating with organizations focused on long-term community impact</li>
-          </ul>
-
-          <h2 class="ff-display h3 text-white">WORKFORCE &amp; LOCAL OPPORTUNITY</h2>
-          <p class="text-gray">As a growing company, we are committed to creating meaningful opportunities for people who want to build careers in construction and perimeter security. We value mentorship, practical training, and professional growth through real project experience.</p>
-
-          <h2 class="ff-display h3 text-white">PARTNER WITH US</h2>
-          <p class="text-gray">If your organization is leading a community initiative aligned with safety, infrastructure, workforce development, or neighborhood improvement, we welcome opportunities to connect and collaborate.</p>
-
-          <div class="mt-4 pt-3 border-top border-dark3">
-            <a href="./contact.html#contact-form" class="btn-sentinel btn bg-danger text-white text-decoration-none">REQUEST CONSULTATION</a>
-          </div>
-        </article>
-      </div>
-
-      <div class="col-lg-4 reveal">
-        <aside class="sidebar-sticky">
-          <div class="side-card">
-            <h3 class="ff-display text-white">Related Pages</h3>
-            <ul class="side-list">
-              <li><a class="side-link" href="./about.html">About Safeguard Solutions</a></li>
-              <li><a class="side-link" href="#">Our Team</a></li>
-              <li><a class="side-link" href="#">Testimonials</a></li>
-              <li><a class="side-link" href="#">Join Our Team</a></li>
-            </ul>
-          </div>
-
-          <div class="side-card">
-            <h3 class="ff-display text-white">Featured Community Highlight</h3>
-            <article class="featured-project">
-              <img src="./assets/external-04.jpg" alt="Community highlight image">
-              <div class="copy">
-                <p class="ff-mono text-red text-uppercase mb-1" style="font-size:.66rem;letter-spacing:.12em;">Community</p>
-                <p class="text-white mb-2" style="font-weight:700;line-height:1.35;">Local partnership supporting safe and resilient public spaces.</p>
-                <a class="side-link" href="./contact.html">Connect With Us</a>
-              </div>
-            </article>
-          </div>
-
-          <div class="side-card">
-            <h3 class="ff-display text-white">Quick Links</h3>
-            <ul class="side-list">
-              <li><a class="side-link" href="#">Services</a></li>
-              <li><a class="side-link" href="#">Industries</a></li>
-              <li><a class="side-link" href="#">Testimonials</a></li>
-              <li><a class="side-link" href="#">Where We Work</a></li>
-              <li><a class="side-link" href="#">Contact</a></li>
-            </ul>
-          </div>
-        </aside>
-      </div>
-    </div>
-  </div>
-</section>
-
+<main id="main-content"><section id="hero" class="template-hero position-relative d-flex align-items-center overflow-hidden"><div class="hero-bg"></div><div class="hero-vignette"></div><div class="container position-relative" style="z-index:5"><div class="section-label">LIVING OUR CULTURE</div><h1 class="ff-display text-white mb-4">WHEN THE WATER CAME UP,<br><span class="text-red">WE SHOWED UP.</span></h1><p class="text-gray community-lead">Twice now our neighbors have needed more than thoughts and prayers. One time we drove to them. One time we loaded the trucks that did. Neither time did anyone here hesitate.</p><p class="filler-note">Illustrative filler image · Not event photography</p></div></section><section id="community-zone-2" class="bg-dark1 py-5 py-lg-6"><div class="container"><div class="row align-items-center g-5"><div class="col-lg-7"><div class="section-label">LIVING OUR CULTURE</div><h2 class="ff-display text-white mb-4">THE SIGN IN OUR OFFICE IS NOT DECORATION.</h2><p class="text-gray">God First. Family Second. Safeguard Solutions Third. We hung that on the wall and we have been trying to earn it ever since. Twice now, earning it meant putting the third one last and going to work for people who had lost everything.</p></div><div class="col-lg-5"><figure class="mb-0"><img class="community-image" src="./assets/community-filler.jpg" alt="Illustrative work gloves and supplies on a truck tailgate" loading="lazy"><figcaption class="filler-note">Illustrative filler · Office sign photograph to follow</figcaption></figure></div></div></div></section><section id="community-zone-3" class="bg-dark2 py-5 py-lg-6"><div class="container"><div class="row g-5"><div class="col-lg-4"><div class="section-label">LOCAL / CONNERSVILLE, INDIANA</div><h2 class="ff-display text-white mb-4">THE RIVER TOOK DECADES IN ONE NIGHT.</h2></div><div class="col-lg-8 community-copy"><p class="text-gray">In August 2026, the Whitewater River crested at nearly 22 feet and tore through Fayette County. At Robinson’s Whitewater River Campground, floodwater picked up more than a hundred campers and threw them into the woods. Dwain Robinson had spent decades building that place. It was gone in a matter of hours.</p><p class="text-gray">The United Cajun Navy came up from the Gulf to help.</p><p class="text-gray">AES Indiana asked us to come stand beside them.</p><p class="text-gray">On Friday, August 21st, we shut the company down. No jobs. No schedule. No exceptions. Eighteen people, thirty-six hands, six trucks, four pieces of equipment, and three trailers drove to Connersville and spent the day working alongside the United Cajun Navy in what was left of the campground.</p><p class="text-gray">We brought the hands and the skid steers. We cleared debris, sorted what could be saved from what could not, and moved out the trailers insurance had already written off. We dug four wheelers out from where the current had wedged them. We carried heavy things out of spaces families had spent years making their own, next to the people who had built them.</p></div></div></div></section><section id="community-zone-4" class="bg-dark1 py-5 py-lg-6"><div class="container"><div class="project-stats-band"><div class="row g-0"><div class="col-6 col-md-4 col-lg-2"><div class="project-stat"><span class="project-stat-value">18</span><span class="project-stat-label">People</span></div></div><div class="col-6 col-md-4 col-lg-2"><div class="project-stat"><span class="project-stat-value">36</span><span class="project-stat-label">Hands</span></div></div><div class="col-6 col-md-4 col-lg-2"><div class="project-stat"><span class="project-stat-value">6</span><span class="project-stat-label">Trucks</span></div></div><div class="col-6 col-md-4 col-lg-2"><div class="project-stat"><span class="project-stat-value">4</span><span class="project-stat-label">Pieces of Equipment</span></div></div><div class="col-6 col-md-4 col-lg-2"><div class="project-stat"><span class="project-stat-value">3</span><span class="project-stat-label">Trailers</span></div></div><div class="col-6 col-md-4 col-lg-2"><div class="project-stat"><span class="project-stat-value">1</span><span class="project-stat-label">Day</span></div></div></div></div><p class="text-center text-gray mt-3 mb-0">One Friday nobody on this team will forget.</p></div></section><section id="community-zone-5" class="bg-dark1 py-5 py-lg-6"><div class="container"><div class="project-overview-gallery" id="service-gallery" role="region" aria-label="Connersville gallery"><button class="project-gallery-nav prev" type="button" aria-label="Previous gallery image">&#8592;</button><div class="project-gallery-viewport"><div class="project-gallery-track" id="projectGalleryTrack"><figure class="gallery-tile gallery-slide"><img src="./assets/community-filler.jpg" alt="Illustrative filler for Rolling In; event image pending" loading="lazy" style="object-position:32% center"><figcaption>Rolling In</figcaption></figure><figure class="gallery-tile gallery-slide"><img src="./assets/community-filler.jpg" alt="Illustrative filler for What the River Left; event image pending" loading="lazy" style="object-position:44% center"><figcaption>What the River Left</figcaption></figure><figure class="gallery-tile gallery-slide"><img src="./assets/community-filler.jpg" alt="Illustrative filler for Ground Level; event image pending" loading="lazy" style="object-position:56% center"><figcaption>Ground Level</figcaption></figure><figure class="gallery-tile gallery-slide"><img src="./assets/community-filler.jpg" alt="Illustrative filler for Boots and Skid Steers; event image pending" loading="lazy" style="object-position:68% center"><figcaption>Boots and Skid Steers</figcaption></figure><figure class="gallery-tile gallery-slide"><img src="./assets/community-filler.jpg" alt="Illustrative filler for The Work From Above; event image pending" loading="lazy" style="object-position:80% center"><figcaption>The Work From Above</figcaption></figure><figure class="gallery-tile gallery-slide"><img src="./assets/community-filler.jpg" alt="Illustrative filler for Side By Side; event image pending" loading="lazy" style="object-position:92% center"><figcaption>Side By Side</figcaption></figure></div></div><button class="project-gallery-nav next" type="button" aria-label="Next gallery image">&#8594;</button></div><p class="filler-note">Illustrative filler images · Six event photographs and video to follow</p><div class="project-partnership alongside-strip p-4 mt-4"><div class="row align-items-center g-4 position-relative" style="z-index:1"><div class="col-lg-8"><div class="section-label">ALONGSIDE</div><p class="text-gray mb-0">We were guests in their operation. The United Cajun Navy drove up from the Gulf to help Indiana families they had never met. We were proud to work beside them for a day.</p></div><div class="col-lg-4"><a class="partner-lockup partner-wordmark text-decoration-none" href="https://unitedcajunnavy.org/" target="_blank" rel="noopener noreferrer">United Cajun Navy<span class="visually-hidden"> (opens in a new tab)</span></a></div></div></div></div></section><template id="pending-team-voices"><section id="community-zone-6" class="bg-dark1 py-5 py-lg-6"><div class="container"><div class="section-label">IN THEIR WORDS</div><h2 class="ff-display text-white mb-4">WE WENT TO GIVE A DAY. WE CAME HOME WITH MORE THAN WE GAVE.</h2><p>That is not our line. It belongs to the people who were standing in it.</p><div class="row g-4"><div class="col-md-6"><article class="t-card"><p class="t-quote" data-pending-quote="1"></p><p class="t-name">Kevin Meisenholder</p><p class="t-meta">Safeguard Solutions</p></article></div><div class="col-md-6"><article class="t-card"><p class="t-quote" data-pending-quote="2"></p><p class="t-name">Braydon McNeely</p><p class="t-meta">Safeguard Solutions</p></article></div><div class="col-md-6"><article class="t-card"><p class="t-quote" data-pending-quote="3"></p><p class="t-name">Josh Denney</p><p class="t-meta">Safeguard Solutions</p></article></div><div class="col-md-6"><article class="t-card"><p class="t-quote" data-pending-quote="4"></p><p class="t-name">John &quot;Red&quot; Shepherd</p><p class="t-meta">Safeguard Solutions</p></article></div></div></div></section></template><section id="community-zone-7" class="bg-dark2 py-5 py-lg-6"><div class="container"><div class="row g-5"><div class="col-lg-5"><div class="section-label">NATIONAL / WESTERN NORTH CAROLINA</div><h2 class="ff-display text-white mb-4">SOME OF IT FINISHED THE TRIP BY MULE.</h2></div><div class="col-lg-7 community-copy"><p class="text-gray">When Hurricane Helene tore through Western North Carolina and Eastern Tennessee in the fall of 2024, it took the roads with it. Communities that needed help most were the ones nobody could drive to.</p><p class="text-gray">AES Indiana asked us to help. We were barely a year into this business. We said yes anyway, and we brought Citizens State Bank of New Castle with us.</p><p class="text-gray">Our team spent a day buying thousands of dollars in supplies. Truckloads of it went south to the Carolina Cavalry warehouse in Asheville. The rest went up into the mountains the only way left, hauled the final miles by side by side, by mule team, and by helicopter.</p><blockquote class="community-quote mt-5"><p class="t-quote">&ldquo;When that call came we were barely a year in. There was no version of this where we said no. That is not something we marketed. It is something that got built into this company while we were still figuring out who we were. We have a group of men and women here who will do whatever they can when somebody asks, and this company was a family before it was anything else.&rdquo;</p><div class="d-flex align-items-center gap-3"><img class="community-portrait" src="./assets/Tedd-Brown-V-Headshot.webp" alt="Ted Brown V" loading="lazy"><footer><p class="t-name">Ted Brown V</p><p class="t-meta mb-0">President</p></footer></div></blockquote></div></div></div></section><section id="community-zone-8" class="bg-dark1 py-5 py-lg-6"><div class="container"><div class="community-transit row g-4 text-center"><div class="col-md-4"><p class="ff-display text-white mb-0">By side by side.</p></div><div class="col-md-4"><p class="ff-display text-white mb-0">By mule team.</p></div><div class="col-md-4"><p class="ff-display text-red mb-0">By helicopter.</p></div></div><div class="project-partnership alongside-strip p-4 mt-4"><div class="row align-items-center g-4 position-relative" style="z-index:1"><div class="col-lg-8"><div class="section-label">ALONGSIDE</div><p class="text-gray mb-0">We asked. They did not hesitate. Citizens State Bank of New Castle stepped up the same day we called and helped us fill those trucks. Good partners show up when it is not about business.</p></div><div class="col-lg-4"><a class="partner-lockup partner-wordmark text-decoration-none" href="https://www.mycsbin.com/" target="_blank" rel="noopener noreferrer">Citizens State Bank<br>of New Castle<span class="visually-hidden"> (opens in a new tab)</span></a></div></div></div></div></section><section id="community-zone-9" class="bg-dark2 py-5 py-lg-6"><div class="container"><div class="section-label">WHAT THESE TWO DAYS HAVE IN COMMON</div><h2 class="ff-display text-white mb-4">CULTURE IS NOT WHAT A COMPANY SAYS. IT IS WHAT A COMPANY DOES ON THE DAY IT COSTS SOMETHING.</h2><div class="community-copy"><p class="text-gray">We did not build Safeguard Solutions to be the kind of company that posts about its values. We built it to be the kind that closes the doors on a Friday when a town an hour away has lost everything. God First. Family Second. Safeguard Solutions Third. This is what that looks like when it leaves the wall.</p></div></div></section><section id="community-zone-10" class="bg-dark1 py-5 py-lg-6"><div class="container"><div class="row g-5 align-items-center"><div class="col-lg-8"><div class="section-label">GOD FIRST. FAMILY SECOND. SAFEGUARD SOLUTIONS THIRD.</div><h2 class="ff-display text-white mb-3">CONNERSVILLE IS STILL REBUILDING.</h2><p class="text-gray">Recovery in Fayette County is measured in years, not weeks. If you want to help, the people doing the work are still there and they still need hands.</p><a class="btn btn-sentinel bg-danger text-white mt-3" href="https://unitedcajunnavy.org/" target="_blank" rel="noopener noreferrer">SUPPORT THE UNITED CAJUN NAVY<span class="visually-hidden"> (opens in a new tab)</span></a></div><aside class="col-lg-4"><div class="side-card"><h3 class="ff-display text-white">Related Pages</h3><ul class="side-list"><li><a class="side-link" href="./join-our-team.html">Join Our Team</a></li><li><a class="side-link" href="./our-core-beliefs.html">Our Core Beliefs</a></li><li><a class="side-link" href="./team.html">Our Team</a></li></ul></div></aside></div></div></section></main>
 <div class="red-bar"></div>
 <footer class="bg-black border-top border-dark3">
   <div class="container py-5">
@@ -369,6 +469,133 @@ document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
   draw();
   window.addEventListener('resize', resize);
 })();
+</script>
+<script>
+(function(){
+  const wrapper = document.getElementById('service-gallery');
+  const track = document.getElementById('projectGalleryTrack');
+  if (!wrapper || !track) return;
+
+  const slides = Array.from(track.querySelectorAll('.gallery-slide'));
+  const viewport = wrapper.querySelector('.project-gallery-viewport');
+  const prevBtn = wrapper.querySelector('.project-gallery-nav.prev');
+  const nextBtn = wrapper.querySelector('.project-gallery-nav.next');
+  if (!slides.length || !viewport) return;
+
+  let currentIndex = 0;
+
+  const getGap = () => {
+    const styles = window.getComputedStyle(track);
+    return parseFloat(styles.columnGap || styles.gap || '12') || 12;
+  };
+
+  const updateTrack = () => {
+    const slideWidth = slides[0].offsetWidth;
+    const gap = getGap();
+    const viewportWidth = viewport.clientWidth;
+    const maxScroll = Math.max(0, track.scrollWidth - viewportWidth);
+    const peekOffset = 0;
+    const targetCenter = (currentIndex * (slideWidth + gap)) - ((viewportWidth - slideWidth) / 2);
+    const clamped = Math.max(-peekOffset, Math.min(maxScroll + peekOffset, targetCenter));
+    track.style.transform = 'translate3d(' + (-clamped).toFixed(2) + 'px,0,0)';
+  };
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      updateTrack();
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % slides.length;
+      updateTrack();
+    });
+  }
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth < 992) currentIndex = 0;
+    updateTrack();
+  });
+
+  updateTrack();
+
+})();
+</script>
+<script>
+  const teamVoices = document.getElementById('pending-team-voices');
+  const northCarolinaSection = document.getElementById('community-zone-7');
+  if (teamVoices && northCarolinaSection) {
+    const teamVoicesContent = teamVoices.content.cloneNode(true);
+    const teamVoicesGrid = teamVoicesContent.querySelector('.row');
+    if (teamVoicesGrid) {
+      teamVoicesGrid.className = 'row g-3';
+      teamVoicesGrid.querySelectorAll(':scope > div').forEach((cardColumn) => {
+        cardColumn.className = 'col-lg-4 col-md-6 reveal visible';
+      });
+      teamVoicesGrid.querySelectorAll('.t-name, .t-meta').forEach((line) => {
+        line.classList.add('mb-0');
+      });
+      const teamPortraits = [
+        './assets/community-team-01.png',
+        './assets/community-team-02.png',
+        './assets/community-team-03.png',
+        './assets/community-team-04.png'
+      ];
+      teamVoicesGrid.querySelectorAll('.t-card').forEach((card, index) => {
+        card.insertAdjacentHTML('afterbegin', `<img class="community-testimonial-portrait" src="${teamPortraits[index]}" alt="Illustrative team portrait" loading="lazy">`);
+      });
+    }
+    northCarolinaSection.before(teamVoicesContent);
+  }
+
+  const northCarolinaVisuals = document.getElementById('community-zone-8');
+  const northCarolinaTransit = northCarolinaVisuals?.querySelector('.community-transit');
+  if (northCarolinaTransit) {
+    northCarolinaTransit.outerHTML = `
+      <div class="north-carolina-photo-set row g-3" aria-label="North Carolina supply-run photos">
+        <div class="col-md-6">
+          <figure class="gallery-tile mb-0">
+            <img src="./assets/community-filler.jpg" alt="Work gloves and supplies on a pickup truck" loading="lazy" style="object-position:20% center">
+          </figure>
+        </div>
+        <div class="col-md-6">
+          <figure class="gallery-tile mb-0">
+            <img src="./assets/community-filler.jpg" alt="Packed supply boxes in a pickup truck" loading="lazy" style="object-position:80% center">
+          </figure>
+        </div>
+      </div>`;
+  }
+
+  const communityGalleryAssets = [
+    './assets/community-gallery-01.png',
+    './assets/community-gallery-02.png',
+    './assets/community-gallery-03.png',
+    './assets/community-gallery-04.png',
+    './assets/community-gallery-05.png',
+    './assets/community-gallery-06.png'
+  ];
+  const communityGalleryAlt = [
+    'Work convoy arriving at a volunteer relief staging site',
+    'Wide cleanup view after a flood',
+    'Storm cleanup field at ground level',
+    'Crew and skid steer at work',
+    'Cleanup work viewed from above',
+    'Volunteers working side by side'
+  ];
+  const officeSignImage = document.querySelector('#community-zone-2 .community-image');
+  if (officeSignImage) {
+    officeSignImage.src = './assets/community-office-sign.png';
+    officeSignImage.alt = 'God First. Family Second. Safeguard Solutions Third. office sign';
+  }
+  document.querySelectorAll('#community-zone-5 .gallery-tile img').forEach((image, index) => {
+    image.src = communityGalleryAssets[index];
+    image.alt = communityGalleryAlt[index];
+  });
+  document.querySelectorAll('#community-zone-8 .north-carolina-photo-set img').forEach((image, index) => {
+    image.src = index === 0 ? './assets/community-nc-supplies.png' : './assets/community-nc-shopping.png';
+  });
 </script>
 </body>
 </html>
